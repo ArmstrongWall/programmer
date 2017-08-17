@@ -1,0 +1,3 @@
+/home/wang/programmer/cplusplus/3_state/build/CMakeFiles/context.dir
+/home/wang/programmer/cplusplus/3_state/build/CMakeFiles/state.dir
+/home/wang/programmer/cplusplus/3_state/build/CMakeFiles/state_pattern.dir
