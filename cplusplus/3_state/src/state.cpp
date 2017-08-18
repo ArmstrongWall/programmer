@@ -3,7 +3,7 @@
 #include "state.h"
 
 using namespace std;
-
+/*基类*/
 State::State(){}
 State::~State(){}
 
@@ -19,6 +19,9 @@ bool State::ChangeState(Context *con,State *st)
 }
 
 
+
+
+/*派生类*/
 ConcreateStateA::ConcreateStateA(){}
 ConcreateStateA::~ConcreateStateA(){}
 
@@ -33,6 +36,10 @@ void ConcreateStateA::OperationChangeState(Context *con)
     this->ChangeState(con,new ConcreateStateB());
 }
 
+
+
+
+/*派生类*/
 ConcreateStateB::ConcreateStateB(){}
 ConcreateStateB::~ConcreateStateB(){}
 void ConcreateStateB::OperationInterface(Context *con)
