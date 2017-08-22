@@ -11,9 +11,16 @@ int main(int argc,char** argv)
 
     Context *con = new Context(st);
 
+    long count = 0;
+
     while(1)
-    {con->OperationChangeState();
+    {
+      con->OperationChangeState();
+      count ++;
+      std::cout<< count << std::endl;
+
     }
+    
     if(con != NULL)
     {
         delete con;

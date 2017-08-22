@@ -26,6 +26,10 @@ void Context::OperationInterface()
 
 bool Context::ChangeState(State *state)
 {
+  //释放上一个申请的内存，不然会导致内存泄露
+    State* st_temp = this->_state;
+    delete st_temp;
+
     this->_state = state;
     return 1;
 }
