@@ -1,1 +1,0 @@
-/usr/bin/c++       CMakeFiles/state_pattern.dir/src/main.cpp.o  -o state_pattern -rdynamic libstate.so libcontext.so -lpthread -Wl,-rpath,/home/wang/programmer/cplusplus/3_state/build 
