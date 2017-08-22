@@ -11,10 +11,9 @@ int main(int argc,char** argv)
 
     Context *con = new Context(st);
 
-    con->OperationChangeState();
-    con->OperationChangeState();
-    con->OperationChangeState();
-
+    while(1)
+    {con->OperationChangeState();
+    }
     if(con != NULL)
     {
         delete con;

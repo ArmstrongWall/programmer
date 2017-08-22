@@ -9,7 +9,7 @@ class State
         virtual ~State();
         
         virtual void OperationInterface(Context * con);
-        virtual void OperationChangeState()=0;
+        virtual void OperationChangeState(Context * con)=0;
 
     protected:
         bool ChangeState(Context* con,State* st);
