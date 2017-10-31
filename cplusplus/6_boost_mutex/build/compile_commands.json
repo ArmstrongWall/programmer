@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/home/wzq/programmer/cplusplus/6_boost_mutex/build",
+  "command": "/usr/bin/c++     -g   -o CMakeFiles/project.dir/src/main.cpp.o -c /home/wzq/programmer/cplusplus/6_boost_mutex/src/main.cpp",
+  "file": "/home/wzq/programmer/cplusplus/6_boost_mutex/src/main.cpp"
+}
+]
