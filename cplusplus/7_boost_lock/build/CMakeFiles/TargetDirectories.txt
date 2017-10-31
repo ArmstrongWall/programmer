@@ -1,3 +1,0 @@
-/home/wzq/programmer/cplusplus/7_boost_lock/build/CMakeFiles/edit_cache.dir
-/home/wzq/programmer/cplusplus/7_boost_lock/build/CMakeFiles/rebuild_cache.dir
-/home/wzq/programmer/cplusplus/7_boost_lock/build/CMakeFiles/project.dir

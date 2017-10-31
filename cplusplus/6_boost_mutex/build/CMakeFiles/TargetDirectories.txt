@@ -1,3 +1,0 @@
-/home/wzq/programmer/cplusplus/6_boost_mutex/build/CMakeFiles/edit_cache.dir
-/home/wzq/programmer/cplusplus/6_boost_mutex/build/CMakeFiles/rebuild_cache.dir
-/home/wzq/programmer/cplusplus/6_boost_mutex/build/CMakeFiles/project.dir
