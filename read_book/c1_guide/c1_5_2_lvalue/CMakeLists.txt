@@ -5,6 +5,8 @@
 cmake_minimum_required(VERSION 2.8)
 #工程名
 PROJECT (project)
+#use C++11
+add_compile_options(-std=c++11)
 #设置全局变量
 #set (EXTRA_LIBS ${EXTRA_LIBS} state context)
 #注意，如果一个库要引用其他库的函数，需要将被引用的库放在后面
