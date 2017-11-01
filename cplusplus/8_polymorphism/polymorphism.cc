@@ -1,4 +1,7 @@
 #include<iostream>
+#include<vector>
+
+using namespace std;
 
 class A
 {
@@ -33,8 +36,14 @@ int main(int argc , char ** argv)
   B b2;
   tune2(&b2);
 
+    vector<int> ran = {1,2,3,5};
 
+    std::cout << ran.size()<< endl;
 
-
+    for(auto x : ran)
+    {
+        ++x;
+        std::cout << x<< endl;
+    }
   return 0;
 }
