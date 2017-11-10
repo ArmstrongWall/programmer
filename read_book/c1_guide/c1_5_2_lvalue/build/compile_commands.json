@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/home/wzq/programmer/read_book/c1_guide/c1_5_2_lvalue/build",
+  "command": "/usr/bin/c++     -g   -std=c++11 -o CMakeFiles/project.dir/src/main.cpp.o -c /home/wzq/programmer/read_book/c1_guide/c1_5_2_lvalue/src/main.cpp",
+  "file": "/home/wzq/programmer/read_book/c1_guide/c1_5_2_lvalue/src/main.cpp"
+}
+]
