@@ -19,4 +19,4 @@ B 是n×m维矩阵，![pic]( http://latex.codecogs.com/gif.latex?\varepsilon_t) 
 ![pic](http://latex.codecogs.com/gif.latex?\boldsymbol{Q}=\begin{pmatrix}cov[\delta_1,\delta_1]&cov[\delta_1,\delta_2]&\cdots&cov[\delta_1,\delta_k]\\\\cov[\delta_2,\delta_1]&cov[\delta_2,\delta_2]&\cdots&cov[\delta_2,\delta_k]\\\\\vdots&\ddots&&\vdots\\\\cov[\delta_k,\delta_1]&cov[\delta_k,\delta_2]&\cdots&cov[\delta_k,\delta_k]\end{pmatrix})，
 </br>
 　　由《Probabilistic Robotics》<sup>[1]</sup>中,得到卡尔曼滤波的算法，
-</br>　　
+</br>　　![pic](1.png)
