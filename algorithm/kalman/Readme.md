@@ -11,7 +11,7 @@ B 是n×m维矩阵，![pic]( http://latex.codecogs.com/gif.latex?\varepsilon_t) 
 </br>![pic](http://latex.codecogs.com/gif.latex?\boldsymbol{\varepsilon_t}=\begin{pmatrix}\varepsilon_1\\\\\varepsilon_2\\\\\vdots\\\\\varepsilon_n\end{pmatrix}),
 ![pic](http://latex.codecogs.com/gif.latex?\boldsymbol{R}=\begin{pmatrix}cov[\varepsilon_1,\varepsilon_1]&cov[\varepsilon_1,\varepsilon_2]&\cdots&cov[\varepsilon_1,\varepsilon_n]\\\\cov[\varepsilon_2,\varepsilon_1]&cov[\varepsilon_2,\varepsilon_2]&\cdots&cov[\varepsilon_2,\varepsilon_n]\\\\\vdots&\ddots&&\vdots\\\\cov[\varepsilon_n,\varepsilon_1]&cov[\varepsilon_n,\varepsilon_2]&\cdots&cov[\varepsilon_n,\varepsilon_n]\end{pmatrix})，
 </br>　　使用(2)式去观测这个系统：
-</br>　　　　　　　　　　　　　　　![pic]( http://latex.codecogs.com/gif.latex?z_t=\boldsymbol{C}x_{t}+\boldsymbol{\delta_t}) 　　　　　　　　　　　　　　　　　　　　　(2)    
+</br>　　　　　　　　　　　　　　　![pic]( http://latex.codecogs.com/gif.latex?z_t=\boldsymbol{C}x_{t}+\boldsymbol{\delta_t}) 　　　　　　　　　　　　　　　　　　　　           　   (2)    
 </br>其中![pic]( http://latex.codecogs.com/gif.latex?z_t)是k维的状态观测向量，C是k×n维矩阵，
 ![pic]( http://latex.codecogs.com/gif.latex?\delta_t) 是系统在 t 时刻的 n 维观测噪声向量，
 是一个高斯随机变量，所有元素均值为0，n×n维协方差矩阵为Q 。
