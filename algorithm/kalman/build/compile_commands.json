@@ -1,0 +1,12 @@
+[
+{
+  "directory": "/home/wzq/programmer/algorithm/kalman/build",
+  "command": "/usr/bin/c++    -I/usr/include/eigen3 -I/home/wzq/3rd_party/Sophus  -std=c++11 -g   -o CMakeFiles/project.dir/src/main.cc.o -c /home/wzq/programmer/algorithm/kalman/src/main.cc",
+  "file": "/home/wzq/programmer/algorithm/kalman/src/main.cc"
+},
+{
+  "directory": "/home/wzq/programmer/algorithm/kalman/build",
+  "command": "/usr/bin/c++   -Dkalmanfilter_EXPORTS -I/usr/include/eigen3 -I/home/wzq/3rd_party/Sophus  -std=c++11 -g -fPIC   -o CMakeFiles/kalmanfilter.dir/src/kalman/kalman.cc.o -c /home/wzq/programmer/algorithm/kalman/src/kalman/kalman.cc",
+  "file": "/home/wzq/programmer/algorithm/kalman/src/kalman/kalman.cc"
+}
+]
