@@ -47,4 +47,4 @@ B<sub>t</sub> 是n×m维矩阵，![pic]( http://latex.codecogs.com/gif.latex?\va
 参考文献
 -----------------------------------
 [1].Sebastian Thrun,Wolfram,Burgard,Dieter Fox,Probabilistic Robotics[M],The MIT Press,2006:41-83
-[2].Yaakov Bar-Shalom,X.-Rong Li,Thiagalingam Kirubarajan,Estimation with Applications to Tracking and Navigation[M],John Wiley & Sons, Inc,2001:218-230
+</br>[2].Yaakov Bar-Shalom,X.-Rong Li,Thiagalingam Kirubarajan,Estimation with Applications to Tracking and Navigation[M],John Wiley & Sons, Inc,2001:218-230
