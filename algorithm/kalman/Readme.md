@@ -7,6 +7,8 @@
  
   <img src="http://latex.codecogs.com/gif.latex?\frac{\partial J}{\partial \theta_k^{(j)}}=\sum_{i:r(i,j)=1}{\big((\theta^{(j)})^Tx^{(i)}-y^{(i,j)}\big)x_k^{(i)}}+\lambda \theta_k^{(j)}" />
 
+![机器人]( http://latex.codecogs.com/gif.latex?1+sin(x) )
+
 作者：Deep Reader
 链接：https://www.zhihu.com/question/26887527/answer/43166739
 来源：知乎
