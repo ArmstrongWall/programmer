@@ -1,5 +1,7 @@
 卡尔曼滤波在倒立摆中的应用
 ===================================
+1：理论模型
+-----------------------------------
 　　对于一个线性高斯系统，我们认为它内部的状态在时刻ｔ是服从于均值为ｎ维向量![pic]( http://latex.codecogs.com/gif.latex?\boldsymbol{\mu_t})，
 协方差为n×n维矩阵![pic](http://latex.codecogs.com/gif.latex?\boldsymbol{\Sigma_t})的高斯分布。而![pic](http://latex.codecogs.com/gif.latex?\boldsymbol{\overline{\mu_t}})和![pic](http://latex.codecogs.com/gif.latex?\boldsymbol{\overline{\Sigma_t}})为
 系统的状态预测均值与协方差。使用(1)式描述该系统</br>　　　　　　　　　　　　　　　
@@ -20,6 +22,9 @@ B<sub>t</sub> 是n×m维矩阵，![pic]( http://latex.codecogs.com/gif.latex?\va
 </br>
 　　由《Probabilistic Robotics》<sup>[1]</sup>中,得到卡尔曼滤波的算法，
 </br>　　![pic](1.png)
+
+2：在倒立摆中的应用
+-----------------------------------
 </br>　　在倒立摆模型中，可以观测到状态量是角度![pic]( http://latex.codecogs.com/gif.latex?\theta)，角速度![pic]( http://latex.codecogs.com/gif.latex?\dot\theta)，接下来我们简化模型，
 我们只需要去得到真实的角度和角速度，不要控制，控制姿态放到PID模型中。比如把这个倒立摆静置，然后去测量该系统的状态，
 此时系统不受任何外力干扰，但是加速度计会受到机械振动的噪声干扰，陀螺仪会有零漂，温漂干扰，这些都是高斯噪声，那么怎么去描述这些
@@ -31,11 +36,11 @@ B<sub>t</sub> 是n×m维矩阵，![pic]( http://latex.codecogs.com/gif.latex?\va
 </br> 　　![pic](http://latex.codecogs.com/gif.latex?\boldsymbol{A_t}=\begin{pmatrix}1&T\\\\0&1\end{pmatrix}),
 </br> 　　![pic](http://latex.codecogs.com/gif.latex?\boldsymbol{B_t}=\boldsymbol{0}),
 </br> 　　![pic](http://latex.codecogs.com/gif.latex?\boldsymbol{R_t}=\begin{pmatrix}\frac{1}{4}T^4&\frac{1}{2}T^3\\\\\frac{1}{2}T^3&T^2\end{pmatrix}),
-</br> 考虑观测模型：
+</br> 　　考虑观测模型：
 </br> ![pic](http://latex.codecogs.com/gif.latex?\boldsymbol{z_t}=\begin{pmatrix}\theta_t\\\\\dot\theta_t\end{pmatrix}=\begin{pmatrix}1&0\\\\0&1\end{pmatrix}\begin{pmatrix}\theta_{t}\\\\\dot\theta_{t}\end{pmatrix}+\boldsymbol{\delta_t}),
-</br> 其中![pic](http://latex.codecogs.com/gif.latex?\boldsymbol{\delta_t})很难衡量，分别是角度和和角速度的零均值高斯干扰量，
+</br> 　　其中![pic](http://latex.codecogs.com/gif.latex?\boldsymbol{\delta_t})很难衡量，分别是角度和和角速度的零均值高斯干扰量，
 对应的Q<sub>t</sub>根据实际的测量值(使用MPU6050)去选取，见build/data.txt文件，根据初中统计数据知识算到![pic](http://latex.codecogs.com/gif.latex?cov[\theta,\theta]=E[[\theta-E[\theta]]^2]),![pic](http://latex.codecogs.com/gif.latex?cov[\theta,\dot\theta]=E[\theta\dot\theta]-E[\theta]E[\dot\theta]),![pic](http://latex.codecogs.com/gif.latex?cov[\dot\theta,\dot\theta]=E[[\dot\theta-E[\dot\theta]]^2])
 </br>![pic](http://latex.codecogs.com/gif.latex?\boldsymbol{Q_t}=\begin{pmatrix}cov[\theta,\theta]&cov[\theta,\dot\theta]\\\\cov[\dot\theta,\theta]&cov[\dot\theta,\dot\theta]\end{pmatrix}=\begin{pmatrix}1023.684&0.221\\\\0.221&25.228\end{pmatrix}).
-</br>由此可以建立卡尔曼算法，基于Eigen矩阵库使用C++编程可得到如下效果图，可以看到测量值跳变非常大，而中间的得到的滤波值跳变很小，黄色是角加速度值，由于只静置，所以得到的值在0附近，蓝色是加速度计测到的角度值，在-200左右。
+</br>　　由此可以建立卡尔曼算法，基于Eigen矩阵库使用C++编程可得到如下效果图，可以看到测量值跳变非常大，而中间的得到的滤波值跳变很小，黄色是角加速度值，由于只静置，所以得到的值在0附近，蓝色是加速度计测到的角度值，在-200左右。
 </br>![pic](build/result.png)
 
