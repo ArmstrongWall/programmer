@@ -1,7 +1,7 @@
 卡尔曼滤波在倒立摆中的应用
 ===================================
-By [Johnny Wang](https://armstrongwall.github.io/Resume/)
-1：理论模型
+### By [Johnny Wang](https://armstrongwall.github.io/Resume/)
+</br>1：理论模型
 -----------------------------------
 　　对于一个线性高斯系统，我们认为它内部的状态在时刻ｔ是服从于均值为ｎ维向量![pic]( http://latex.codecogs.com/gif.latex?\boldsymbol{\mu_t})，
 协方差为n×n维矩阵![pic](http://latex.codecogs.com/gif.latex?\boldsymbol{\Sigma_t})的高斯分布。而![pic](http://latex.codecogs.com/gif.latex?\boldsymbol{\overline{\mu_t}})和![pic](http://latex.codecogs.com/gif.latex?\boldsymbol{\overline{\Sigma_t}})为
