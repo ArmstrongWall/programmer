@@ -1,5 +1,6 @@
 卡尔曼滤波在倒立摆中的应用
 ===================================
+By [Johnny Wang](https://armstrongwall.github.io/Resume/)
 1：理论模型
 -----------------------------------
 　　对于一个线性高斯系统，我们认为它内部的状态在时刻ｔ是服从于均值为ｎ维向量![pic]( http://latex.codecogs.com/gif.latex?\boldsymbol{\mu_t})，
