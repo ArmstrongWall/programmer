@@ -6,19 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/wzq/3rd_party/Sophus/sophus/se3.h
-so3.h
-/home/wzq/3rd_party/Sophus/sophus/so3.h
-
-/home/wzq/3rd_party/Sophus/sophus/so3.h
-Eigen/Core
--
-Eigen/StdVector
--
-Eigen/Geometry
--
-
-/home/wzq/programmer/algorithm/kalman/src/kalman/kalman.h
+/home/cerelon/programmer/algorithm/kalman/src/kalman/kalman.h
 iostream
 -
 cmath
@@ -29,12 +17,8 @@ Eigen/Core
 -
 Eigen/Geometry
 -
-sophus/so3.h
-/home/wzq/programmer/algorithm/kalman/src/kalman/sophus/so3.h
-sophus/se3.h
-/home/wzq/programmer/algorithm/kalman/src/kalman/sophus/se3.h
 
-/home/wzq/programmer/algorithm/kalman/src/main.cc
+/home/cerelon/programmer/algorithm/kalman/src/main.cc
 iostream
 -
 cmath
@@ -45,12 +29,8 @@ Eigen/Core
 -
 Eigen/Geometry
 -
-sophus/so3.h
-/home/wzq/programmer/algorithm/kalman/src/sophus/so3.h
-sophus/se3.h
-/home/wzq/programmer/algorithm/kalman/src/sophus/se3.h
 kalman/kalman.h
-/home/wzq/programmer/algorithm/kalman/src/kalman/kalman.h
+/home/cerelon/programmer/algorithm/kalman/src/kalman/kalman.h
 
 /usr/include/eigen3/Eigen/Cholesky
 Core
@@ -554,14 +534,6 @@ src/Eigen2Support/SVD.h
 src/Core/util/ReenableStupidWarnings.h
 /usr/include/eigen3/Eigen/src/Core/util/ReenableStupidWarnings.h
 
-/usr/include/eigen3/Eigen/StdVector
-Core
-/usr/include/eigen3/Eigen/Core
-vector
--
-src/StlSupport/StdVector.h
-/usr/include/eigen3/Eigen/src/StlSupport/StdVector.h
-
 /usr/include/eigen3/Eigen/src/Cholesky/LDLT.h
 
 /usr/include/eigen3/Eigen/src/Cholesky/LLT.h
@@ -1033,12 +1005,6 @@ Eigen/src/Core/util/MKL_support.h
 /usr/include/eigen3/Eigen/src/SVD/Eigen/src/Core/util/MKL_support.h
 
 /usr/include/eigen3/Eigen/src/SVD/UpperBidiagonalization.h
-
-/usr/include/eigen3/Eigen/src/StlSupport/StdVector.h
-Eigen/src/StlSupport/details.h
-/usr/include/eigen3/Eigen/src/StlSupport/Eigen/src/StlSupport/details.h
-
-/usr/include/eigen3/Eigen/src/StlSupport/details.h
 
 /usr/include/eigen3/Eigen/src/misc/Image.h
 

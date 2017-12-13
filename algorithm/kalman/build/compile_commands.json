@@ -1,12 +1,12 @@
 [
 {
-  "directory": "/home/wzq/programmer/algorithm/kalman/build",
-  "command": "/usr/bin/c++    -I/usr/include/eigen3 -I/home/wzq/3rd_party/Sophus  -std=c++11 -g   -o CMakeFiles/project.dir/src/main.cc.o -c /home/wzq/programmer/algorithm/kalman/src/main.cc",
-  "file": "/home/wzq/programmer/algorithm/kalman/src/main.cc"
+  "directory": "/home/cerelon/programmer/algorithm/kalman/build",
+  "command": "/usr/bin/c++   -Dkalmanfilter_EXPORTS -std=c++11 -g -fPIC -I/usr/include/eigen3    -o CMakeFiles/kalmanfilter.dir/src/kalman/kalman.cc.o -c /home/cerelon/programmer/algorithm/kalman/src/kalman/kalman.cc",
+  "file": "/home/cerelon/programmer/algorithm/kalman/src/kalman/kalman.cc"
 },
 {
-  "directory": "/home/wzq/programmer/algorithm/kalman/build",
-  "command": "/usr/bin/c++   -Dkalmanfilter_EXPORTS -I/usr/include/eigen3 -I/home/wzq/3rd_party/Sophus  -std=c++11 -g -fPIC   -o CMakeFiles/kalmanfilter.dir/src/kalman/kalman.cc.o -c /home/wzq/programmer/algorithm/kalman/src/kalman/kalman.cc",
-  "file": "/home/wzq/programmer/algorithm/kalman/src/kalman/kalman.cc"
+  "directory": "/home/cerelon/programmer/algorithm/kalman/build",
+  "command": "/usr/bin/c++    -std=c++11 -g -I/usr/include/eigen3    -o CMakeFiles/project.dir/src/main.cc.o -c /home/cerelon/programmer/algorithm/kalman/src/main.cc",
+  "file": "/home/cerelon/programmer/algorithm/kalman/src/main.cc"
 }
 ]

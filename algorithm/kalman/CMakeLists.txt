@@ -20,10 +20,10 @@ find_package( Sophus REQUIRED )
 
 #添加头文件
 include_directories( "/usr/include/eigen3" )
-include_directories(  "/home/wzq/3rd_party/Sophus"  )
+#include_directories(  "/home/wzq/3rd_party/Sophus"  )
 
 #添加需要链接的库文件路径LINK_LIBRARIES
-link_libraries("/home/wzq/3rd_party/Sophus/build/libSophus.so")
+#link_libraries("/home/wzq/3rd_party/Sophus/build/libSophus.so")
 
 #添加库文件
 add_library(kalmanfilter   SHARED src/kalman/kalman.cc)

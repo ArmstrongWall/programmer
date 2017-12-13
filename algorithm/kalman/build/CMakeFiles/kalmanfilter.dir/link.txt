@@ -1,1 +1,1 @@
-/usr/bin/c++  -fPIC -std=c++11 -g  -shared -Wl,-soname,libkalmanfilter.so -o libkalmanfilter.so CMakeFiles/kalmanfilter.dir/src/kalman/kalman.cc.o /home/wzq/3rd_party/Sophus/build/libSophus.so -Wl,-rpath,/home/wzq/3rd_party/Sophus/build 
+/usr/bin/c++  -fPIC -std=c++11 -g   -shared -Wl,-soname,libkalmanfilter.so -o libkalmanfilter.so CMakeFiles/kalmanfilter.dir/src/kalman/kalman.cc.o 

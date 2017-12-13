@@ -1,1 +1,1 @@
-/usr/bin/c++   -std=c++11 -g   CMakeFiles/project.dir/src/main.cc.o  -o project -rdynamic /home/wzq/3rd_party/Sophus/build/libSophus.so libkalmanfilter.so /home/wzq/3rd_party/Sophus/build/libSophus.so -Wl,-rpath,/home/wzq/3rd_party/Sophus/build:/home/wzq/programmer/algorithm/kalman/build 
+/usr/bin/c++   -std=c++11 -g    CMakeFiles/project.dir/src/main.cc.o  -o project -rdynamic libkalmanfilter.so -Wl,-rpath,/home/cerelon/programmer/algorithm/kalman/build 
