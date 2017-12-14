@@ -39,7 +39,8 @@ B<sub>t</sub> 是n×m维矩阵，![pic]( http://latex.codecogs.com/gif.latex?\va
 </br> 　　![pic](http://latex.codecogs.com/gif.latex?\boldsymbol{\varepsilon_t}=\begin{pmatrix}\frac{1}{2}T^2\\\\T\end{pmatrix}\ddot\theta_{t-1}=\boldsymbol{S_t}\ddot\theta_{t-1}),
 </br> 　　![pic](http://latex.codecogs.com/gif.latex?\boldsymbol{R_t}=\boldsymbol{S_t}\boldsymbol{S_t^T}k^2=\begin{pmatrix}\frac{1}{4}T^4&\frac{1}{2}T^3\\\\\frac{1}{2}T^3&T^2\end{pmatrix}k^2),
 </br> 　　考虑观测模型：
-</br> ![pic](http://latex.codecogs.com/gif.latex?\boldsymbol{z_t}=\begin{pmatrix}\theta_t\\\\\dot\theta_t\end{pmatrix}=\begin{pmatrix}1&0\\\\0&1\end{pmatrix}\begin{pmatrix}\theta_{t}\\\\\dot\theta_{t}\end{pmatrix}+\boldsymbol{\delta_t}),
+</br> 　　![pic](http://latex.codecogs.com/gif.latex?\boldsymbol{z_t}=\begin{pmatrix}\theta_t\\\\\dot\theta_t\end{pmatrix}=\begin{pmatrix}1&0\\\\0&1\end{pmatrix}\begin{pmatrix}\theta_{t}\\\\\dot\theta_{t}\end{pmatrix}+\boldsymbol{\delta_t}),
+</br> 　　![pic](http://latex.codecogs.com/gif.latex?\boldsymbol{C_t}=\begin{pmatrix}1&0\\\\0&1\end{pmatrix}),
 </br> 　　其中![pic](http://latex.codecogs.com/gif.latex?\boldsymbol{\delta_t})很难衡量，分别是角度和和角速度的零均值高斯干扰量，
 对应的Q<sub>t</sub>根据实际的测量值(使用MPU6050)去选取，见build/data.txt文件，根据初中统计数据知识算到![pic](http://latex.codecogs.com/gif.latex?cov[\theta,\theta]=E[[\theta-E[\theta]]^2]),![pic](http://latex.codecogs.com/gif.latex?cov[\theta,\dot\theta]=E[\theta\dot\theta]-E[\theta]E[\dot\theta]),![pic](http://latex.codecogs.com/gif.latex?cov[\dot\theta,\dot\theta]=E[[\dot\theta-E[\dot\theta]]^2])
 </br>![pic](http://latex.codecogs.com/gif.latex?\boldsymbol{Q_t}=\begin{pmatrix}cov[\theta,\theta]&cov[\theta,\dot\theta]\\\\cov[\dot\theta,\theta]&cov[\dot\theta,\dot\theta]\end{pmatrix}=\begin{pmatrix}1023.684&0.221\\\\0.221&25.228\end{pmatrix}).
