@@ -46,7 +46,8 @@ B<sub>t</sub> 是n×m维矩阵，![pic]( http://latex.codecogs.com/gif.latex?\va
 </br>![pic](http://latex.codecogs.com/gif.latex?\boldsymbol{Q_t}=\begin{pmatrix}cov[\theta,\theta]&cov[\theta,\dot\theta]\\\\cov[\dot\theta,\theta]&cov[\dot\theta,\dot\theta]\end{pmatrix}=\begin{pmatrix}1023.684&0.221\\\\0.221&25.228\end{pmatrix}).
 </br>　　由此可以建立卡尔曼算法，基于Eigen矩阵库使用C++编程可得到如下效果图，可以看到测量值跳变非常大，而中间的得到的滤波值跳变很小，黄色是角加速度值，由于只静置，所以得到的值在0附近，蓝色是加速度计测到的角度值，在-200左右。
 </br>![pic](build/result.png)
-</br>![pic](build/1.png)
+</br>![pic](build/1.jpg)
+
 参考文献
 -----------------------------------
 [1].Sebastian Thrun,Wolfram,Burgard,Dieter Fox,Probabilistic Robotics[M],The MIT Press,2006:41-83
