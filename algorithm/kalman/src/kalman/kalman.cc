@@ -18,9 +18,9 @@ KalmanFilter::KalmanFilter()
     R << 0.25*T*T*T*T*sigma_acceleration,    0.5*T*T*T*sigma_acceleration,
          0.5*T*T*T*sigma_acceleration,       T*T*sigma_acceleration;
     
-    Q << 400  , 0.01,
+    Q << 100  , 0.01,
          0.01 , 25;
-
+    //
     I = Eigen::Matrix<double, 2, 2>::Identity();
         
 }

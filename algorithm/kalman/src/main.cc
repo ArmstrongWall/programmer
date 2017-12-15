@@ -20,47 +20,47 @@
 int main(int argc,char** argv)
 {
     
-     
-//     KalmanFilter* kalman = new KalmanFilter();
-//     kalman->LoadData("data.txt");
-//     
-//     Eigen::Vector2d mu_last;
-//     mu_last << -200,0;
-//     Eigen::Matrix2d Sigma_last;
-//     Sigma_last << 0,0,0,0;
-//     cout.setf(ios::fixed);
-//             
-//     for(int i = 0 ; i < kalman->totalnum - 1; i++)
-//     {
-//         kalman->Pridect(mu_last,Sigma_last);
-//         mu_last    = kalman->MeanUpdate(kalman->data_observe[i]);
-//         Sigma_last = kalman->CovarienceUpdate();
-//        
-//         //cout << "count = " << i << endl << mu_last << endl;
-//         cout  << setprecision(4) << mu_last[0] << " " << setprecision(4) << mu_last[1] << endl;
-//         
-//     }
-    
-    KalmanFilter1* kalman = new KalmanFilter1();
-    kalman->LoadData("data.txt");
+    //倒立摆建模     
+    KalmanFilter* kalman = new KalmanFilter();
+    kalman->LoadData("data1.txt");
     
     Eigen::Vector2d mu_last;
-    mu_last << 2.3,10;
+    mu_last << -300,0;
     Eigen::Matrix2d Sigma_last;
-    Sigma_last << 0.01,0,0,0.01;
+    Sigma_last << 1,0.1,0.1,1;
     cout.setf(ios::fixed);
             
     for(int i = 0 ; i < kalman->totalnum - 1; i++)
     {
-        kalman->C << kalman->data_observe[i],1;
         kalman->Pridect(mu_last,Sigma_last);
         mu_last    = kalman->MeanUpdate(kalman->data_observe[i]);
         Sigma_last = kalman->CovarienceUpdate();
-        //cout << Sigma_last<< endl;
+       
         //cout << "count = " << i << endl << mu_last << endl;
         cout  << setprecision(4) << mu_last[0] << " " << setprecision(4) << mu_last[1] << endl;
         
     }
+    //y=kx+b 建模 
+//     KalmanFilter1* kalman = new KalmanFilter1();
+//     kalman->LoadData("data.txt");
+//     
+//     Eigen::Vector2d mu_last;
+//     mu_last << 2.3,10;
+//     Eigen::Matrix2d Sigma_last;
+//     Sigma_last << 0.01,0,0,0.01;
+//     cout.setf(ios::fixed);
+//             
+//     for(int i = 0 ; i < kalman->totalnum - 1; i++)
+//     {
+//         kalman->C << kalman->data_observe[i],1;
+//         kalman->Pridect(mu_last,Sigma_last);
+//         mu_last    = kalman->MeanUpdate(kalman->data_observe[i]);
+//         Sigma_last = kalman->CovarienceUpdate();
+//         //cout << Sigma_last<< endl;
+//         //cout << "count = " << i << endl << mu_last << endl;
+//         cout  << setprecision(4) << mu_last[0] << " " << setprecision(4) << mu_last[1] << endl;
+//         
+//     }
         
    
     return 0;

@@ -32,10 +32,11 @@ public:
     //State Covarience posterior Matrix2d
     
 private:
-    double sigma_acceleration = 0.001;
+    double sigma_acceleration = 10;
     /*assume acceleration of Angle is Normal distribution
        ..
       Angle ~ N(0,0.001)
+      状态噪声和观测噪声的方差矩阵数值越大，表示你越不相信观测的数据，收敛的速度就慢，小则收敛速度快，但是抗干扰差，数值太小也不会收敛
     */
     double T = 0.010;
     //Sample time interval 10ms
@@ -81,7 +82,7 @@ public:
     //State to Obervation Matrix
     
 private:
-    double sigma_acceleration = 0.001;
+    double sigma_acceleration = 1;
     /*assume acceleration of Angle is Normal distribution
        ..
       Angle ~ N(0,0.001)
