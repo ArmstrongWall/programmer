@@ -4,108 +4,99 @@
 #include "astar.h"
 #include <sys/time.h>
 
-set<anode*,SetCompare_f> open_set;
-set<anode*,SetCompare_f> close_set;
+set<node> open_set;
+set<node> close_set;
+map<node,int> current_cost;
+map<node,node> come_from;
 
-struct  timeval  time_start,time_stop,time_search_start,time_search_stop;
-float   time_search_use;
+//define a heap
+template<typename T, typename priority_t>
+struct PriorityQueue {
+    typedef pair<priority_t, T> PQElement;
+    priority_queue<PQElement, vector<PQElement>,
+            std::greater<PQElement>> elements;
 
-int MoveCost(const int *const a){
+    inline bool empty() const { return elements.empty(); }
 
-    return *a**(a+1)?14:10;
+    inline void put(T item, priority_t priority) {
+        elements.emplace(priority, item);
+    }
+
+    inline T get() {
+        T best_item = elements.top().second;
+        elements.pop();
+        return best_item;
+    }
+};
+
+struct  timeval  time_start,time_stop;
+
+//int MoveCost(const int *const a){
+//
+//    return *a**(a+1)?14:10;
+//}
+int MoveCost(const node & a){
+
+    return a.x*a.z?14:10;
 }
 
-
-void AStarSearch(anode* & start,anode* & end , MAP & gridmap){
+void AStarSearch(const node & start,const node & end , MAP & gridmap){
 
     gettimeofday(&time_start,nullptr);
+    PriorityQueue< node, int> frontier;
+    static const vector<node> direction = {
+            { -1, -1 }, { -1, 0 }, { -1, 1 }, { 0, -1 },
+            {  0,  1 }, { 1, -1 }, { 1, 0 }, { 1, 1 } };
+
     open_set.insert(start);
-    int find_indicate = 0;
-    while(true) //end not in open_set
+    frontier.put(start, 0);
+    current_cost[start] = 0;
+    come_from[start] = start;
+
+
+    while(!frontier.empty())
     {
-        anode *current_node = *open_set.begin();
+        auto current_node = frontier.get();
 
-        close_set.insert(current_node);
-        open_set.erase(current_node);
-        //cout << "current is x=" <<current_node->x << " z=" << current_node->z << endl ;
-
-        int count = 0;
-
-        for (int j = 0 ; j < 8 ; j++) {
-            auto itr = open_set.begin();
-            anode * neighbor_node;
-            bool find_node = false;
-            gettimeofday(&time_search_start,nullptr);
-
-            while( itr != open_set.end() ){
-                if( current_node->x + direction[j][0] == (*itr)->x  &&  current_node->z + direction[j][1] == (*itr)->z ) {
-                    neighbor_node = *itr;
-                    find_node = true;
-                    break;
-                }
-                itr++;
-            }
-
-            gettimeofday(&time_search_stop,nullptr);
-            time_search_use += (time_search_stop.tv_sec-time_search_start.tv_sec)+(time_search_stop.tv_usec-time_search_start.tv_usec)/1000000.0;
-
-            if(!find_node){//open_set can't find current_node
-                neighbor_node = new anode;
-                neighbor_node->x = current_node->x + direction[j][0];
-                neighbor_node->z = current_node->z + direction[j][1];
-            }
-
-            if(   gridmap(neighbor_node->x,neighbor_node->z) ==  2
-               || gridmap(neighbor_node->x,neighbor_node->z) == -1
-               || close_set.find(neighbor_node) != close_set.end()) continue;
-
-            count ++;
-
-            int cost = current_node->f + MoveCost(direction[j]);
-
-            if(open_set.find(neighbor_node) != open_set.end() && cost < neighbor_node->g)
-                //neighbor_node  in open_set
-                open_set.erase(neighbor_node);
-
-            if(open_set.find(neighbor_node) == open_set.end() && close_set.find(neighbor_node) == close_set.end())
-                //neighbor_node  neither in open_set nor close_set
-            {
-                if( neighbor_node->x == end->x && neighbor_node->z == end->z )
-                {
-                    end->father = current_node;
-                    find_indicate = true;
-                    //std::cout << "END father x=" << neighbor_node->father->x << " z=" <<neighbor_node->father->z << std::endl;
-                    break;
-                }
-                neighbor_node->g = current_node->g + MoveCost(direction[j]);
-                neighbor_node->h = 10*(abs(neighbor_node->x - end->x) + abs(neighbor_node->z - end->z));
-                neighbor_node->f = neighbor_node->g + neighbor_node->h;
-                //Manhattan distance
-                neighbor_node->father = current_node;
-                open_set.insert(neighbor_node);
-            }
-            //delete neighbor_node;
-        }
-        if(!count)
-        {
-            cout << "can't find path" << endl;
-            break;
-        }
-        if(find_indicate)
-        {
+        if(current_node == end) {
             cout << "find end" << endl;
             break;
         }
 
-    }
+        open_set.erase(current_node);
+        close_set.insert(current_node);
 
+        for (auto index : direction) {
+            //get neighbor_node
+            auto neighbor_node = new node{current_node.x + index.x,current_node.z + index.z};
+
+            if(   gridmap(neighbor_node->x,neighbor_node->z) ==  2  //neighbor_node is obstacle
+               || gridmap(neighbor_node->x,neighbor_node->z) == -1  //no node in gridmap
+               || close_set.find(*neighbor_node) != close_set.end()) continue;
+
+            int cost = current_cost[current_node] + MoveCost(index);
+
+            if(open_set.find(*neighbor_node) != open_set.end() && cost < current_cost[*neighbor_node]) {
+                //neighbor_node  is already in open_set and ???
+                open_set.erase(*neighbor_node);
+                current_cost.erase(*neighbor_node);
+            }
+
+
+            if(open_set.find(*neighbor_node) == open_set.end() && close_set.find(*neighbor_node) == close_set.end())
+                //neighbor_node  neither in open_set nor close_set
+            {
+                current_cost[*neighbor_node] = cost;//only store g
+                int f = cost + 10*(abs(neighbor_node->x - end.x) + abs(neighbor_node->z - end.z));//h : Manhattan distance
+                frontier.put(*neighbor_node, f);
+                open_set.insert(*neighbor_node);
+                come_from[*neighbor_node] = current_node;
+            }
+            delete neighbor_node;
+        }
+    }
     gettimeofday(&time_stop,nullptr);
-    float cost_time  = (time_stop.tv_sec-time_start.tv_sec)+(time_stop.tv_usec-time_start.tv_usec)/1000000.0;
+    double cost_time  = (time_stop.tv_sec-time_start.tv_sec)+(time_stop.tv_usec-time_start.tv_usec)/1000000.0;
 
     cout <<"cost time " <<  cost_time << endl;
-    cout <<"serach cost time " << time_search_use << endl <<"serach/cost  "<< (time_search_use/cost_time)*100 << endl;
-
 }
-
-
-

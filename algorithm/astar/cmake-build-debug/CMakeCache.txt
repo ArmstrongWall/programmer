@@ -197,9 +197,6 @@ ProcessorCount_cmd_sysctl:FILEPATH=/sbin/sysctl
 //Value Computed by CMake
 astar_BINARY_DIR:STATIC=/home/johnny/git/programmer/algorithm/astar/cmake-build-debug
 
-//Dependencies for target
-astar_LIB_DEPENDS:STATIC=
-
 //Value Computed by CMake
 astar_SOURCE_DIR:STATIC=/home/johnny/git/programmer/algorithm/astar
 

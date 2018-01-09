@@ -7,40 +7,11 @@
 
 #include <vector>
 #include <map>
+#include <queue>
 #include <set>
 #include <iostream>
 
 using namespace std;
-
-static const int direction[8][2] = {
-        { -1, -1 }, { -1, 0 }, { -1, 1 }, { 0, -1 },
-        {  0,  1 }, { 1, -1 }, { 1, 0 }, { 1, 1 } };// 方向
-
-struct anode
-{
-    int    x        = 0;
-    int    z        = 0;
-    int    f        = 0;
-    int    g        = 0;
-    int    h        = 0;
-    anode* father   = nullptr;
-    //bool   used     = false;
-};
-
-class SetCompare_f
-{
-public:
-
-    bool operator() ( const anode *x, const anode *y ) const
-    {
-        return (        x->f <  y->f
-                    ||  x->f == y->f && x->x <  y->x
-                    ||  x->f == y->f && x->x == y->x && x->z < y->z );
-    }
-};
-
-extern set<anode*,SetCompare_f> open_set;
-extern set<anode*,SetCompare_f> close_set;
 
 
 struct node
@@ -51,7 +22,21 @@ struct node
     {
         return (this->x < compNode.x || (this->x == compNode.x && this->z < compNode.z));
     }
+    bool operator == (const node &compNode) const
+    {
+        return (this->x == compNode.x &&  this->z == compNode.z);
+    }
+    bool operator != (const node &compNode) const
+    {
+        return (this->x != compNode.x &&  this->z != compNode.z);
+    }
 };
+
+
+
+extern set<node> open_set;
+extern set<node> close_set;
+extern map<node,node> come_from;
 
 struct globalVertex
 {
@@ -78,17 +63,17 @@ public:
     }
     void gridInsertNode(int x, int z)
     {
-        node temp_n;
-        temp_n.x = x;
-        temp_n.z = z;
-        if(g_map.find(temp_n) == g_map.end())//no this node
+        auto temp_n = new node{x,z};
+
+        if(g_map.find(*temp_n) == g_map.end())//no this node
         {
-            g_map[temp_n] = 1;//add node
+            g_map[*temp_n] = 1;//add node
         }
         else//already have this node
         {
-            g_map[temp_n]++;//point cloud num ++
+            g_map[*temp_n]++;//point cloud num ++
         }
+        delete temp_n;
     }
 
 
@@ -99,10 +84,7 @@ public:
 
     int  &operator ()(int x, int z)
     {
-        node temp_n;
-        temp_n.x = x;
-        temp_n.z = z;
-
+        node temp_n{x,z};
         if (g_map.find(temp_n) == g_map.end())//no this node
         {
             //cout << "no this node"<<endl;
@@ -130,5 +112,5 @@ public:
     }
 };
 
-void AStarSearch(anode* & start,anode* & end, MAP & gridmap);
+void AStarSearch(const node & start,const node & end , MAP & gridmap);
 #endif //ASTAR_ASTAR_H
