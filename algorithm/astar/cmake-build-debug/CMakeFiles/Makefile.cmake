@@ -34,7 +34,6 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/home/johnny/Downloads/clion-2017.3/bin/cmake/share/cmake-3.9/Modules/CMakeTestCCompiler.cmake"
   "/home/johnny/Downloads/clion-2017.3/bin/cmake/share/cmake-3.9/Modules/CMakeTestCXXCompiler.cmake"
   "/home/johnny/Downloads/clion-2017.3/bin/cmake/share/cmake-3.9/Modules/CMakeTestCompilerCommon.cmake"
-  "/home/johnny/Downloads/clion-2017.3/bin/cmake/share/cmake-3.9/Modules/CMakeUnixFindMake.cmake"
   "/home/johnny/Downloads/clion-2017.3/bin/cmake/share/cmake-3.9/Modules/Compiler/ADSP-DetermineCompiler.cmake"
   "/home/johnny/Downloads/clion-2017.3/bin/cmake/share/cmake-3.9/Modules/Compiler/ARMCC-DetermineCompiler.cmake"
   "/home/johnny/Downloads/clion-2017.3/bin/cmake/share/cmake-3.9/Modules/Compiler/AppleClang-DetermineCompiler.cmake"
@@ -92,9 +91,9 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/home/johnny/Downloads/clion-2017.3/bin/cmake/share/cmake-3.9/Modules/Platform/UnixPaths.cmake"
   "/home/johnny/Downloads/clion-2017.3/bin/cmake/share/cmake-3.9/Modules/ProcessorCount.cmake"
   "../CMakeLists.txt"
-  "CMakeFiles/3.9.4/CMakeCCompiler.cmake"
-  "CMakeFiles/3.9.4/CMakeCXXCompiler.cmake"
-  "CMakeFiles/3.9.4/CMakeSystem.cmake"
+  "CMakeFiles/3.9.6/CMakeCCompiler.cmake"
+  "CMakeFiles/3.9.6/CMakeCXXCompiler.cmake"
+  "CMakeFiles/3.9.6/CMakeSystem.cmake"
   "CMakeFiles/feature_tests.c"
   "CMakeFiles/feature_tests.cxx"
   )
@@ -107,11 +106,11 @@ set(CMAKE_MAKEFILE_OUTPUTS
 
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
-  "CMakeFiles/3.9.4/CMakeSystem.cmake"
-  "CMakeFiles/3.9.4/CMakeCCompiler.cmake"
-  "CMakeFiles/3.9.4/CMakeCXXCompiler.cmake"
-  "CMakeFiles/3.9.4/CMakeCCompiler.cmake"
-  "CMakeFiles/3.9.4/CMakeCXXCompiler.cmake"
+  "CMakeFiles/3.9.6/CMakeSystem.cmake"
+  "CMakeFiles/3.9.6/CMakeCCompiler.cmake"
+  "CMakeFiles/3.9.6/CMakeCXXCompiler.cmake"
+  "CMakeFiles/3.9.6/CMakeCCompiler.cmake"
+  "CMakeFiles/3.9.6/CMakeCXXCompiler.cmake"
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 

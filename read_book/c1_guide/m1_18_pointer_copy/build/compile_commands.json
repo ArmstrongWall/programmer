@@ -1,7 +1,0 @@
-[
-{
-  "directory": "/home/wzq/programmer/read_book/c1_guide/m1_18_pointer_copy/build",
-  "command": "/usr/bin/c++     -g   -o CMakeFiles/project.dir/src/main.cpp.o -c /home/wzq/programmer/read_book/c1_guide/m1_18_pointer_copy/src/main.cpp",
-  "file": "/home/wzq/programmer/read_book/c1_guide/m1_18_pointer_copy/src/main.cpp"
-}
-]

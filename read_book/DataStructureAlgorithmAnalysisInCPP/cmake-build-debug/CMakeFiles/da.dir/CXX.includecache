@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/johnny/git/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/main.cpp
+iostream
+-
+
+/home/johnny/git/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/src/c1/recursion.cpp
+iostream
+-
+vector
+-
+
+/home/johnny/git/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/src/c4_3BinarySearchTree/BinarySearchTree.cpp
+
+/home/johnny/git/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/src/c4_4AVLTree/AVLTree.cpp
+
