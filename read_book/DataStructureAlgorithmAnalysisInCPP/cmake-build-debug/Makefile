@@ -231,6 +231,33 @@ src/c4_4AVLTree/AVLTree.cpp.s:
 	$(MAKE) -f CMakeFiles/da.dir/build.make CMakeFiles/da.dir/src/c4_4AVLTree/AVLTree.cpp.s
 .PHONY : src/c4_4AVLTree/AVLTree.cpp.s
 
+src/c6_3BinaryHeap/BinaryHeap.o: src/c6_3BinaryHeap/BinaryHeap.cpp.o
+
+.PHONY : src/c6_3BinaryHeap/BinaryHeap.o
+
+# target to build an object file
+src/c6_3BinaryHeap/BinaryHeap.cpp.o:
+	$(MAKE) -f CMakeFiles/da.dir/build.make CMakeFiles/da.dir/src/c6_3BinaryHeap/BinaryHeap.cpp.o
+.PHONY : src/c6_3BinaryHeap/BinaryHeap.cpp.o
+
+src/c6_3BinaryHeap/BinaryHeap.i: src/c6_3BinaryHeap/BinaryHeap.cpp.i
+
+.PHONY : src/c6_3BinaryHeap/BinaryHeap.i
+
+# target to preprocess a source file
+src/c6_3BinaryHeap/BinaryHeap.cpp.i:
+	$(MAKE) -f CMakeFiles/da.dir/build.make CMakeFiles/da.dir/src/c6_3BinaryHeap/BinaryHeap.cpp.i
+.PHONY : src/c6_3BinaryHeap/BinaryHeap.cpp.i
+
+src/c6_3BinaryHeap/BinaryHeap.s: src/c6_3BinaryHeap/BinaryHeap.cpp.s
+
+.PHONY : src/c6_3BinaryHeap/BinaryHeap.s
+
+# target to generate assembly for a file
+src/c6_3BinaryHeap/BinaryHeap.cpp.s:
+	$(MAKE) -f CMakeFiles/da.dir/build.make CMakeFiles/da.dir/src/c6_3BinaryHeap/BinaryHeap.cpp.s
+.PHONY : src/c6_3BinaryHeap/BinaryHeap.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -252,6 +279,9 @@ help:
 	@echo "... src/c4_4AVLTree/AVLTree.o"
 	@echo "... src/c4_4AVLTree/AVLTree.i"
 	@echo "... src/c4_4AVLTree/AVLTree.s"
+	@echo "... src/c6_3BinaryHeap/BinaryHeap.o"
+	@echo "... src/c6_3BinaryHeap/BinaryHeap.i"
+	@echo "... src/c6_3BinaryHeap/BinaryHeap.s"
 .PHONY : help
 
 

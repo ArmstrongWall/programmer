@@ -6,9 +6,17 @@
 
 #IncludeRegexTransform: 
 
+/home/johnny/git/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/include.h
+src/c6_3BinaryHeap/BinaryHeap.h
+/home/johnny/git/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/src/c6_3BinaryHeap/BinaryHeap.h
+src/c6_3BinaryHeap/BinaryHeap.cpp
+/home/johnny/git/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/src/c6_3BinaryHeap/BinaryHeap.cpp
+
 /home/johnny/git/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/main.cpp
 iostream
 -
+include.h
+/home/johnny/git/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/include.h
 
 /home/johnny/git/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/src/c1/recursion.cpp
 iostream
@@ -19,4 +27,14 @@ vector
 /home/johnny/git/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/src/c4_3BinarySearchTree/BinarySearchTree.cpp
 
 /home/johnny/git/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/src/c4_4AVLTree/AVLTree.cpp
+
+/home/johnny/git/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/src/c6_3BinaryHeap/BinaryHeap.cpp
+iostream
+-
+BinaryHeap.h
+/home/johnny/git/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/src/c6_3BinaryHeap/BinaryHeap.h
+
+/home/johnny/git/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/src/c6_3BinaryHeap/BinaryHeap.h
+vector
+-
 

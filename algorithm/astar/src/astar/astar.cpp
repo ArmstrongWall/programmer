@@ -77,7 +77,7 @@ void AStarSearch(const node & start,const node & end , MAP & gridmap){
             int cost = current_cost[current_node] + MoveCost(index);
 
             if(open_set.find(*neighbor_node) != open_set.end() && cost < current_cost[*neighbor_node]) {
-                //neighbor_node  is already in open_set and ???
+                //neighbor_node  is already in open_set and has a better path
                 open_set.erase(*neighbor_node);
                 current_cost.erase(*neighbor_node);
             }

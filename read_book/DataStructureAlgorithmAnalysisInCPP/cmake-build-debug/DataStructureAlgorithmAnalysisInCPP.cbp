@@ -84,6 +84,9 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/johnny/git/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/include.h">
+			<Option target="da"/>
+		</Unit>
 		<Unit filename="/home/johnny/git/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/main.cpp">
 			<Option target="da"/>
 		</Unit>
@@ -100,6 +103,12 @@
 			<Option target="da"/>
 		</Unit>
 		<Unit filename="/home/johnny/git/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/src/c4_4AVLTree/AVLTree.h">
+			<Option target="da"/>
+		</Unit>
+		<Unit filename="/home/johnny/git/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/src/c6_3BinaryHeap/BinaryHeap.cpp">
+			<Option target="da"/>
+		</Unit>
+		<Unit filename="/home/johnny/git/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/src/c6_3BinaryHeap/BinaryHeap.h">
 			<Option target="da"/>
 		</Unit>
 		<Unit filename="/home/johnny/git/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/CMakeLists.txt">
