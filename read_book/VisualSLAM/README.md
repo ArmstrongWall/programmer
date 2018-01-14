@@ -13,6 +13,7 @@
 ![pic](http://latex.codecogs.com/gif.latex?v_c=f_c(e,\boldsymbol{W},\boldsymbol{K},t))，
 使得
 ![pic](http://latex.codecogs.com/gif.latex?\lim_{t\to+\infty}(\boldsymbol{O_r}-\boldsymbol{O_L})=\boldsymbol{0})。
+
 ![pic](pic/c0/CarCoodinate.png)
 <center>图0.0</center>
 
