@@ -27,8 +27,8 @@
         <entry file="file://$PROJECT_DIR$/../VisualSLAM/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="18">
-                <caret line="1" column="134" lean-forward="false" selection-start-line="1" selection-start-column="134" selection-end-line="1" selection-end-column="134" />
+              <first_editor relative-caret-position="72">
+                <caret line="4" column="43" lean-forward="false" selection-start-line="4" selection-start-column="43" selection-end-line="4" selection-end-column="43" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -139,12 +139,12 @@
       <workItem from="1515819708079" duration="881000" />
       <workItem from="1515820828264" duration="9592000" />
       <workItem from="1515896539696" duration="6384000" />
-      <workItem from="1515906611262" duration="12674000" />
+      <workItem from="1515906611262" duration="17139000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48628000" />
+    <option name="totallyTimeSpent" value="53093000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-11" width="1853" height="1111" extended-state="6" />
@@ -411,8 +411,8 @@
     <entry file="file://$PROJECT_DIR$/../VisualSLAM/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="18">
-            <caret line="1" column="134" lean-forward="false" selection-start-line="1" selection-start-column="134" selection-end-line="1" selection-end-column="134" />
+          <first_editor relative-caret-position="72">
+            <caret line="4" column="43" lean-forward="false" selection-start-line="4" selection-start-column="43" selection-end-line="4" selection-end-column="43" />
             <folding />
           </first_editor>
           <second_editor />

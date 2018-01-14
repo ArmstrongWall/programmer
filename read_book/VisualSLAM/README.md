@@ -1,9 +1,21 @@
 # Viusal SLAM On WUGV 介绍
-![pic](http://latex.codecogs.com/gif.latex?\boldsymbol{R}=\begin{pmatrix}cos\theta\cos\phi&1&1\\\\c&1&1\\\\0&1&1\end{pmatrix}_{n\timesn})                                     
+![pic](http://latex.codecogs.com/gif.latex?\boldsymbol{R}=\begin{pmatrix}cos\theta\cos\phi&sin\psi\sin\theta\cos\phi\-cos\psi\sin\phi&cos\psi\sin\theta\cos\phi\+sin\psi\sin\phi\\\\cos\theta\sin\phi&sin\psi\sin\theta\sin\phi+cos\psi\cos\phi&cos\phi\sin\theta\sin\phi-sin\psi\cos\phi\\\\-sin\theta&sin\psi\cos\theta&cos\psi\cos\theta\end{pmatrix}_{3\times{3}})                                     
 ## 0. 解决什么问题 
 轮式无人地面交通载具(WUGV)如自动驾驶汽车，码头自动导引车，仓储运货机器人等等，都需要在无人工干预条件下自主地从
-起点到达终点，称之为点镇定问题，本文介绍一种解决方法。数学定义点镇定问题：给定车辆质心O，在世界坐标系的位姿是
-![pic](http://latex.codecogs.com/gif.latex?(x_r,y_r,\theta)),
+起点到达终点，称之为点镇定问题，本文介绍一种解决方法。数学定义点镇定问题：如图0.0，
+世界坐标系是
+![pic](http://latex.codecogs.com/gif.latex?\\{X_W,Y_W,O_W\\})，
+车辆质心为O，车辆移动坐标系是
+![pic](http://latex.codecogs.com/gif.latex?\\{X,Y,O\\})，
+车辆位姿O<sub>L</sub>是
+![pic](http://latex.codecogs.com/gif.latex?(X_L,Y_L,\theta))，
+给定任意位姿O<sub>r</sub>，设计机器人速度控制输入
+![pic](http://latex.codecogs.com/gif.latex?v_c=f_c(e,\boldsymbol{W},\boldsymbol{K},t))，
+使得
+![pic](http://latex.codecogs.com/gif.latex?\lim_{t\to+\infty}(\boldsymbol{O_r}-\boldsymbol{O_L})=\boldsymbol{0})。
+![pic](pic/c0/CarCoodinate.png)
+<center>图0.0</center>
+
 
 
 
