@@ -6,13 +6,14 @@
 世界坐标系是
 ![pic](http://latex.codecogs.com/gif.latex?\\{X_W,Y_W,O_W\\})，
 车辆质心为O，车辆移动坐标系是
-![pic](http://latex.codecogs.com/gif.latex?\\{X,Y,O\\})，
-车辆位姿O<sub>L</sub>是
+![pic](http://latex.codecogs.com/gif.latex?\\{X,Y,P\\})，
+车辆位姿P<sub>L</sub>是
 ![pic](http://latex.codecogs.com/gif.latex?(X_L,Y_L,\theta))，
-给定任意位姿O<sub>r</sub>，设计机器人速度控制输入
+给定任意位姿P<sub>r</sub>，设计机器人速度控制输入
 ![pic](http://latex.codecogs.com/gif.latex?v_c=f_c(e,\boldsymbol{W},\boldsymbol{K},t))，
-使得
-![pic](http://latex.codecogs.com/gif.latex?\lim_{t\to+\infty}(\boldsymbol{O_r}-\boldsymbol{O_L})=\boldsymbol{0})。
+其中e,W,K分别为位置误差，参考速度矢量和控制增益矢量，使得
+
+![pic](http://latex.codecogs.com/gif.latex?\lim_{t\to+\infty}(\boldsymbol{P_r}-\boldsymbol{P_L})=\boldsymbol{0})。
 
 ![pic](pic/c0/CarCoodinate.png)
 <center>图0.0</center>
