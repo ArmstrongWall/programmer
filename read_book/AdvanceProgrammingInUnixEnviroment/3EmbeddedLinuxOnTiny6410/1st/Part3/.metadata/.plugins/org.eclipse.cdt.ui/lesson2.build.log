@@ -1,0 +1,6 @@
+
+**** Build of configuration Default for project lesson2 ****
+
+make all 
+arm-linux-gcc -g -o start.o start.S -c
+arm-linux-ld -Ttext 0x50008000 -o start.elf start.o

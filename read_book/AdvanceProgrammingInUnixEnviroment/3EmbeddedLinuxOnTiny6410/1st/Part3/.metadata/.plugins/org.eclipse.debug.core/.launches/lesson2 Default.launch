@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="com.zylin.embeddedcdt.idleNative">
+<booleanAttribute key="com.zylin.embeddedcdt.debugger_app_console" value="false"/>
+<stringAttribute key="com.zylin.embeddedcdt.debugger_init_commands" value="# tiny6410_config&#10;# connect to the J-Link gdb server&#10;target remote localhost:2331&#10;# Set JTAG speed to 30 kHz&#10;monitor endian little&#10;monitor speed 30&#10;# Reset the target&#10;monitor reset&#10;monitor sleep 10&#10;#&#10;# CPU core initialization (to be done by user)&#10;#&#10;# Set the processor mode&#10;monitor reg cpsr = 0xd3&#10;#config MMU&#10;#flush v3/v4 cache&#10;monitor cp15 7, 7, 0, 0 = 0x0&#10;#/* flush v4 TLB */&#10;monitor cp15 8, 7, 0, 0 = 0x0&#10;#disable MMU stuff and caches&#10;monitor cp15 1, 0, 0, 0 =0x1002&#10;#Peri port setup&#10;monitor cp15 15, 2, 0, 4 = 0x70000013&#10;#disable watchdog&#10;monitor MemU32 0x7e004000  =  0x00000000&#10;monitor sleep 10&#10;#disable interrupt&#10;monitor MemU32 0x71200014  =  0x00000000&#10;monitor MemU32 0x71300014  =  0x00000000&#10;monitor MemU32 0x7120000C  =  0x00000000&#10;monitor MemU32 0x7130000C  =  0x00000000&#10;monitor MemU32 0x71200F00  =  0x00000000&#10;monitor MemU32 0x71300F00  =  0x00000000&#10;#set clock &#10;monitor MemU32 0x7e00f900  =  0x0000801e&#10;monitor MemU32 0x7e00f000  =  0x0000ffff&#10;monitor MemU32 0x7e00f004  =  0x0000ffff&#10;monitor MemU32 0x7e00f020  =  0x01043310&#10;monitor MemU32 0x7e00f00C  =  0xc2150601&#10;monitor MemU32 0x7e00f010  =  0xc2150601&#10;monitor MemU32 0x7e00f024  =  0x00000003&#10;monitor MemU32 0x7e00f014  =  0x00200102&#10;monitor MemU32 0x7e00f018  =  0x00000000&#10;monitor MemU32 0x7e00f01C  =  0x14000007&#10;#config sdram&#10;monitor MemU32 0x7e00f120  =  0x00000008&#10;monitor MemU32 0x7e001004  =  0x00000004&#10;monitor MemU32 0x7e001010  =  0x0000040f&#10;monitor MemU32 0x7e001014  =  0x00000006&#10;monitor MemU32 0x7e001018  =  0x00000001&#10;monitor MemU32 0x7e00101c  =  0x00000002&#10;monitor MemU32 0x7e001020  =  0x00000006&#10;monitor MemU32 0x7e001024  =  0x0000000a&#10;monitor MemU32 0x7e001028  =  0x0000000c&#10;monitor MemU32 0x7e00102c  =  0x0000018f&#10;monitor MemU32 0x7e001030  =  0x0000000c&#10;monitor MemU32 0x7e001034  =  0x00000002&#10;monitor MemU32 0x7e001038  =  0x00000002&#10;monitor MemU32 0x7e00103c  =  0x00000002&#10;monitor MemU32 0x7e001040  =  0x00000002&#10;monitor MemU32 0x7e001044  =  0x00000013&#10;monitor MemU32 0x7e001048  =  0x00000013&#10;monitor MemU32 0x7e00100C  =  0x00010012&#10;monitor MemU32 0x7e00104C  =  0x00000b45&#10;monitor MemU32 0x7e001200  =  0x000150f8&#10;monitor MemU32 0x7e001304  =  0x00000000&#10;monitor MemU32 0x7e001008  =  0x000c0000&#10;monitor MemU32 0x7e001008  =  0x00000000&#10;monitor MemU32 0x7e001008  =  0x00040000&#10;monitor MemU32 0x7e001008  =  0x00040000&#10;monitor MemU32 0x7e001008  =  0x000a0000&#10;monitor MemU32 0x7e001008  =  0x00080032&#10;monitor MemU32 0x7e001004  =  0x00000000&#10;# Setup GDB for faster downloads&#10;#set remote memory-write-packet-size 1024&#10;set remote memory-write-packet-size 4096&#10;set remote memory-write-packet-size fixed&#10;monitor speed 12000&#10;break _start&#10;load"/>
+<booleanAttribute key="org.eclipse.cdt.debug.mi.core.AUTO_SOLIB" value="true"/>
+<listAttribute key="org.eclipse.cdt.debug.mi.core.AUTO_SOLIB_LIST"/>
+<stringAttribute key="org.eclipse.cdt.debug.mi.core.DEBUG_NAME" value="arm-linux-gdb"/>
+<stringAttribute key="org.eclipse.cdt.debug.mi.core.DEV" value="/dev/ttyS0"/>
+<stringAttribute key="org.eclipse.cdt.debug.mi.core.DEV_SPEED" value="115200"/>
+<stringAttribute key="org.eclipse.cdt.debug.mi.core.GDB_INIT" value=""/>
+<stringAttribute key="org.eclipse.cdt.debug.mi.core.HOST" value="localhost"/>
+<stringAttribute key="org.eclipse.cdt.debug.mi.core.PORT" value="10000"/>
+<booleanAttribute key="org.eclipse.cdt.debug.mi.core.REMOTE_TCP" value="false"/>
+<listAttribute key="org.eclipse.cdt.debug.mi.core.SOLIB_PATH"/>
+<booleanAttribute key="org.eclipse.cdt.debug.mi.core.STOP_ON_SOLIB_EVENTS" value="false"/>
+<booleanAttribute key="org.eclipse.cdt.debug.mi.core.breakpointsFullPath" value="false"/>
+<stringAttribute key="org.eclipse.cdt.debug.mi.core.commandFactory" value="org.eclipse.cdt.debug.mi.core.standardCommandFactory"/>
+<stringAttribute key="org.eclipse.cdt.debug.mi.core.protocol" value="mi"/>
+<booleanAttribute key="org.eclipse.cdt.debug.mi.core.verboseMode" value="false"/>
+<stringAttribute key="org.eclipse.cdt.launch.DEBUGGER_ID" value="com.zylin.embeddedcdt.EmbeddedCDebugger"/>
+<stringAttribute key="org.eclipse.cdt.launch.DEBUGGER_REGISTER_GROUPS" value=""/>
+<stringAttribute key="org.eclipse.cdt.launch.DEBUGGER_START_MODE" value="run"/>
+<booleanAttribute key="org.eclipse.cdt.launch.DEBUGGER_STOP_AT_MAIN" value="false"/>
+<stringAttribute key="org.eclipse.cdt.launch.DEBUGGER_STOP_AT_MAIN_SYMBOL" value="main"/>
+<booleanAttribute key="org.eclipse.cdt.launch.ENABLE_REGISTER_BOOKKEEPING" value="false"/>
+<booleanAttribute key="org.eclipse.cdt.launch.ENABLE_VARIABLE_BOOKKEEPING" value="false"/>
+<stringAttribute key="org.eclipse.cdt.launch.FORMAT" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;&lt;contentList&gt;&lt;content id=&quot;r0-(format)&quot; val=&quot;2&quot;/&gt;&lt;content id=&quot;r1-(format)&quot; val=&quot;4&quot;/&gt;&lt;content id=&quot;r2-(format)&quot; val=&quot;4&quot;/&gt;&lt;content id=&quot;r3-(format)&quot; val=&quot;4&quot;/&gt;&lt;content id=&quot;r4-(format)&quot; val=&quot;4&quot;/&gt;&lt;content id=&quot;r5-(format)&quot; val=&quot;4&quot;/&gt;&lt;content id=&quot;r6-(format)&quot; val=&quot;4&quot;/&gt;&lt;content id=&quot;r7-(format)&quot; val=&quot;4&quot;/&gt;&lt;content id=&quot;r8-(format)&quot; val=&quot;4&quot;/&gt;&lt;content id=&quot;r9-(format)&quot; val=&quot;4&quot;/&gt;&lt;content id=&quot;r10-(format)&quot; val=&quot;4&quot;/&gt;&lt;content id=&quot;r11-(format)&quot; val=&quot;4&quot;/&gt;&lt;content id=&quot;r12-(format)&quot; val=&quot;4&quot;/&gt;&lt;content id=&quot;sp-(format)&quot; val=&quot;4&quot;/&gt;&lt;content id=&quot;lr-(format)&quot; val=&quot;4&quot;/&gt;&lt;content id=&quot;pc-(format)&quot; val=&quot;4&quot;/&gt;&lt;content id=&quot;f0-(format)&quot; val=&quot;4&quot;/&gt;&lt;content id=&quot;f1-(format)&quot; val=&quot;4&quot;/&gt;&lt;content id=&quot;f2-(format)&quot; val=&quot;4&quot;/&gt;&lt;content id=&quot;f3-(format)&quot; val=&quot;4&quot;/&gt;&lt;content id=&quot;f4-(format)&quot; val=&quot;4&quot;/&gt;&lt;content id=&quot;f5-(format)&quot; val=&quot;4&quot;/&gt;&lt;content id=&quot;f6-(format)&quot; val=&quot;4&quot;/&gt;&lt;content id=&quot;f7-(format)&quot; val=&quot;4&quot;/&gt;&lt;content id=&quot;fps-(format)&quot; val=&quot;4&quot;/&gt;&lt;content id=&quot;cpsr-(format)&quot; val=&quot;4&quot;/&gt;&lt;/contentList&gt;"/>
+<stringAttribute key="org.eclipse.cdt.launch.GLOBAL_VARIABLES" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;&#10;&lt;globalVariableList/&gt;&#10;"/>
+<stringAttribute key="org.eclipse.cdt.launch.MEMORY_BLOCKS" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;no&quot;?&gt;&#10;&lt;memoryBlockExpressionList/&gt;&#10;"/>
+<stringAttribute key="org.eclipse.cdt.launch.PROGRAM_NAME" value="/home/S3_ARM/Part3/lesson2/start.elf"/>
+<stringAttribute key="org.eclipse.cdt.launch.PROJECT_ATTR" value="lesson2"/>
+<stringAttribute key="org.eclipse.cdt.launch.PROJECT_BUILD_CONFIG_ID_ATTR" value="0.1136780218"/>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+<listEntry value="/lesson2"/>
+</listAttribute>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+<listEntry value="4"/>
+</listAttribute>
+</launchConfiguration>

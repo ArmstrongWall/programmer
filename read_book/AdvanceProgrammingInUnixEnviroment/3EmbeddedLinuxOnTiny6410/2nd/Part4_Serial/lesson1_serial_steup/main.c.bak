@@ -1,0 +1,81 @@
+/*
+@Platform: Friendly Arm tiny6410
+@CPU: S3C6410
+@Function: Bootloader0 ,init cpu 
+@Written by Armstrong Wall
+@Start wrirte date: 2016.3.3
+@Daily: 		2016.3.6  Finish init MMU
+ 						2016.3.7  Finish interrupt
+ 						2016.3.10 Nand Flash 
+*/
+
+
+int gboot_main()
+{
+	
+	unsigned long a=2000000;
+//A page dataof Nand Flash 
+#ifdef MMU_ON	
+  mmu_init();
+#endif
+
+  led_init();
+	
+	button_init();
+	init_irq();
+	uart_init();
+	
+	led_off();
+	while(a--);
+	led_on();
+	
+	put_char(0x0d);
+	put_char(0x0c);
+	
+	put_char('H');
+		
+	while(1)
+	{
+  	get_char();
+		}
+	
+	
+	return 0;
+}
+
+/*
+int gboot_main()
+{
+	unsigned long a=500000;
+	*(GPKCON0) = 0x11110000;
+	
+	while(1)
+	{
+		light_led();
+		
+	  *(GPKDAT)  = 0xb0;
+	  while(a--);
+	  a=500000;
+	  
+	  
+	  *(GPKDAT)  = 0x70;
+	  while(a--);
+	  a=500000;
+	  
+	  *(GPKDAT)  = 0xd0;
+	  while(a--);
+	  a=500000;
+	  
+	  *(GPKDAT)  = 0xe0;
+	  while(a--);
+	  a=500000;
+	  
+	  
+		
+		}
+	
+	
+	
+	return 0;
+}
+*/

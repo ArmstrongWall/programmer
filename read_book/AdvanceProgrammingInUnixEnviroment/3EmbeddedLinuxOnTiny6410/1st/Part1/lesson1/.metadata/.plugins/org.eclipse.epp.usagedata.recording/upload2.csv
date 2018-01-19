@@ -1,0 +1,301 @@
+what,kind,bundleId,bundleVersion,description,time
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1452726213511
+activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1452726459050
+activated,view,org.eclipse.ui.ide,3.6.2.M20101201-0800,"org.eclipse.ui.views.ProblemView",1452726511999
+opened,view,org.eclipse.ui.ide,3.6.2.M20101201-0800,"org.eclipse.ui.views.TaskList",1452726513067
+activated,view,org.eclipse.ui.ide,3.6.2.M20101201-0800,"org.eclipse.ui.views.TaskList",1452726513075
+activated,view,org.eclipse.ui.console,3.5.0.v20100526,"org.eclipse.ui.console.ConsoleView",1452726514049
+executed,command,org.eclipse.ui,3.6.2.M20110203-1100,"org.eclipse.ui.edit.copy",1452726580973
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1452726585430
+activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1452726821783
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1452726829988
+activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1452727248040
+error,log,,,"Failed command: target remote localhost:2331",1452727261600
+error,log,,,"Failed command: monitor endian little",1452727261701
+error,log,,,"Failed command: monitor speed 30",1452727261803
+error,log,,,"Failed command: monitor reset",1452727261905
+error,log,,,"Failed command: monitor sleep 10",1452727262006
+error,log,,,"Failed command: monitor reg cpsr = 0xd3",1452727262108
+error,log,,,"Failed command: monitor cp15 7, 7, 0, 0 = 0x0",1452727262209
+error,log,,,"Failed command: monitor cp15 8, 7, 0, 0 = 0x0",1452727262311
+error,log,,,"Failed command: monitor cp15 1, 0, 0, 0 =0x1002",1452727262412
+error,log,,,"Failed command: monitor cp15 15, 2, 0, 4 = 0x70000013",1452727262513
+error,log,,,"Failed command: monitor MemU32 0x7e004000  =  0x00000000",1452727262614
+error,log,,,"Failed command: monitor sleep 10",1452727262715
+error,log,,,"Failed command: monitor MemU32 0x71200014  =  0x00000000",1452727262817
+error,log,,,"Failed command: monitor MemU32 0x71300014  =  0x00000000",1452727262919
+error,log,,,"Failed command: monitor MemU32 0x7120000C  =  0x00000000",1452727263021
+error,log,,,"Failed command: monitor MemU32 0x7130000C  =  0x00000000",1452727263122
+error,log,,,"Failed command: monitor MemU32 0x71200F00  =  0x00000000",1452727263223
+error,log,,,"Failed command: monitor MemU32 0x71300F00  =  0x00000000",1452727263325
+error,log,,,"Failed command: monitor MemU32 0x7e00f900  =  0x0000801e",1452727263427
+error,log,,,"Failed command: monitor MemU32 0x7e00f000  =  0x0000ffff",1452727263530
+error,log,,,"Failed command: monitor MemU32 0x7e00f004  =  0x0000ffff",1452727263631
+error,log,,,"Failed command: monitor MemU32 0x7e00f020  =  0x01043310",1452727263733
+error,log,,,"Failed command: monitor MemU32 0x7e00f00C  =  0xc2150601",1452727263835
+error,log,,,"Failed command: monitor MemU32 0x7e00f010  =  0xc2150601",1452727263936
+error,log,,,"Failed command: monitor MemU32 0x7e00f024  =  0x00000003",1452727264038
+error,log,,,"Failed command: monitor MemU32 0x7e00f014  =  0x00200102",1452727264140
+error,log,,,"Failed command: monitor MemU32 0x7e00f018  =  0x00000000",1452727264242
+error,log,,,"Failed command: monitor MemU32 0x7e00f01C  =  0x14000007",1452727264344
+error,log,,,"Failed command: monitor MemU32 0x7e00f120  =  0x00000008",1452727264446
+error,log,,,"Failed command: monitor MemU32 0x7e001004  =  0x00000004",1452727264547
+error,log,,,"Failed command: monitor MemU32 0x7e001010  =  0x0000040f",1452727264649
+error,log,,,"Failed command: monitor MemU32 0x7e001014  =  0x00000006",1452727264750
+error,log,,,"Failed command: monitor MemU32 0x7e001018  =  0x00000001",1452727264853
+error,log,,,"Failed command: monitor MemU32 0x7e00101c  =  0x00000002",1452727264955
+error,log,,,"Failed command: monitor MemU32 0x7e001020  =  0x00000006",1452727265056
+error,log,,,"Failed command: monitor MemU32 0x7e001024  =  0x0000000a",1452727265158
+error,log,,,"Failed command: monitor MemU32 0x7e001028  =  0x0000000c",1452727265259
+error,log,,,"Failed command: monitor MemU32 0x7e00102c  =  0x0000018f",1452727265360
+error,log,,,"Failed command: monitor MemU32 0x7e001030  =  0x0000000c",1452727265462
+error,log,,,"Failed command: monitor MemU32 0x7e001034  =  0x00000002",1452727265564
+error,log,,,"Failed command: monitor MemU32 0x7e001038  =  0x00000002",1452727265666
+error,log,,,"Failed command: monitor MemU32 0x7e00103c  =  0x00000002",1452727265768
+error,log,,,"Failed command: monitor MemU32 0x7e001040  =  0x00000002",1452727265870
+error,log,,,"Failed command: monitor MemU32 0x7e001044  =  0x00000013",1452727265972
+error,log,,,"Failed command: monitor MemU32 0x7e001048  =  0x00000013",1452727266075
+error,log,,,"Failed command: monitor MemU32 0x7e00100C  =  0x00010012",1452727266178
+error,log,,,"Failed command: monitor MemU32 0x7e00104C  =  0x00000b45",1452727266282
+error,log,,,"Failed command: monitor MemU32 0x7e001200  =  0x000150f8",1452727266383
+error,log,,,"Failed command: monitor MemU32 0x7e001304  =  0x00000000",1452727266484
+error,log,,,"Failed command: monitor MemU32 0x7e001008  =  0x000c0000",1452727266587
+error,log,,,"Failed command: monitor MemU32 0x7e001008  =  0x00000000",1452727266703
+error,log,,,"Failed command: monitor MemU32 0x7e001008  =  0x00040000",1452727266805
+error,log,,,"Failed command: monitor MemU32 0x7e001008  =  0x00040000",1452727266906
+error,log,,,"Failed command: monitor MemU32 0x7e001008  =  0x000a0000",1452727267008
+error,log,,,"Failed command: monitor MemU32 0x7e001008  =  0x00080032",1452727267109
+error,log,,,"Failed command: monitor MemU32 0x7e001004  =  0x00000000",1452727267210
+error,log,,,"Failed command: monitor speed 12000",1452727267514
+error,log,,,"Failed command: load",1452727267717
+error,log,,,"Failed command: target remote localhost:2331",1452727291696
+error,log,,,"Failed command: monitor endian little",1452727291798
+error,log,,,"Failed command: monitor speed 30",1452727291900
+error,log,,,"Failed command: monitor reset",1452727292001
+error,log,,,"Failed command: monitor sleep 10",1452727292102
+error,log,,,"Failed command: monitor reg cpsr = 0xd3",1452727292204
+error,log,,,"Failed command: monitor cp15 7, 7, 0, 0 = 0x0",1452727292305
+error,log,,,"Failed command: monitor cp15 8, 7, 0, 0 = 0x0",1452727292406
+error,log,,,"Failed command: monitor cp15 1, 0, 0, 0 =0x1002",1452727292507
+error,log,,,"Failed command: monitor cp15 15, 2, 0, 4 = 0x70000013",1452727292608
+error,log,,,"Failed command: monitor MemU32 0x7e004000  =  0x00000000",1452727292709
+error,log,,,"Failed command: monitor sleep 10",1452727292810
+error,log,,,"Failed command: monitor MemU32 0x71200014  =  0x00000000",1452727292911
+error,log,,,"Failed command: monitor MemU32 0x71300014  =  0x00000000",1452727293015
+error,log,,,"Failed command: monitor MemU32 0x7120000C  =  0x00000000",1452727293119
+error,log,,,"Failed command: monitor MemU32 0x7130000C  =  0x00000000",1452727293221
+error,log,,,"Failed command: monitor MemU32 0x71200F00  =  0x00000000",1452727293323
+error,log,,,"Failed command: monitor MemU32 0x71300F00  =  0x00000000",1452727293425
+error,log,,,"Failed command: monitor MemU32 0x7e00f900  =  0x0000801e",1452727293527
+error,log,,,"Failed command: monitor MemU32 0x7e00f000  =  0x0000ffff",1452727293628
+error,log,,,"Failed command: monitor MemU32 0x7e00f004  =  0x0000ffff",1452727293730
+error,log,,,"Failed command: monitor MemU32 0x7e00f020  =  0x01043310",1452727293834
+error,log,,,"Failed command: monitor MemU32 0x7e00f00C  =  0xc2150601",1452727293935
+error,log,,,"Failed command: monitor MemU32 0x7e00f010  =  0xc2150601",1452727294038
+error,log,,,"Failed command: monitor MemU32 0x7e00f024  =  0x00000003",1452727294139
+error,log,,,"Failed command: monitor MemU32 0x7e00f014  =  0x00200102",1452727294242
+error,log,,,"Failed command: monitor MemU32 0x7e00f018  =  0x00000000",1452727294345
+error,log,,,"Failed command: monitor MemU32 0x7e00f01C  =  0x14000007",1452727294446
+error,log,,,"Failed command: monitor MemU32 0x7e00f120  =  0x00000008",1452727294547
+error,log,,,"Failed command: monitor MemU32 0x7e001004  =  0x00000004",1452727294648
+error,log,,,"Failed command: monitor MemU32 0x7e001010  =  0x0000040f",1452727294749
+error,log,,,"Failed command: monitor MemU32 0x7e001014  =  0x00000006",1452727294850
+error,log,,,"Failed command: monitor MemU32 0x7e001018  =  0x00000001",1452727294951
+error,log,,,"Failed command: monitor MemU32 0x7e00101c  =  0x00000002",1452727295059
+error,log,,,"Failed command: monitor MemU32 0x7e001020  =  0x00000006",1452727295162
+error,log,,,"Failed command: monitor MemU32 0x7e001024  =  0x0000000a",1452727295264
+error,log,,,"Failed command: monitor MemU32 0x7e001028  =  0x0000000c",1452727295366
+error,log,,,"Failed command: monitor MemU32 0x7e00102c  =  0x0000018f",1452727295467
+error,log,,,"Failed command: monitor MemU32 0x7e001030  =  0x0000000c",1452727295569
+error,log,,,"Failed command: monitor MemU32 0x7e001034  =  0x00000002",1452727295674
+error,log,,,"Failed command: monitor MemU32 0x7e001038  =  0x00000002",1452727295777
+error,log,,,"Failed command: monitor MemU32 0x7e00103c  =  0x00000002",1452727295880
+error,log,,,"Failed command: monitor MemU32 0x7e001040  =  0x00000002",1452727295983
+error,log,,,"Failed command: monitor MemU32 0x7e001044  =  0x00000013",1452727296089
+error,log,,,"Failed command: monitor MemU32 0x7e001048  =  0x00000013",1452727296190
+error,log,,,"Failed command: monitor MemU32 0x7e00100C  =  0x00010012",1452727296292
+error,log,,,"Failed command: monitor MemU32 0x7e00104C  =  0x00000b45",1452727296393
+error,log,,,"Failed command: monitor MemU32 0x7e001200  =  0x000150f8",1452727296494
+error,log,,,"Failed command: monitor MemU32 0x7e001304  =  0x00000000",1452727296595
+error,log,,,"Failed command: monitor MemU32 0x7e001008  =  0x000c0000",1452727296696
+error,log,,,"Failed command: monitor MemU32 0x7e001008  =  0x00000000",1452727296798
+error,log,,,"Failed command: monitor MemU32 0x7e001008  =  0x00040000",1452727296900
+error,log,,,"Failed command: monitor MemU32 0x7e001008  =  0x00040000",1452727297001
+error,log,,,"Failed command: monitor MemU32 0x7e001008  =  0x000a0000",1452727297103
+error,log,,,"Failed command: monitor MemU32 0x7e001008  =  0x00080032",1452727297205
+error,log,,,"Failed command: monitor MemU32 0x7e001004  =  0x00000000",1452727297308
+error,log,,,"Failed command: monitor speed 12000",1452727297611
+error,log,,,"Failed command: load",1452727297813
+activated,view,org.eclipse.ui.views,3.5.1.M20110202-0800,"org.eclipse.ui.views.ContentOutline",1452727323963
+activated,editor,org.eclipse.cdt.ui,5.2.2.201102110609,"org.eclipse.cdt.ui.editor.asm.AsmEditor",1452727334591
+activated,view,org.eclipse.ui.console,3.5.0.v20100526,"org.eclipse.ui.console.ConsoleView",1452727336193
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1452727339393
+activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1452727376710
+activated,editor,org.eclipse.cdt.ui,5.2.2.201102110609,"org.eclipse.cdt.ui.editor.asm.AsmEditor",1452727382921
+activated,view,org.eclipse.ui.console,3.5.0.v20100526,"org.eclipse.ui.console.ConsoleView",1452727402327
+error,log,,,"Failed command: target remote localhost:2331",1452727402368
+error,log,,,"Failed command: monitor endian little",1452727402471
+error,log,,,"Failed command: monitor speed 30",1452727402573
+error,log,,,"Failed command: monitor reset",1452727402675
+error,log,,,"Failed command: monitor sleep 10",1452727402776
+error,log,,,"Failed command: monitor reg cpsr = 0xd3",1452727402878
+error,log,,,"Failed command: monitor cp15 7, 7, 0, 0 = 0x0",1452727402980
+error,log,,,"Failed command: monitor cp15 8, 7, 0, 0 = 0x0",1452727403081
+error,log,,,"Failed command: monitor cp15 1, 0, 0, 0 =0x1002",1452727403183
+error,log,,,"Failed command: monitor cp15 15, 2, 0, 4 = 0x70000013",1452727403287
+error,log,,,"Failed command: monitor MemU32 0x7e004000  =  0x00000000",1452727403389
+error,log,,,"Failed command: monitor sleep 10",1452727403491
+error,log,,,"Failed command: monitor MemU32 0x71200014  =  0x00000000",1452727403593
+error,log,,,"Failed command: monitor MemU32 0x71300014  =  0x00000000",1452727403706
+error,log,,,"Failed command: monitor MemU32 0x7120000C  =  0x00000000",1452727403810
+error,log,,,"Failed command: monitor MemU32 0x7130000C  =  0x00000000",1452727403912
+error,log,,,"Failed command: monitor MemU32 0x71200F00  =  0x00000000",1452727404013
+error,log,,,"Failed command: monitor MemU32 0x71300F00  =  0x00000000",1452727404114
+error,log,,,"Failed command: monitor MemU32 0x7e00f900  =  0x0000801e",1452727404215
+error,log,,,"Failed command: monitor MemU32 0x7e00f000  =  0x0000ffff",1452727404316
+error,log,,,"Failed command: monitor MemU32 0x7e00f004  =  0x0000ffff",1452727404418
+error,log,,,"Failed command: monitor MemU32 0x7e00f020  =  0x01043310",1452727404520
+error,log,,,"Failed command: monitor MemU32 0x7e00f00C  =  0xc2150601",1452727404622
+error,log,,,"Failed command: monitor MemU32 0x7e00f010  =  0xc2150601",1452727404724
+error,log,,,"Failed command: monitor MemU32 0x7e00f024  =  0x00000003",1452727404826
+error,log,,,"Failed command: monitor MemU32 0x7e00f014  =  0x00200102",1452727404928
+error,log,,,"Failed command: monitor MemU32 0x7e00f018  =  0x00000000",1452727405030
+error,log,,,"Failed command: monitor MemU32 0x7e00f01C  =  0x14000007",1452727405132
+error,log,,,"Failed command: monitor MemU32 0x7e00f120  =  0x00000008",1452727405234
+error,log,,,"Failed command: monitor MemU32 0x7e001004  =  0x00000004",1452727405336
+error,log,,,"Failed command: monitor MemU32 0x7e001010  =  0x0000040f",1452727405437
+error,log,,,"Failed command: monitor MemU32 0x7e001014  =  0x00000006",1452727405539
+error,log,,,"Failed command: monitor MemU32 0x7e001018  =  0x00000001",1452727405641
+error,log,,,"Failed command: monitor MemU32 0x7e00101c  =  0x00000002",1452727405742
+error,log,,,"Failed command: monitor MemU32 0x7e001020  =  0x00000006",1452727405844
+error,log,,,"Failed command: monitor MemU32 0x7e001024  =  0x0000000a",1452727405948
+error,log,,,"Failed command: monitor MemU32 0x7e001028  =  0x0000000c",1452727406050
+error,log,,,"Failed command: monitor MemU32 0x7e00102c  =  0x0000018f",1452727406152
+error,log,,,"Failed command: monitor MemU32 0x7e001030  =  0x0000000c",1452727406255
+error,log,,,"Failed command: monitor MemU32 0x7e001034  =  0x00000002",1452727406357
+error,log,,,"Failed command: monitor MemU32 0x7e001038  =  0x00000002",1452727406459
+error,log,,,"Failed command: monitor MemU32 0x7e00103c  =  0x00000002",1452727406561
+error,log,,,"Failed command: monitor MemU32 0x7e001040  =  0x00000002",1452727406663
+error,log,,,"Failed command: monitor MemU32 0x7e001044  =  0x00000013",1452727406765
+error,log,,,"Failed command: monitor MemU32 0x7e001048  =  0x00000013",1452727406867
+error,log,,,"Failed command: monitor MemU32 0x7e00100C  =  0x00010012",1452727406969
+error,log,,,"Failed command: monitor MemU32 0x7e00104C  =  0x00000b45",1452727407070
+error,log,,,"Failed command: monitor MemU32 0x7e001200  =  0x000150f8",1452727407172
+error,log,,,"Failed command: monitor MemU32 0x7e001304  =  0x00000000",1452727407273
+error,log,,,"Failed command: monitor MemU32 0x7e001008  =  0x000c0000",1452727407374
+error,log,,,"Failed command: monitor MemU32 0x7e001008  =  0x00000000",1452727407476
+error,log,,,"Failed command: monitor MemU32 0x7e001008  =  0x00040000",1452727407578
+error,log,,,"Failed command: monitor MemU32 0x7e001008  =  0x00040000",1452727407678
+error,log,,,"Failed command: monitor MemU32 0x7e001008  =  0x000a0000",1452727407780
+error,log,,,"Failed command: monitor MemU32 0x7e001008  =  0x00080032",1452727407882
+error,log,,,"Failed command: monitor MemU32 0x7e001004  =  0x00000000",1452727407984
+error,log,,,"Failed command: monitor speed 12000",1452727408292
+error,log,,,"Failed command: load",1452727408495
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1452727478182
+activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1452727487889
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1452727491064
+activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1452727502506
+error,log,,,"Failed command: target remote localhost:2331",1452727515994
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1452727516046
+activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1452727516047
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1452727516077
+activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1452727516081
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1452727516090
+error,log,,,"Failed command: monitor endian little",1452727516104
+error,log,,,"Failed command: monitor speed 30",1452727516205
+error,log,,,"Failed command: monitor reset",1452727516307
+error,log,,,"Failed command: monitor sleep 10",1452727516408
+error,log,,,"Failed command: monitor reg cpsr = 0xd3",1452727516509
+error,log,,,"Failed command: monitor cp15 7, 7, 0, 0 = 0x0",1452727516610
+error,log,,,"Failed command: monitor cp15 8, 7, 0, 0 = 0x0",1452727516711
+error,log,,,"Failed command: monitor cp15 1, 0, 0, 0 =0x1002",1452727516813
+error,log,,,"Failed command: monitor cp15 15, 2, 0, 4 = 0x70000013",1452727516914
+error,log,,,"Failed command: monitor MemU32 0x7e004000  =  0x00000000",1452727517021
+error,log,,,"Failed command: monitor sleep 10",1452727517124
+error,log,,,"Failed command: monitor MemU32 0x71200014  =  0x00000000",1452727517226
+error,log,,,"Failed command: monitor MemU32 0x71300014  =  0x00000000",1452727517327
+error,log,,,"Failed command: monitor MemU32 0x7120000C  =  0x00000000",1452727517427
+error,log,,,"Failed command: monitor MemU32 0x7130000C  =  0x00000000",1452727517529
+error,log,,,"Failed command: monitor MemU32 0x71200F00  =  0x00000000",1452727517631
+error,log,,,"Failed command: monitor MemU32 0x71300F00  =  0x00000000",1452727517732
+error,log,,,"Failed command: monitor MemU32 0x7e00f900  =  0x0000801e",1452727517833
+error,log,,,"Failed command: monitor MemU32 0x7e00f000  =  0x0000ffff",1452727517934
+error,log,,,"Failed command: monitor MemU32 0x7e00f004  =  0x0000ffff",1452727518035
+error,log,,,"Failed command: monitor MemU32 0x7e00f020  =  0x01043310",1452727518136
+error,log,,,"Failed command: monitor MemU32 0x7e00f00C  =  0xc2150601",1452727518237
+error,log,,,"Failed command: monitor MemU32 0x7e00f010  =  0xc2150601",1452727518338
+error,log,,,"Failed command: monitor MemU32 0x7e00f024  =  0x00000003",1452727518440
+error,log,,,"Failed command: monitor MemU32 0x7e00f014  =  0x00200102",1452727518543
+error,log,,,"Failed command: monitor MemU32 0x7e00f018  =  0x00000000",1452727518648
+error,log,,,"Failed command: monitor MemU32 0x7e00f01C  =  0x14000007",1452727518750
+error,log,,,"Failed command: monitor MemU32 0x7e00f120  =  0x00000008",1452727518852
+error,log,,,"Failed command: monitor MemU32 0x7e001004  =  0x00000004",1452727518954
+error,log,,,"Failed command: monitor MemU32 0x7e001010  =  0x0000040f",1452727519055
+error,log,,,"Failed command: monitor MemU32 0x7e001014  =  0x00000006",1452727519156
+error,log,,,"Failed command: monitor MemU32 0x7e001018  =  0x00000001",1452727519257
+error,log,,,"Failed command: monitor MemU32 0x7e00101c  =  0x00000002",1452727519359
+error,log,,,"Failed command: monitor MemU32 0x7e001020  =  0x00000006",1452727519460
+error,log,,,"Failed command: monitor MemU32 0x7e001024  =  0x0000000a",1452727519562
+error,log,,,"Failed command: monitor MemU32 0x7e001028  =  0x0000000c",1452727519663
+error,log,,,"Failed command: monitor MemU32 0x7e00102c  =  0x0000018f",1452727519765
+error,log,,,"Failed command: monitor MemU32 0x7e001030  =  0x0000000c",1452727519866
+error,log,,,"Failed command: monitor MemU32 0x7e001034  =  0x00000002",1452727519970
+error,log,,,"Failed command: monitor MemU32 0x7e001038  =  0x00000002",1452727520071
+error,log,,,"Failed command: monitor MemU32 0x7e00103c  =  0x00000002",1452727520173
+error,log,,,"Failed command: monitor MemU32 0x7e001040  =  0x00000002",1452727520274
+error,log,,,"Failed command: monitor MemU32 0x7e001044  =  0x00000013",1452727520375
+error,log,,,"Failed command: monitor MemU32 0x7e001048  =  0x00000013",1452727520476
+error,log,,,"Failed command: monitor MemU32 0x7e00100C  =  0x00010012",1452727520578
+error,log,,,"Failed command: monitor MemU32 0x7e00104C  =  0x00000b45",1452727520679
+error,log,,,"Failed command: monitor MemU32 0x7e001200  =  0x000150f8",1452727520780
+error,log,,,"Failed command: monitor MemU32 0x7e001304  =  0x00000000",1452727520881
+error,log,,,"Failed command: monitor MemU32 0x7e001008  =  0x000c0000",1452727520983
+error,log,,,"Failed command: monitor MemU32 0x7e001008  =  0x00000000",1452727521084
+error,log,,,"Failed command: monitor MemU32 0x7e001008  =  0x00040000",1452727521185
+error,log,,,"Failed command: monitor MemU32 0x7e001008  =  0x00040000",1452727521286
+error,log,,,"Failed command: monitor MemU32 0x7e001008  =  0x000a0000",1452727521389
+error,log,,,"Failed command: monitor MemU32 0x7e001008  =  0x00080032",1452727521491
+error,log,,,"Failed command: monitor MemU32 0x7e001004  =  0x00000000",1452727521592
+error,log,,,"Failed command: monitor speed 12000",1452727521895
+error,log,,,"Failed command: load",1452727522097
+activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1452727534420
+executed,command,org.eclipse.ui,3.6.2.M20110203-1100,"org.eclipse.ui.edit.copy",1452727572551
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1452727583222
+activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1452727684643
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1452727685254
+activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1452727686283
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1452727688084
+closed,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1452727690534
+stopped,bundle,com.zylin.embeddedcdt,4.18.1,"com.zylin.embeddedcdt",1452727690922
+stopped,bundle,org.eclipse.cdt.debug.mi.ui,6.1.0.201102110609,"org.eclipse.cdt.debug.mi.ui",1452727690922
+stopped,bundle,org.eclipse.cdt.debug.mi.core,7.0.1.201102110609,"org.eclipse.cdt.debug.mi.core",1452727690923
+stopped,bundle,org.eclipse.cdt.debug.ui.memory.memorybrowser,1.2.1.201102110609,"org.eclipse.cdt.debug.ui.memory.memorybrowser",1452727690923
+stopped,bundle,org.eclipse.cdt.debug.ui.memory.search,1.2.0.201102110609,"org.eclipse.cdt.debug.ui.memory.search",1452727690923
+stopped,bundle,org.eclipse.cdt.dsf.gdb.ui,2.1.0.201102110609,"org.eclipse.cdt.dsf.gdb.ui",1452727690924
+stopped,bundle,org.eclipse.cdt.dsf.ui,2.1.2.201102110609,"org.eclipse.cdt.dsf.ui",1452727690924
+stopped,bundle,org.eclipse.cdt.gdb.ui,7.0.0.201102110609,"org.eclipse.cdt.gdb.ui",1452727690924
+stopped,bundle,org.eclipse.cdt.dsf.gdb,3.0.0.201102110609,"org.eclipse.cdt.dsf.gdb",1452727690924
+stopped,bundle,org.eclipse.cdt.launch,6.1.0.201102110609,"org.eclipse.cdt.launch",1452727690924
+stopped,bundle,org.eclipse.cdt.debug.ui,7.0.0.201102110609,"org.eclipse.cdt.debug.ui",1452727690925
+stopped,bundle,org.eclipse.cdt.debug.ui.memory.traditional,1.2.0.201102110609,"org.eclipse.cdt.debug.ui.memory.traditional",1452727690925
+stopped,bundle,org.eclipse.cdt.dsf,2.1.1.201102110609,"org.eclipse.cdt.dsf",1452727690925
+stopped,bundle,org.eclipse.cdt.debug.core,7.0.0.201102110609,"org.eclipse.cdt.debug.core",1452727690926
+stopped,bundle,org.eclipse.cdt.managedbuilder.ui,7.0.0.201102110609,"org.eclipse.cdt.managedbuilder.ui",1452727690926
+stopped,bundle,org.eclipse.cdt.make.ui,7.0.0.201102110609,"org.eclipse.cdt.make.ui",1452727690926
+stopped,bundle,org.eclipse.cdt.managedbuilder.gnu.ui,7.0.0.201102110609,"org.eclipse.cdt.managedbuilder.gnu.ui",1452727690926
+stopped,bundle,org.eclipse.cdt.managedbuilder.core,7.0.2.201102110609,"org.eclipse.cdt.managedbuilder.core",1452727690927
+stopped,bundle,org.eclipse.cdt.make.core,7.0.1.201102110609,"org.eclipse.cdt.make.core",1452727690927
+stopped,bundle,org.eclipse.cdt.mylyn.ui,1.1.4.v20110204-0100-e3x,"org.eclipse.cdt.mylyn.ui",1452727690927
+stopped,bundle,org.eclipse.cdt.ui,5.2.2.201102110609,"org.eclipse.cdt.ui",1452727690929
+stopped,bundle,org.eclipse.cdt.core,5.2.1.201102110609,"org.eclipse.cdt.core",1452727690929
+stopped,bundle,org.eclipse.equinox.p2.ui.sdk,1.0.100.v20100513,"org.eclipse.equinox.p2.ui.sdk",1452727690929
+stopped,bundle,org.eclipse.search,3.6.0.v20100520-0800,"org.eclipse.search",1452727690933
+stopped,bundle,org.eclipse.mylyn.team.ui,3.4.3.v20110131-0100-e3x,"org.eclipse.mylyn.team.ui",1452727690933
+stopped,bundle,org.eclipse.ui.navigator.resources,3.4.202.M20101124-0800,"org.eclipse.ui.navigator.resources",1452727690933
+stopped,bundle,org.eclipse.ltk.ui.refactoring,3.5.0.v20100526-0800,"org.eclipse.ltk.ui.refactoring",1452727690934
+stopped,bundle,org.eclipse.mylyn.bugzilla.ui,3.4.3.v20110131-0100-e3x,"org.eclipse.mylyn.bugzilla.ui",1452727690934
+stopped,bundle,org.eclipse.mylyn.ide.ui,3.4.0.v20100608-0100-e3x,"org.eclipse.mylyn.ide.ui",1452727690934
+stopped,bundle,org.eclipse.mylyn.resources.ui,3.4.1.v20100909-0100-e3x,"org.eclipse.mylyn.resources.ui",1452727690934
+stopped,bundle,org.eclipse.mylyn.wikitext.tasks.ui,1.3.1.v20100823-0100-e3x,"org.eclipse.mylyn.wikitext.tasks.ui",1452727690934
+stopped,bundle,org.eclipse.mylyn.context.ui,3.4.2.v20110131-0100-e3x,"org.eclipse.mylyn.context.ui",1452727690934
+stopped,bundle,org.eclipse.mylyn.help.ui,3.4.2.v20110131-0100-e3x,"org.eclipse.mylyn.help.ui",1452727690934

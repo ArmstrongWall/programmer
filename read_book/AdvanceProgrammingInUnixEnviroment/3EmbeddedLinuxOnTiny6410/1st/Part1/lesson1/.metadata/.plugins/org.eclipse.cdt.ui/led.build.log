@@ -1,0 +1,6 @@
+
+**** Build of configuration Default for project led ****
+
+make all 
+arm-linux-ld -Tled.lds -o led.elf led.o
+arm-linux-objcopy -O binary led.elf led.bin
