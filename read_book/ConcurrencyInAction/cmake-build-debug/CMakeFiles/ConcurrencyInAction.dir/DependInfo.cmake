@@ -5,6 +5,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/johnny/git/programmer/read_book/ConcurrencyInAction/main.cpp" "/home/johnny/git/programmer/read_book/ConcurrencyInAction/cmake-build-debug/CMakeFiles/ConcurrencyInAction.dir/main.cpp.o"
+  "/home/johnny/git/programmer/read_book/ConcurrencyInAction/src/c1StartThread/c1StartThread.cpp" "/home/johnny/git/programmer/read_book/ConcurrencyInAction/cmake-build-debug/CMakeFiles/ConcurrencyInAction.dir/src/c1StartThread/c1StartThread.cpp.o"
+  "/home/johnny/git/programmer/read_book/ConcurrencyInAction/src/c2_1_3RAIIWaitForThread/RAIIWaitForThread.cpp" "/home/johnny/git/programmer/read_book/ConcurrencyInAction/cmake-build-debug/CMakeFiles/ConcurrencyInAction.dir/src/c2_1_3RAIIWaitForThread/RAIIWaitForThread.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

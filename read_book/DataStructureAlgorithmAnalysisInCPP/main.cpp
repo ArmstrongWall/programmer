@@ -19,3 +19,4 @@ void BinaryHeapDemo() {
     std::cout << "after insert" << std::endl;
     heap->printBinaryHeap();
 }
+

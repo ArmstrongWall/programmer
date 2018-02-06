@@ -87,6 +87,15 @@
 		<Unit filename="/home/johnny/git/programmer/read_book/ConcurrencyInAction/main.cpp">
 			<Option target="ConcurrencyInAction"/>
 		</Unit>
+		<Unit filename="/home/johnny/git/programmer/read_book/ConcurrencyInAction/src/c1StartThread/c1StartThread.cpp">
+			<Option target="ConcurrencyInAction"/>
+		</Unit>
+		<Unit filename="/home/johnny/git/programmer/read_book/ConcurrencyInAction/src/c2_1_3RAIIWaitForThread/RAIIWaitForThread.cpp">
+			<Option target="ConcurrencyInAction"/>
+		</Unit>
+		<Unit filename="/home/johnny/git/programmer/read_book/ConcurrencyInAction/src/c2_1_3RAIIWaitForThread/RAIIWaitForThread.h">
+			<Option target="ConcurrencyInAction"/>
+		</Unit>
 		<Unit filename="/home/johnny/git/programmer/read_book/ConcurrencyInAction/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

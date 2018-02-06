@@ -150,6 +150,60 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles/ConcurrencyInAction.dir/build.make CMakeFiles/ConcurrencyInAction.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+src/c1StartThread/c1StartThread.o: src/c1StartThread/c1StartThread.cpp.o
+
+.PHONY : src/c1StartThread/c1StartThread.o
+
+# target to build an object file
+src/c1StartThread/c1StartThread.cpp.o:
+	$(MAKE) -f CMakeFiles/ConcurrencyInAction.dir/build.make CMakeFiles/ConcurrencyInAction.dir/src/c1StartThread/c1StartThread.cpp.o
+.PHONY : src/c1StartThread/c1StartThread.cpp.o
+
+src/c1StartThread/c1StartThread.i: src/c1StartThread/c1StartThread.cpp.i
+
+.PHONY : src/c1StartThread/c1StartThread.i
+
+# target to preprocess a source file
+src/c1StartThread/c1StartThread.cpp.i:
+	$(MAKE) -f CMakeFiles/ConcurrencyInAction.dir/build.make CMakeFiles/ConcurrencyInAction.dir/src/c1StartThread/c1StartThread.cpp.i
+.PHONY : src/c1StartThread/c1StartThread.cpp.i
+
+src/c1StartThread/c1StartThread.s: src/c1StartThread/c1StartThread.cpp.s
+
+.PHONY : src/c1StartThread/c1StartThread.s
+
+# target to generate assembly for a file
+src/c1StartThread/c1StartThread.cpp.s:
+	$(MAKE) -f CMakeFiles/ConcurrencyInAction.dir/build.make CMakeFiles/ConcurrencyInAction.dir/src/c1StartThread/c1StartThread.cpp.s
+.PHONY : src/c1StartThread/c1StartThread.cpp.s
+
+src/c2_1_3RAIIWaitForThread/RAIIWaitForThread.o: src/c2_1_3RAIIWaitForThread/RAIIWaitForThread.cpp.o
+
+.PHONY : src/c2_1_3RAIIWaitForThread/RAIIWaitForThread.o
+
+# target to build an object file
+src/c2_1_3RAIIWaitForThread/RAIIWaitForThread.cpp.o:
+	$(MAKE) -f CMakeFiles/ConcurrencyInAction.dir/build.make CMakeFiles/ConcurrencyInAction.dir/src/c2_1_3RAIIWaitForThread/RAIIWaitForThread.cpp.o
+.PHONY : src/c2_1_3RAIIWaitForThread/RAIIWaitForThread.cpp.o
+
+src/c2_1_3RAIIWaitForThread/RAIIWaitForThread.i: src/c2_1_3RAIIWaitForThread/RAIIWaitForThread.cpp.i
+
+.PHONY : src/c2_1_3RAIIWaitForThread/RAIIWaitForThread.i
+
+# target to preprocess a source file
+src/c2_1_3RAIIWaitForThread/RAIIWaitForThread.cpp.i:
+	$(MAKE) -f CMakeFiles/ConcurrencyInAction.dir/build.make CMakeFiles/ConcurrencyInAction.dir/src/c2_1_3RAIIWaitForThread/RAIIWaitForThread.cpp.i
+.PHONY : src/c2_1_3RAIIWaitForThread/RAIIWaitForThread.cpp.i
+
+src/c2_1_3RAIIWaitForThread/RAIIWaitForThread.s: src/c2_1_3RAIIWaitForThread/RAIIWaitForThread.cpp.s
+
+.PHONY : src/c2_1_3RAIIWaitForThread/RAIIWaitForThread.s
+
+# target to generate assembly for a file
+src/c2_1_3RAIIWaitForThread/RAIIWaitForThread.cpp.s:
+	$(MAKE) -f CMakeFiles/ConcurrencyInAction.dir/build.make CMakeFiles/ConcurrencyInAction.dir/src/c2_1_3RAIIWaitForThread/RAIIWaitForThread.cpp.s
+.PHONY : src/c2_1_3RAIIWaitForThread/RAIIWaitForThread.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -162,6 +216,12 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... src/c1StartThread/c1StartThread.o"
+	@echo "... src/c1StartThread/c1StartThread.i"
+	@echo "... src/c1StartThread/c1StartThread.s"
+	@echo "... src/c2_1_3RAIIWaitForThread/RAIIWaitForThread.o"
+	@echo "... src/c2_1_3RAIIWaitForThread/RAIIWaitForThread.i"
+	@echo "... src/c2_1_3RAIIWaitForThread/RAIIWaitForThread.s"
 .PHONY : help
 
 
