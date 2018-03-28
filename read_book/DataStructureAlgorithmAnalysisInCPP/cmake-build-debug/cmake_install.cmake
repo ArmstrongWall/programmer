@@ -1,4 +1,4 @@
-# Install script for directory: /home/johnny/git/programmer/read_book/DataStructureAlgorithmAnalysisInCPP
+# Install script for directory: /home/johnny/programmer/read_book/DataStructureAlgorithmAnalysisInCPP
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/johnny/git/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/johnny/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

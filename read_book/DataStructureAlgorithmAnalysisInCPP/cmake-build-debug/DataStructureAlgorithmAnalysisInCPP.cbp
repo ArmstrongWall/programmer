@@ -8,38 +8,38 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/home/johnny/git/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/cmake-build-debug"/>
+				<Option working_dir="/home/johnny/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/johnny/git/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/johnny/git/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/johnny/git/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/johnny/git/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/johnny/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/johnny/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/johnny/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/johnny/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/home/johnny/git/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/cmake-build-debug"/>
+				<Option working_dir="/home/johnny/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/johnny/git/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/johnny/git/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/johnny/git/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/johnny/git/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/johnny/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/johnny/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/johnny/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/johnny/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/home/johnny/git/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/cmake-build-debug"/>
+				<Option working_dir="/home/johnny/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/johnny/git/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/johnny/git/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/johnny/git/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/johnny/git/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/johnny/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/johnny/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/johnny/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/johnny/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="da">
-				<Option output="/home/johnny/git/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/cmake-build-debug/da" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/johnny/git/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/cmake-build-debug"/>
+				<Option output="/home/johnny/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/cmake-build-debug/da" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/johnny/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -54,15 +54,15 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/johnny/git/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/cmake-build-debug/Makefile&quot;  VERBOSE=1 da"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/johnny/git/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/johnny/git/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/johnny/git/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/johnny/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/cmake-build-debug/Makefile&quot;  VERBOSE=1 da"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/johnny/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/johnny/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/johnny/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="da/fast">
-				<Option output="/home/johnny/git/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/cmake-build-debug/da" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/johnny/git/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/cmake-build-debug"/>
+				<Option output="/home/johnny/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/cmake-build-debug/da" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/johnny/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -77,41 +77,41 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/johnny/git/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/cmake-build-debug/Makefile&quot;  VERBOSE=1 da/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/johnny/git/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/johnny/git/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/johnny/git/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/johnny/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/cmake-build-debug/Makefile&quot;  VERBOSE=1 da/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/johnny/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/johnny/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/johnny/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/johnny/git/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/include.h">
+		<Unit filename="/home/johnny/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/include.h">
 			<Option target="da"/>
 		</Unit>
-		<Unit filename="/home/johnny/git/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/main.cpp">
+		<Unit filename="/home/johnny/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/main.cpp">
 			<Option target="da"/>
 		</Unit>
-		<Unit filename="/home/johnny/git/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/src/c1/recursion.cpp">
+		<Unit filename="/home/johnny/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/src/c1/recursion.cpp">
 			<Option target="da"/>
 		</Unit>
-		<Unit filename="/home/johnny/git/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/src/c4_3BinarySearchTree/BinarySearchTree.cpp">
+		<Unit filename="/home/johnny/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/src/c4_3BinarySearchTree/BinarySearchTree.cpp">
 			<Option target="da"/>
 		</Unit>
-		<Unit filename="/home/johnny/git/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/src/c4_3BinarySearchTree/BinarySearchTree.h">
+		<Unit filename="/home/johnny/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/src/c4_3BinarySearchTree/BinarySearchTree.h">
 			<Option target="da"/>
 		</Unit>
-		<Unit filename="/home/johnny/git/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/src/c4_4AVLTree/AVLTree.cpp">
+		<Unit filename="/home/johnny/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/src/c4_4AVLTree/AVLTree.cpp">
 			<Option target="da"/>
 		</Unit>
-		<Unit filename="/home/johnny/git/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/src/c4_4AVLTree/AVLTree.h">
+		<Unit filename="/home/johnny/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/src/c4_4AVLTree/AVLTree.h">
 			<Option target="da"/>
 		</Unit>
-		<Unit filename="/home/johnny/git/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/src/c6_3BinaryHeap/BinaryHeap.cpp">
+		<Unit filename="/home/johnny/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/src/c6_3BinaryHeap/BinaryHeap.cpp">
 			<Option target="da"/>
 		</Unit>
-		<Unit filename="/home/johnny/git/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/src/c6_3BinaryHeap/BinaryHeap.h">
+		<Unit filename="/home/johnny/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/src/c6_3BinaryHeap/BinaryHeap.h">
 			<Option target="da"/>
 		</Unit>
-		<Unit filename="/home/johnny/git/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/CMakeLists.txt">
+		<Unit filename="/home/johnny/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

@@ -43,10 +43,10 @@ RM = /home/johnny/Downloads/clion-2017.3/bin/cmake/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/johnny/git/programmer/read_book/DataStructureAlgorithmAnalysisInCPP
+CMAKE_SOURCE_DIR = /home/johnny/programmer/read_book/DataStructureAlgorithmAnalysisInCPP
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/johnny/git/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/cmake-build-debug
+CMAKE_BINARY_DIR = /home/johnny/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/da.dir/depend.make
@@ -59,16 +59,16 @@ include CMakeFiles/da.dir/flags.make
 
 CMakeFiles/da.dir/main.cpp.o: CMakeFiles/da.dir/flags.make
 CMakeFiles/da.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/johnny/git/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/da.dir/main.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/da.dir/main.cpp.o -c /home/johnny/git/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/johnny/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/da.dir/main.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/da.dir/main.cpp.o -c /home/johnny/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/main.cpp
 
 CMakeFiles/da.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/da.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/johnny/git/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/main.cpp > CMakeFiles/da.dir/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/johnny/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/main.cpp > CMakeFiles/da.dir/main.cpp.i
 
 CMakeFiles/da.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/da.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/johnny/git/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/main.cpp -o CMakeFiles/da.dir/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/johnny/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/main.cpp -o CMakeFiles/da.dir/main.cpp.s
 
 CMakeFiles/da.dir/main.cpp.o.requires:
 
@@ -83,16 +83,16 @@ CMakeFiles/da.dir/main.cpp.o.provides.build: CMakeFiles/da.dir/main.cpp.o
 
 CMakeFiles/da.dir/src/c1/recursion.cpp.o: CMakeFiles/da.dir/flags.make
 CMakeFiles/da.dir/src/c1/recursion.cpp.o: ../src/c1/recursion.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/johnny/git/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/da.dir/src/c1/recursion.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/da.dir/src/c1/recursion.cpp.o -c /home/johnny/git/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/src/c1/recursion.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/johnny/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/da.dir/src/c1/recursion.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/da.dir/src/c1/recursion.cpp.o -c /home/johnny/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/src/c1/recursion.cpp
 
 CMakeFiles/da.dir/src/c1/recursion.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/da.dir/src/c1/recursion.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/johnny/git/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/src/c1/recursion.cpp > CMakeFiles/da.dir/src/c1/recursion.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/johnny/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/src/c1/recursion.cpp > CMakeFiles/da.dir/src/c1/recursion.cpp.i
 
 CMakeFiles/da.dir/src/c1/recursion.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/da.dir/src/c1/recursion.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/johnny/git/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/src/c1/recursion.cpp -o CMakeFiles/da.dir/src/c1/recursion.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/johnny/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/src/c1/recursion.cpp -o CMakeFiles/da.dir/src/c1/recursion.cpp.s
 
 CMakeFiles/da.dir/src/c1/recursion.cpp.o.requires:
 
@@ -107,16 +107,16 @@ CMakeFiles/da.dir/src/c1/recursion.cpp.o.provides.build: CMakeFiles/da.dir/src/c
 
 CMakeFiles/da.dir/src/c4_3BinarySearchTree/BinarySearchTree.cpp.o: CMakeFiles/da.dir/flags.make
 CMakeFiles/da.dir/src/c4_3BinarySearchTree/BinarySearchTree.cpp.o: ../src/c4_3BinarySearchTree/BinarySearchTree.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/johnny/git/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/da.dir/src/c4_3BinarySearchTree/BinarySearchTree.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/da.dir/src/c4_3BinarySearchTree/BinarySearchTree.cpp.o -c /home/johnny/git/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/src/c4_3BinarySearchTree/BinarySearchTree.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/johnny/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/da.dir/src/c4_3BinarySearchTree/BinarySearchTree.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/da.dir/src/c4_3BinarySearchTree/BinarySearchTree.cpp.o -c /home/johnny/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/src/c4_3BinarySearchTree/BinarySearchTree.cpp
 
 CMakeFiles/da.dir/src/c4_3BinarySearchTree/BinarySearchTree.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/da.dir/src/c4_3BinarySearchTree/BinarySearchTree.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/johnny/git/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/src/c4_3BinarySearchTree/BinarySearchTree.cpp > CMakeFiles/da.dir/src/c4_3BinarySearchTree/BinarySearchTree.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/johnny/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/src/c4_3BinarySearchTree/BinarySearchTree.cpp > CMakeFiles/da.dir/src/c4_3BinarySearchTree/BinarySearchTree.cpp.i
 
 CMakeFiles/da.dir/src/c4_3BinarySearchTree/BinarySearchTree.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/da.dir/src/c4_3BinarySearchTree/BinarySearchTree.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/johnny/git/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/src/c4_3BinarySearchTree/BinarySearchTree.cpp -o CMakeFiles/da.dir/src/c4_3BinarySearchTree/BinarySearchTree.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/johnny/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/src/c4_3BinarySearchTree/BinarySearchTree.cpp -o CMakeFiles/da.dir/src/c4_3BinarySearchTree/BinarySearchTree.cpp.s
 
 CMakeFiles/da.dir/src/c4_3BinarySearchTree/BinarySearchTree.cpp.o.requires:
 
@@ -131,16 +131,16 @@ CMakeFiles/da.dir/src/c4_3BinarySearchTree/BinarySearchTree.cpp.o.provides.build
 
 CMakeFiles/da.dir/src/c4_4AVLTree/AVLTree.cpp.o: CMakeFiles/da.dir/flags.make
 CMakeFiles/da.dir/src/c4_4AVLTree/AVLTree.cpp.o: ../src/c4_4AVLTree/AVLTree.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/johnny/git/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/da.dir/src/c4_4AVLTree/AVLTree.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/da.dir/src/c4_4AVLTree/AVLTree.cpp.o -c /home/johnny/git/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/src/c4_4AVLTree/AVLTree.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/johnny/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/da.dir/src/c4_4AVLTree/AVLTree.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/da.dir/src/c4_4AVLTree/AVLTree.cpp.o -c /home/johnny/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/src/c4_4AVLTree/AVLTree.cpp
 
 CMakeFiles/da.dir/src/c4_4AVLTree/AVLTree.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/da.dir/src/c4_4AVLTree/AVLTree.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/johnny/git/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/src/c4_4AVLTree/AVLTree.cpp > CMakeFiles/da.dir/src/c4_4AVLTree/AVLTree.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/johnny/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/src/c4_4AVLTree/AVLTree.cpp > CMakeFiles/da.dir/src/c4_4AVLTree/AVLTree.cpp.i
 
 CMakeFiles/da.dir/src/c4_4AVLTree/AVLTree.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/da.dir/src/c4_4AVLTree/AVLTree.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/johnny/git/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/src/c4_4AVLTree/AVLTree.cpp -o CMakeFiles/da.dir/src/c4_4AVLTree/AVLTree.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/johnny/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/src/c4_4AVLTree/AVLTree.cpp -o CMakeFiles/da.dir/src/c4_4AVLTree/AVLTree.cpp.s
 
 CMakeFiles/da.dir/src/c4_4AVLTree/AVLTree.cpp.o.requires:
 
@@ -155,16 +155,16 @@ CMakeFiles/da.dir/src/c4_4AVLTree/AVLTree.cpp.o.provides.build: CMakeFiles/da.di
 
 CMakeFiles/da.dir/src/c6_3BinaryHeap/BinaryHeap.cpp.o: CMakeFiles/da.dir/flags.make
 CMakeFiles/da.dir/src/c6_3BinaryHeap/BinaryHeap.cpp.o: ../src/c6_3BinaryHeap/BinaryHeap.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/johnny/git/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/da.dir/src/c6_3BinaryHeap/BinaryHeap.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/da.dir/src/c6_3BinaryHeap/BinaryHeap.cpp.o -c /home/johnny/git/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/src/c6_3BinaryHeap/BinaryHeap.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/johnny/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/da.dir/src/c6_3BinaryHeap/BinaryHeap.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/da.dir/src/c6_3BinaryHeap/BinaryHeap.cpp.o -c /home/johnny/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/src/c6_3BinaryHeap/BinaryHeap.cpp
 
 CMakeFiles/da.dir/src/c6_3BinaryHeap/BinaryHeap.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/da.dir/src/c6_3BinaryHeap/BinaryHeap.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/johnny/git/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/src/c6_3BinaryHeap/BinaryHeap.cpp > CMakeFiles/da.dir/src/c6_3BinaryHeap/BinaryHeap.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/johnny/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/src/c6_3BinaryHeap/BinaryHeap.cpp > CMakeFiles/da.dir/src/c6_3BinaryHeap/BinaryHeap.cpp.i
 
 CMakeFiles/da.dir/src/c6_3BinaryHeap/BinaryHeap.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/da.dir/src/c6_3BinaryHeap/BinaryHeap.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/johnny/git/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/src/c6_3BinaryHeap/BinaryHeap.cpp -o CMakeFiles/da.dir/src/c6_3BinaryHeap/BinaryHeap.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/johnny/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/src/c6_3BinaryHeap/BinaryHeap.cpp -o CMakeFiles/da.dir/src/c6_3BinaryHeap/BinaryHeap.cpp.s
 
 CMakeFiles/da.dir/src/c6_3BinaryHeap/BinaryHeap.cpp.o.requires:
 
@@ -195,7 +195,7 @@ da: CMakeFiles/da.dir/src/c4_4AVLTree/AVLTree.cpp.o
 da: CMakeFiles/da.dir/src/c6_3BinaryHeap/BinaryHeap.cpp.o
 da: CMakeFiles/da.dir/build.make
 da: CMakeFiles/da.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/johnny/git/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable da"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/johnny/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable da"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/da.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -216,6 +216,6 @@ CMakeFiles/da.dir/clean:
 .PHONY : CMakeFiles/da.dir/clean
 
 CMakeFiles/da.dir/depend:
-	cd /home/johnny/git/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/johnny/git/programmer/read_book/DataStructureAlgorithmAnalysisInCPP /home/johnny/git/programmer/read_book/DataStructureAlgorithmAnalysisInCPP /home/johnny/git/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/cmake-build-debug /home/johnny/git/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/cmake-build-debug /home/johnny/git/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/cmake-build-debug/CMakeFiles/da.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/johnny/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/johnny/programmer/read_book/DataStructureAlgorithmAnalysisInCPP /home/johnny/programmer/read_book/DataStructureAlgorithmAnalysisInCPP /home/johnny/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/cmake-build-debug /home/johnny/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/cmake-build-debug /home/johnny/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/cmake-build-debug/CMakeFiles/da.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/da.dir/depend
 

@@ -54,10 +54,10 @@ RM = /home/johnny/Downloads/clion-2017.3/bin/cmake/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/johnny/git/programmer/read_book/DataStructureAlgorithmAnalysisInCPP
+CMAKE_SOURCE_DIR = /home/johnny/programmer/read_book/DataStructureAlgorithmAnalysisInCPP
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/johnny/git/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/cmake-build-debug
+CMAKE_BINARY_DIR = /home/johnny/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/cmake-build-debug
 
 #=============================================================================
 # Target rules for target CMakeFiles/da.dir
@@ -66,7 +66,7 @@ CMAKE_BINARY_DIR = /home/johnny/git/programmer/read_book/DataStructureAlgorithmA
 CMakeFiles/da.dir/all:
 	$(MAKE) -f CMakeFiles/da.dir/build.make CMakeFiles/da.dir/depend
 	$(MAKE) -f CMakeFiles/da.dir/build.make CMakeFiles/da.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/johnny/git/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6 "Built target da"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/johnny/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6 "Built target da"
 .PHONY : CMakeFiles/da.dir/all
 
 # Include target in all.
@@ -76,9 +76,9 @@ all: CMakeFiles/da.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/da.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/johnny/git/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/cmake-build-debug/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/johnny/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/cmake-build-debug/CMakeFiles 6
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/da.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/johnny/git/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/johnny/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/da.dir/rule
 
 # Convenience name for target.
