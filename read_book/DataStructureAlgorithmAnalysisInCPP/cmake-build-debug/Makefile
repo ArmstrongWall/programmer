@@ -258,6 +258,33 @@ src/c6_3BinaryHeap/BinaryHeap.cpp.s:
 	$(MAKE) -f CMakeFiles/da.dir/build.make CMakeFiles/da.dir/src/c6_3BinaryHeap/BinaryHeap.cpp.s
 .PHONY : src/c6_3BinaryHeap/BinaryHeap.cpp.s
 
+src/c7_sort/sort.o: src/c7_sort/sort.cpp.o
+
+.PHONY : src/c7_sort/sort.o
+
+# target to build an object file
+src/c7_sort/sort.cpp.o:
+	$(MAKE) -f CMakeFiles/da.dir/build.make CMakeFiles/da.dir/src/c7_sort/sort.cpp.o
+.PHONY : src/c7_sort/sort.cpp.o
+
+src/c7_sort/sort.i: src/c7_sort/sort.cpp.i
+
+.PHONY : src/c7_sort/sort.i
+
+# target to preprocess a source file
+src/c7_sort/sort.cpp.i:
+	$(MAKE) -f CMakeFiles/da.dir/build.make CMakeFiles/da.dir/src/c7_sort/sort.cpp.i
+.PHONY : src/c7_sort/sort.cpp.i
+
+src/c7_sort/sort.s: src/c7_sort/sort.cpp.s
+
+.PHONY : src/c7_sort/sort.s
+
+# target to generate assembly for a file
+src/c7_sort/sort.cpp.s:
+	$(MAKE) -f CMakeFiles/da.dir/build.make CMakeFiles/da.dir/src/c7_sort/sort.cpp.s
+.PHONY : src/c7_sort/sort.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -282,6 +309,9 @@ help:
 	@echo "... src/c6_3BinaryHeap/BinaryHeap.o"
 	@echo "... src/c6_3BinaryHeap/BinaryHeap.i"
 	@echo "... src/c6_3BinaryHeap/BinaryHeap.s"
+	@echo "... src/c7_sort/sort.o"
+	@echo "... src/c7_sort/sort.i"
+	@echo "... src/c7_sort/sort.s"
 .PHONY : help
 
 

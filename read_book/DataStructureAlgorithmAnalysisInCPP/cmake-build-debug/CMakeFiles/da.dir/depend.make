@@ -18,3 +18,5 @@ CMakeFiles/da.dir/src/c4_4AVLTree/AVLTree.cpp.o: ../src/c4_4AVLTree/AVLTree.cpp
 CMakeFiles/da.dir/src/c6_3BinaryHeap/BinaryHeap.cpp.o: ../src/c6_3BinaryHeap/BinaryHeap.cpp
 CMakeFiles/da.dir/src/c6_3BinaryHeap/BinaryHeap.cpp.o: ../src/c6_3BinaryHeap/BinaryHeap.h
 
+CMakeFiles/da.dir/src/c7_sort/sort.cpp.o: ../src/c7_sort/sort.cpp
+

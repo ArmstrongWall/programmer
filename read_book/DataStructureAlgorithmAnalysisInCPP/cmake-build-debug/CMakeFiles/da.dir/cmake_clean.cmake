@@ -4,6 +4,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/da.dir/src/c4_3BinarySearchTree/BinarySearchTree.cpp.o"
   "CMakeFiles/da.dir/src/c4_4AVLTree/AVLTree.cpp.o"
   "CMakeFiles/da.dir/src/c6_3BinaryHeap/BinaryHeap.cpp.o"
+  "CMakeFiles/da.dir/src/c7_sort/sort.cpp.o"
   "da.pdb"
   "da"
 )

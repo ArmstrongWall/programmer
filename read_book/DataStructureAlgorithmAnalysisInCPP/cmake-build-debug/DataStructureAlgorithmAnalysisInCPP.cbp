@@ -111,6 +111,12 @@
 		<Unit filename="/home/johnny/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/src/c6_3BinaryHeap/BinaryHeap.h">
 			<Option target="da"/>
 		</Unit>
+		<Unit filename="/home/johnny/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/src/c7_sort/sort.cpp">
+			<Option target="da"/>
+		</Unit>
+		<Unit filename="/home/johnny/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/src/c7_sort/sort.h">
+			<Option target="da"/>
+		</Unit>
 		<Unit filename="/home/johnny/programmer/read_book/DataStructureAlgorithmAnalysisInCPP/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
