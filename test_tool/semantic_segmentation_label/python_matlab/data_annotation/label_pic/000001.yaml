@@ -1,0 +1,10 @@
+label_names:
+  building: 5
+  car: 0
+  light: 7
+  person: 3
+  road: 1
+  sidewalk: 4
+  sky: 2
+  vegetation: 8
+  wall: 6

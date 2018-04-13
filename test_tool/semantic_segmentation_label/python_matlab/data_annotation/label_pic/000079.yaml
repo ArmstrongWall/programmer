@@ -1,0 +1,9 @@
+label_names:
+  building: 2
+  car: 7
+  pole: 5
+  road: 0
+  sidewalk: 1
+  sky: 4
+  vegetation: 3
+  wall: 6
