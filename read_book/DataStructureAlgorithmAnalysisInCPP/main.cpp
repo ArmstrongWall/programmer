@@ -2,12 +2,14 @@
 #include "include.h"
 void BinaryHeapDemo();
 void binarySearchTreeDemo();
+void sortDemo();
 
 int main() {
     std::cout << "Hello, D&A World!" << std::endl;
 
     //BinaryHeapDemo();
-    binarySearchTreeDemo();
+    //binarySearchTreeDemo();
+    sortDemo();
 
     return 0;
 }
@@ -37,7 +39,17 @@ void binarySearchTreeDemo() {
     auto tree2 = new binarySearchTree<int>{*tree1};
     std::cout << std::endl << "tree2" << std::endl;
     tree2->printTree();
+}
 
+void sortDemo() {
+    std::cout << "insertion Sort Demo" << std::endl;
+
+    auto sorter = new sort<int>;
+    vector<int> a {34,8,64,51,32,21};
+
+    sorter->insertionSort(a);
+    sorter->print(a);
 
 }
+
 

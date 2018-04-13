@@ -1,0 +1,59 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/johnny/git/programmer/read_book/ConcurrencyInAction/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_32857/fast"
+make[1]: Entering directory '/home/johnny/git/programmer/read_book/ConcurrencyInAction/cmake-build-debug/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_32857.dir/build.make CMakeFiles/cmTC_32857.dir/build
+make[2]: Entering directory '/home/johnny/git/programmer/read_book/ConcurrencyInAction/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_32857.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_32857.dir/CheckSymbolExists.c.o   -c /home/johnny/git/programmer/read_book/ConcurrencyInAction/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_32857
+/home/johnny/Downloads/clion-2017.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_32857.dir/link.txt --verbose=1
+/usr/bin/cc      CMakeFiles/cmTC_32857.dir/CheckSymbolExists.c.o  -o cmTC_32857 
+CMakeFiles/cmTC_32857.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0x16): undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_32857.dir/build.make:97: recipe for target 'cmTC_32857' failed
+make[2]: *** [cmTC_32857] Error 1
+make[2]: Leaving directory '/home/johnny/git/programmer/read_book/ConcurrencyInAction/cmake-build-debug/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_32857/fast' failed
+make[1]: *** [cmTC_32857/fast] Error 2
+make[1]: Leaving directory '/home/johnny/git/programmer/read_book/ConcurrencyInAction/cmake-build-debug/CMakeFiles/CMakeTmp'
+
+File /home/johnny/git/programmer/read_book/ConcurrencyInAction/cmake-build-debug/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/johnny/git/programmer/read_book/ConcurrencyInAction/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_511d3/fast"
+make[1]: Entering directory '/home/johnny/git/programmer/read_book/ConcurrencyInAction/cmake-build-debug/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_511d3.dir/build.make CMakeFiles/cmTC_511d3.dir/build
+make[2]: Entering directory '/home/johnny/git/programmer/read_book/ConcurrencyInAction/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_511d3.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_511d3.dir/CheckFunctionExists.c.o   -c /home/johnny/Downloads/clion-2017.3/bin/cmake/share/cmake-3.9/Modules/CheckFunctionExists.c
+Linking C executable cmTC_511d3
+/home/johnny/Downloads/clion-2017.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_511d3.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_511d3.dir/CheckFunctionExists.c.o  -o cmTC_511d3 -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_511d3.dir/build.make:97: recipe for target 'cmTC_511d3' failed
+make[2]: *** [cmTC_511d3] Error 1
+make[2]: Leaving directory '/home/johnny/git/programmer/read_book/ConcurrencyInAction/cmake-build-debug/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_511d3/fast' failed
+make[1]: *** [cmTC_511d3/fast] Error 2
+make[1]: Leaving directory '/home/johnny/git/programmer/read_book/ConcurrencyInAction/cmake-build-debug/CMakeFiles/CMakeTmp'
+
+
