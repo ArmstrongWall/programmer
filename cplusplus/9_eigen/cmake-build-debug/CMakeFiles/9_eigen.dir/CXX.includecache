@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/wzq/git/programmer/cplusplus/9_eigen/main.cpp
+iostream
+-
+vector
+-
+eigen3/Eigen/Dense
+-
+
