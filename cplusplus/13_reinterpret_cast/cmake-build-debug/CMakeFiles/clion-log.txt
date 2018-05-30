@@ -1,0 +1,4 @@
+/home/wzq/3rdparty/clion-2018.1.2/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/wzq/git/programmer/cplusplus/13_reinterpret_cast
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/wzq/git/programmer/cplusplus/13_reinterpret_cast/cmake-build-debug
