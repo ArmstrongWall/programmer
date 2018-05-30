@@ -1,7 +1,14 @@
 #include <cstdint>
 #include <cassert>
 #include <iostream>
+#include <string.h>
+
+#include "data.h"
+
+
+
 int f() { return 42; }
+
 int main()
 {
     int i = 7;
@@ -32,4 +39,21 @@ int main()
     [[maybe_unused]] const int &const_iref = i;
     //int &iref = reinterpret_cast<int&>(const_iref); //compiler error - can't get rid of const
     //Must use const_cast instead:  int &iref = const_cast<int&>(const_iref);
+
+
+    VehicleState st(134,1245);
+
+    memcpy(&_buffer,&st, sizeof(VehicleState));
+
+    std::cout << _buffer[0] << '\n';
+
+    VehicleState *st_cpy;
+
+    st_cpy = reinterpret_cast< VehicleState* > (&_buffer);
+    std::cout << st_cpy->time_stamp << '\n';
+
+
+
+
+
 }
