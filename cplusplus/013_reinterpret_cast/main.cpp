@@ -2,7 +2,7 @@
 #include <cassert>
 #include <iostream>
 #include <string.h>
-
+#include <pthread.h>
 #include "data.h"
 
 
@@ -43,13 +43,23 @@ int main()
 
     VehicleState st(134,1245);
 
+
     memcpy(&_buffer,&st, sizeof(VehicleState));
+
+    std::string str ;
+
+    str.assign(reinterpret_cast<const char *>(_buffer), sizeof(VehicleState));
 
     std::cout << _buffer[0] << '\n';
 
-    VehicleState *st_cpy;
+    const VehicleState *st_cpy;
 
-    st_cpy = reinterpret_cast< VehicleState* > (&_buffer);
+    uint8_t (* pbuff) = &_buffer[0];
+    uint8_t (* pbuff1)[2048] = &_buffer;
+    const uint8_t * pbuff2 = reinterpret_cast<const uint8_t *>(str.data());
+
+    st_cpy = reinterpret_cast< const VehicleState* > (pbuff2);
+
     std::cout << st_cpy->time_stamp << '\n';
 
 
