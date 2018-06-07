@@ -1,4 +1,4 @@
-# Install script for directory: /home/wzq/git/programmer/cplusplus/9_eigen
+# Install script for directory: /home/wzq/git/programmer/cplusplus/009_eigen
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/wzq/git/programmer/cplusplus/9_eigen/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/wzq/git/programmer/cplusplus/009_eigen/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

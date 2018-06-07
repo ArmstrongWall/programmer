@@ -1,4 +1,4 @@
-/home/wzq/Downloads/clion-2018.1.2/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/wzq/git/programmer/cplusplus/9_eigen
+/home/wzq/3rdparty/clion-2018.1.2/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/wzq/git/programmer/cplusplus/009_eigen
 -- The C compiler identification is GNU 5.4.0
 -- The CXX compiler identification is GNU 5.4.0
 -- Check for working C compiler: /usr/bin/cc
@@ -15,4 +15,4 @@
 -- Detecting CXX compile features - done
 -- Configuring done
 -- Generating done
--- Build files have been written to: /home/wzq/git/programmer/cplusplus/9_eigen/cmake-build-debug
+-- Build files have been written to: /home/wzq/git/programmer/cplusplus/009_eigen/cmake-build-debug

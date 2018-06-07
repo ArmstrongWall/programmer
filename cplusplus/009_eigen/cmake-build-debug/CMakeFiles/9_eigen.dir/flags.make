@@ -6,5 +6,5 @@ CXX_FLAGS = -g   -std=gnu++11
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/wzq/git/programmer/cplusplus/9_eigen/usr/include/eigen3 
+CXX_INCLUDES = -I/home/wzq/git/programmer/cplusplus/009_eigen/usr/include/eigen3 
 
