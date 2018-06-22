@@ -1,3 +1,0 @@
-/home/wzq/git/programmer/cplusplus/009_eigen/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/wzq/git/programmer/cplusplus/009_eigen/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/wzq/git/programmer/cplusplus/009_eigen/cmake-build-debug/CMakeFiles/9_eigen.dir

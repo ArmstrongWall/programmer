@@ -1,3 +1,0 @@
-/home/johnny/git/programmer/read_book/ConcurrencyInAction/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/johnny/git/programmer/read_book/ConcurrencyInAction/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/johnny/git/programmer/read_book/ConcurrencyInAction/cmake-build-debug/CMakeFiles/ConcurrencyInAction.dir
