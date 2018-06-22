@@ -1,4 +1,0 @@
-/home/johnny/Downloads/clion-2017.3/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/johnny/git/programmer/algorithm/astar
--- Configuring done
--- Generating done
--- Build files have been written to: /home/johnny/git/programmer/algorithm/astar/cmake-build-debug

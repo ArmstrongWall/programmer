@@ -5,13 +5,21 @@
 #include <pthread.h>
 #include "data.h"
 
-
-
+#include <stdio.h>
+#include <stddef.h>
+#include <time.h>
+#include <sys/time.h>
+#include <iomanip>
 int f() { return 42; }
 
 int main()
 {
     int i = 7;
+    int64_t time_stamp = 1528351008071434;
+    std::cout << "time_stamp=" << time_stamp << '\n';
+
+
+
 
     // pointer to integer and back
     std::uintptr_t v1 = reinterpret_cast<std::uintptr_t>(&i); // static_cast is an error
@@ -62,8 +70,21 @@ int main()
 
     std::cout << st_cpy->time_stamp << '\n';
 
+  std::cout <<std::setiosflags(std::ios::fixed);
+  struct  timeval  time_start;
 
+  while (1) {
+    gettimeofday(&time_start,nullptr);
+    double cost_time  = (time_start.tv_sec)+(time_start.tv_usec)/1000000.0;
+
+    std::cout <<"cost time " <<  std::setprecision(10) <<cost_time << std::endl;
+  }
+
+
+
+  return 0;
 
 
 
 }
+

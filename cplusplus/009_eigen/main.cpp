@@ -7,10 +7,24 @@ constexpr double DEG_TO_RAD = M_PI / 180.0;
 
 int main(int argc , char ** argv)
 {
+
+    double matrix_state_ = -0.09;
+    Eigen::MatrixXd matrix_k_(1,4);
+    matrix_k_<< 0.008,0,0.1,0.0014;
+    cout << matrix_k_ * matrix_state_ <<endl;
+
+    const double steer_angle_feedback = -(matrix_k_ * matrix_state_)(0, 0) * 180 /
+                                        M_PI * 16 /
+                                        470 * 100;
+    cout << steer_angle_feedback <<endl;
+
     Eigen::Matrix3d max_33;
     //max_33 = Eigen::Matrix3d::Random();
 
-    max_33 << 0,-3,2,3,0,-1,2,-1,0;
+
+    max_33 << 5,-3,2,3,0,-1,2,-1,0;
+
+    cout << max_33(0,0) <<endl;
     cout << max_33 <<endl;
     cout << max_33.determinant() << endl;
 
