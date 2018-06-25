@@ -3,6 +3,7 @@
 #include <opencv2/opencv.hpp>
 #include <opencv2/core/core.hpp>
 #include <iomanip>
+#include <chrono>
 
 using namespace std;
 using namespace cv;
@@ -11,7 +12,7 @@ int main()
 {
     vector<Vec4i> Lines; //含有4个int元素的向量,0,1元素是线段起点，2，3元素是线段终点
 
-    String pattern = "/home/wzq/git/dataset/uisee/data/00_h0_5m/image_0/*.png";//s
+    String pattern = "/home/wzq/git/dataset/uisee/data/crosswalk_h1m/image_0/*.png";//s
     vector<String> fn;
 
     glob(pattern, fn, false);
@@ -19,6 +20,8 @@ int main()
     size_t count = fn.size();
     for (size_t i = 0; i < count; i++)
     {
+
+
         Mat frame = imread(fn[i]);
         // 这个大小与VideoWriter构造函数中的大小一致。
         //Mat frame = imread("0.png");
@@ -32,13 +35,18 @@ int main()
         Mat roi = gray_frame;
         threshold(roi, roi, 50, 255, CV_THRESH_BINARY);   //灰度变二值
 
+
         Mat CannyImg;
         Canny(gray_frame, CannyImg, 50, 10, 3);//canny 算子 上下阈值越大，边缘就越少
 
+
         Mat DstImg = frame;
         //cvtColor(frame, DstImg, CV_GRAY2BGR);
-
+        auto start = std::chrono::system_clock::now();
         HoughLinesP(CannyImg, Lines, 1, CV_PI / 360, 170,300,15);
+        auto end   = std::chrono::system_clock::now();
+
+
         for (size_t i = 0; i < Lines.size(); i++)
         {
             line(DstImg, Point(Lines[i][0], Lines[i][1]), Point(Lines[i][2], Lines[i][3]), Scalar(0,0,255), 2, 8);
@@ -47,12 +55,19 @@ int main()
         //imshow("HoughLines_Detect", CannyImg);
         imshow("HoughLines_Detect", DstImg);
         //imshow("HoughLines_Detect", roi);
+        //imwrite(picture_name, DstImg);
+        if(waitKey(1)==27)
+            break;
 
-////imwrite(picture_name, DstImg);
-       if(waitKey(1)==27)
-           break;
+
+        auto duration = std::chrono::duration_cast<chrono::microseconds>(end - start);
+
+        std::cout<< duration.count()/1000000.00 <<std::endl;
+
+
 
     }
+
 
 
 
