@@ -11,7 +11,7 @@ int main()
 {
     vector<Vec4i> Lines; //含有4个int元素的向量,0,1元素是线段起点，2，3元素是线段终点
 
-    String pattern = "/home/wzq/git/dataset/uisee/data/00_h0_5m/image_0/*.png";
+    String pattern = "/home/wzq/git/dataset/uisee/data/00_h0_5m/image_0/*.png";//s
     vector<String> fn;
 
     glob(pattern, fn, false);
