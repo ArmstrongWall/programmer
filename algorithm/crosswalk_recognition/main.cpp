@@ -4,61 +4,95 @@
 #include <opencv2/core/core.hpp>
 #include <iomanip>
 #include <chrono>
+#include <eigen3/Eigen/Dense>
 
 using namespace std;
 using namespace cv;
 
 int main()
 {
-    vector<Vec4i> Lines; //含有4个int元素的向量,0,1元素是线段起点，2，3元素是线段终点
 
-    String pattern = "/home/wzq/git/dataset/uisee/data/crosswalk_h1m/image_0/*.png";//s
+    vector<Vec4d> Lines; //含有4个int元素的向量,0,1元素是线段起点，2，3元素是线段终点
+
+    String pattern = "/home/wzq/git/dataset/uisee/data/00_h0_5m/image_0/*.png";//s
     vector<String> fn;
 
     glob(pattern, fn, false);
 
+    char* semanticMap = new char[752*480] ;
+
+
     size_t count = fn.size();
     for (size_t i = 0; i < count; i++)
+    //for (size_t i = 0; i < 1; i++)
     {
+        auto start = std::chrono::system_clock::now();
+        memset(semanticMap,0,752*480*sizeof(char));
 
+        Mat frame = imread(fn[i],IMREAD_GRAYSCALE);
+//        Mat origin_frame = imread(fn[i],IMREAD_GRAYSCALE);
+//        Eigen::Vector3f* dI = new Eigen::Vector3f[origin_frame.cols*origin_frame.rows*sizeof(Eigen::Vector3f)];
+//
+//
+//        for(int i = 0; i < origin_frame.cols * origin_frame.rows; i++)
+//            dI[i][0]  = static_cast<float> (origin_frame.data[i]);
+//
+//
+//        Mat frame(origin_frame.rows, origin_frame.cols, CV_8UC1);
+//
+//        auto start = std::chrono::system_clock::now();
+//
+//        for(int i = 0; i < frame.cols * frame.rows; i++)
+//            frame.data[i] = static_cast<uchar> (dI[i][0]);
 
-        Mat frame = imread(fn[i]);
-        // 这个大小与VideoWriter构造函数中的大小一致。
-        //Mat frame = imread("0.png");
         if (frame.empty()) {
             std::cout << "ERROR! blank frame grabbed" << std::endl;
             return false;
         }
-        Mat gray_frame;
-        cvtColor(frame, gray_frame, CV_BGR2GRAY);
-
-        Mat roi = gray_frame;
+        Mat roi = frame;
         threshold(roi, roi, 50, 255, CV_THRESH_BINARY);   //灰度变二值
 
 
         Mat CannyImg;
-        Canny(gray_frame, CannyImg, 50, 10, 3);//canny 算子 上下阈值越大，边缘就越少
-
+        Canny(frame, CannyImg, 50, 10, 3);//canny 算子 上下阈值越大，边缘就越少
 
         Mat DstImg = frame;
-        //cvtColor(frame, DstImg, CV_GRAY2BGR);
-        auto start = std::chrono::system_clock::now();
-        HoughLinesP(CannyImg, Lines, 1, CV_PI / 360, 170,300,15);
-        auto end   = std::chrono::system_clock::now();
+        HoughLinesP(CannyImg, Lines, 1, CV_PI / 360, 170,200,15);
+
+        cvtColor(frame, DstImg, CV_GRAY2BGR);
 
 
-        for (size_t i = 0; i < Lines.size(); i++)
+        for (auto lines : Lines)
         {
-            line(DstImg, Point(Lines[i][0], Lines[i][1]), Point(Lines[i][2], Lines[i][3]), Scalar(0,0,255), 2, 8);
+            if(lines[0] != lines[2]) {
+                for (auto x = static_cast<int>(lines[0]); x < lines[2]; x++) {
+                    double k = (lines[1] - lines[3])/(lines[0] - lines[2]);
+                    auto y =  static_cast<int>(k*(x - lines[2]) + (lines[3]));
+                    semanticMap[x+y*frame.cols] = 100;
+                    DstImg.at<Vec3b>(y,x)[0]=0;//set (y,x) is because Mirror flip
+                    DstImg.at<Vec3b>(y,x)[1]=0;
+                    DstImg.at<Vec3b>(y,x)[2]=255;
+                }
+            }
         }
 
+//        //Mat semanticMap_frame(origin_frame.rows, origin_frame.cols, CV_8UC1);
+//        Mat semanticMap_frame(frame.rows,frame.cols, CV_8UC1);
+//
+//        for(int i = 0; i < semanticMap_frame.cols * semanticMap_frame.rows; i++)
+//            semanticMap_frame.data[i] = static_cast<uchar> (semanticMap[i]);
+//
+//        imshow("semanticMap_frame", semanticMap_frame);
         //imshow("HoughLines_Detect", CannyImg);
         imshow("HoughLines_Detect", DstImg);
         //imshow("HoughLines_Detect", roi);
         //imwrite(picture_name, DstImg);
+
+
         if(waitKey(1)==27)
             break;
 
+        auto end   = std::chrono::system_clock::now();
 
         auto duration = std::chrono::duration_cast<chrono::microseconds>(end - start);
 
@@ -68,7 +102,7 @@ int main()
 
     }
 
-
+    delete[] semanticMap;
 
 
 
