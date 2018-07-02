@@ -8,6 +8,8 @@
 
 using namespace std;
 using namespace cv;
+int w=752;
+int h=480;
 
 int main()
 {
@@ -19,7 +21,8 @@ int main()
 
     glob(pattern, fn, false);
 
-    char* semanticMap = new char[752*480] ;
+
+    char* semanticMap = new char[w*h] ;
 
 
     size_t count = fn.size();
@@ -27,7 +30,7 @@ int main()
     //for (size_t i = 0; i < 1; i++)
     {
         auto start = std::chrono::system_clock::now();
-        memset(semanticMap,0,752*480*sizeof(char));
+        memset(semanticMap,0,w*h*sizeof(char));
 
         Mat frame = imread(fn[i],IMREAD_GRAYSCALE);
 //        Mat origin_frame = imread(fn[i],IMREAD_GRAYSCALE);
@@ -115,7 +118,7 @@ int main()
 int pic2video()
 {
     // 构造一个VideoWriter
-    VideoWriter video("inputVideo.avi", CV_FOURCC('M', 'J', 'P', 'G'), 60.0, Size(752, 480));
+    VideoWriter video("inputVideo.avi", CV_FOURCC('M', 'J', 'P', 'G'), 60.0, Size(w, h));
     // 从一个文件夹下读取多张jpg图片
     String pattern = "/home/wzq/git/dataset/uisee/data/00_h0_5m/image_0/*.png";
     vector<String> fn;
@@ -127,7 +130,7 @@ int pic2video()
     {
         Mat image = imread(fn[i]);
         // 这个大小与VideoWriter构造函数中的大小一致。
-        resize(image, image, Size(752, 480));
+        resize(image, image, Size(w, h));
         // 流操作符，把图片传入视频
         video << image;
     }
