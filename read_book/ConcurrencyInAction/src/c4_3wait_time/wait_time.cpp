@@ -16,14 +16,25 @@ InsPub::~InsPub() {
 
 void InsPub::ins_pub_thread() {
 
+    std::chrono::microseconds period(5000);
     while(run_) {
+
+
         auto start = std::chrono::system_clock::now();
 
-        sleep(1);
+        usleep(2000);
 
         auto end   = std::chrono::system_clock::now();
-        auto duration = std::chrono::duration_cast<chrono::microseconds>(end - start);
 
-        std::cout<< duration.count() <<std::endl;
+        auto elapse  = std::chrono::duration_cast<chrono::microseconds>(end - start);
+
+        if (period > elapse) {
+            std::this_thread::sleep_for(period - elapse);
+        } else {
+            std::cout << "Too much time for calculation: " << elapse.count() << std::endl;
+        }
+
+        auto end2   = std::chrono::system_clock::now();
+        std::cout<<"thread cost time: "<< std::chrono::duration_cast<chrono::microseconds>(end2 - start).count() <<std::endl;
     }
 }
