@@ -106,10 +106,12 @@ public:
     }
 
     ~ThreadPool() {
-        printf("data\n");
+        printf("~ThreadPool\n");
         while(!isSynchronize());
+
         for(int i=0;i<maxThreadNum;i++)
             threads[i].join();
+
         delete[]workFunc;
         delete[]running;
         delete[]threads;

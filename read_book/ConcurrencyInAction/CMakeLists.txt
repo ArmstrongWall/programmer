@@ -9,4 +9,4 @@ add_executable(ConcurrencyInAction main.cpp
         src/c2_1_3RAIIWaitForThread/RAIIWaitForThread.h
         src/c2_1_3RAIIWaitForThread/RAIIWaitForThread.cpp
         src/c4_3wait_time/wait_time.cpp
-        src/c4_3wait_time/wait_time.h)
+        src/c4_3wait_time/wait_time.h src/c5_3_synchronizing_operations/c5_3.cpp src/c5_3_synchronizing_operations/c5_3.h)

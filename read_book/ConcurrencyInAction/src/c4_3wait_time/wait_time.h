@@ -24,4 +24,6 @@ private:
     bool run_;
 
 };
+
+void wait_time();
 #endif //CONCURRENCYINACTION_WAIT_TIME_H

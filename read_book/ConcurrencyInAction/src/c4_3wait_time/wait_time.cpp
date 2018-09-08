@@ -38,3 +38,16 @@ void InsPub::ins_pub_thread() {
         std::cout<<"thread cost time: "<< std::chrono::duration_cast<chrono::microseconds>(end2 - start).count() <<std::endl;
     }
 }
+
+void wait_time(){
+
+    InsPub *pub;
+    pub = new InsPub();
+
+    int i=1;
+    while(i)
+    {
+        i++;
+        sleep(1);
+    }
+}

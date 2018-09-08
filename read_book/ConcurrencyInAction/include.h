@@ -12,7 +12,7 @@
 
 #include "src/c2_1_3RAIIWaitForThread/RAIIWaitForThread.h"
 #include "src/c4_3wait_time/wait_time.h"
-
+#include "src/c5_3_synchronizing_operations/c5_3.h"
 
 
 #endif //CONCURRENCYINACTION_INCLUDE_H

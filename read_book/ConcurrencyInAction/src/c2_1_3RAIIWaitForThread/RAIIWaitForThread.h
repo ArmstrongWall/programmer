@@ -27,4 +27,6 @@ private:
 
 };
 
+void RAIIWaitForThread();
+
 #endif //CONCURRENCYINACTION_RAIIWAITFORTHREAD_H
