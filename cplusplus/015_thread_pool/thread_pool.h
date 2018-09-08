@@ -87,7 +87,7 @@ public:
 public:
     ThreadPool(int threadNum = 0) {
         maxThreadNum   = threadNum > WorkThreadNum ? threadNum : WorkThreadNum;
-        //at least 6 thread in pool
+        //at least 4 thread in pool
 
         workFunc       = new WorkFunc[maxThreadNum];
         running        = new bool[maxThreadNum];
@@ -106,7 +106,10 @@ public:
     }
 
     ~ThreadPool() {
+        printf("data\n");
         while(!isSynchronize());
+        for(int i=0;i<maxThreadNum;i++)
+            threads[i].join();
         delete[]workFunc;
         delete[]running;
         delete[]threads;
@@ -176,8 +179,8 @@ private:
             if(running[idx] == false)
                 conditionVal[idx].wait(lock);
 
-            workFunc[idx]((void*)&x[idx]);
-            ++sleepThreadNum;
+            workFunc[idx]((void*)&x[idx]);//run real func
+            ++sleepThreadNum;//run finish,then this thread is idle
             workFunc[idx] = defaultFunc<T>;
             running[idx] = false;
         }
@@ -192,7 +195,7 @@ private:
     std::mutex              *Mutex;
     std::thread             *threads;
     int                     maxThreadNum;
-    std::atomic_int         sleepThreadNum;
+    int                     sleepThreadNum;
 
 
     /////////////////////////////////////////
@@ -239,8 +242,8 @@ public:
 
         for(int i = 0; i < maxThreadNum; ++i) {
             workFunc[i] = defaultFunc<typeName>;
-            running[i] = false;
-            threads[i] = std::thread(&ThreadPool::workLoop, this, i);
+            running[i]  = false;
+            threads[i]  = std::thread(&ThreadPool::workLoop, this, i);
         }
     }
 
@@ -330,7 +333,7 @@ private:
     std::mutex              *Mutex;
     std::thread             *threads;
     int                     maxThreadNum;
-    std::atomic_int         sleepThreadNum;
+    std::atomic<int>        sleepThreadNum;
 
     /////////////////////////////////////////
     /// \brief workFunc param
