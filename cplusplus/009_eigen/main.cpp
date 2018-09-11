@@ -48,9 +48,10 @@ int main(int argc , char ** argv)
 
 
     //验证互为相反数的两组四元数表示同一个旋转
-    double roll  = 0.1017971337 * DEG_TO_RAD;//x
-    double pitch = -0.0213317815 * DEG_TO_RAD;//y
-    double yaw   = (35.5819854736) * DEG_TO_RAD;//z
+    double roll  = -15.000000 * DEG_TO_RAD;//x
+    double pitch = 0.000000 * DEG_TO_RAD;//y
+    double yaw   = 0.000000 * DEG_TO_RAD;//z
+
 
 //从旋转轴初始化四元数
     Eigen::Quaterniond q =
@@ -58,7 +59,7 @@ int main(int argc , char ** argv)
             Eigen::AngleAxisd( roll,   Eigen::Vector3d::UnitX()) *
             Eigen::AngleAxisd( pitch , Eigen::Vector3d::UnitY());
 
-    cout << "Quaternion1" << endl << q.coeffs() << endl;
+    cout << "q" << endl << q.coeffs() << endl;
     Eigen::Vector3d velocity(3.6,0,0);
     velocity = q*velocity;
     std::cout<< "velocity = "  << std::endl << velocity.transpose() << std::endl;
@@ -74,18 +75,20 @@ int main(int argc , char ** argv)
     cout << "unreal Rotation_matrix1" << endl << quater_to_matrix << endl;
 
 
+
 //直接初始化四元数
     Eigen::Quaterniond q2;
-    q2.x()= 0.0467411237479;
-    q2.y()= 0.000437485847171;
-    q2.z()= -0.30571784276;
-    q2.w()= -0.950974067246;
+    q2.x()= 0.4701276013773263;
+    q2.y()= -0.4752457045828525;
+    q2.z()= 0.5287298035712963;
+    q2.w()= 0.5230357095975458;
 
     Eigen::Matrix3d quater_to_matrix2;
     quater_to_matrix2 = q2.matrix();
     cout << "Apollo Rotation_matrix2" << endl << quater_to_matrix2 << endl;
 
-    Eigen::Vector3d  Apollo_eulerAngles = quater_to_matrix2.eulerAngles(2,1,0);//z y x
+    Eigen::Vector3d  Apollo_eulerAngles = quater_to_matrix2.eulerAngles(0,1,2);
+    //eulerAngles(0,1,2),"2" represents the z axis and "0" the x axis
     cout << "Apollo roll pitch yaw " << Apollo_eulerAngles.transpose()<<endl;
 
 
