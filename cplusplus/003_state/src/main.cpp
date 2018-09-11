@@ -1,5 +1,5 @@
 #include <iostream>
-#include "context.h"
+#include "context.hpp"
 #include "state.h"
 
 int main(int argc,char** argv)
@@ -20,7 +20,7 @@ int main(int argc,char** argv)
       std::cout<< count << std::endl;
 
     }
-    
+
     if(con != NULL)
     {
         delete con;

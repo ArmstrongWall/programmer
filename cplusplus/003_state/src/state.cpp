@@ -1,5 +1,5 @@
 #include <iostream>
-#include "context.h"
+#include "context.hpp"
 #include "state.h"
 
 using namespace std;
@@ -15,7 +15,7 @@ void State::OperationInterface(Context *con)
 bool State::ChangeState(Context *con,State *st)
 {
     con->ChangeState(st);//实际运行了状态转换
-    return 1;
+    return true;
 }
 
 

@@ -7,7 +7,7 @@ class State
     public:
         State();
         virtual ~State();
-        
+
         virtual void OperationInterface(Context * con);
         virtual void OperationChangeState(Context * con)=0;
 

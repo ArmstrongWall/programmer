@@ -87,7 +87,7 @@ int main(int argc , char ** argv)
     quater_to_matrix2 = q2.matrix();
     cout << "Apollo Rotation_matrix2" << endl << quater_to_matrix2 << endl;
 
-    Eigen::Vector3d  Apollo_eulerAngles = quater_to_matrix2.eulerAngles(0,1,2);
+    Eigen::Vector3d  Apollo_eulerAngles = quater_to_matrix2.eulerAngles(2,1,0);
     //eulerAngles(0,1,2),"2" represents the z axis and "0" the x axis
     cout << "Apollo roll pitch yaw " << Apollo_eulerAngles.transpose()<<endl;
 
