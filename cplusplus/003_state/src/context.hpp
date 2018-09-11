@@ -2,7 +2,6 @@
 #define CONTEXT_H_
 
 #include"state.h"
-class State;
 
 /*
  * Context在整个状态转换的过程中起着一个中间人的作用
