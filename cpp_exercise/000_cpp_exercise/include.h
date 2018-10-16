@@ -12,6 +12,6 @@
 
 #include "src/001_bind/bind.h"
 #include "src/002_thread_pool/thread_pool.h"
-
+#include "src/003_chrono_time/chrono_time.h"
 
 #endif //CONCURRENCYINACTION_INCLUDE_H
