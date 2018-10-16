@@ -6,6 +6,7 @@
 #include <functional>
 
 
+
 int lambda_demo(){
 
     auto func = [] () { std::cout << "Hello world"<< std::endl; };
@@ -28,5 +29,7 @@ int lambda_demo(){
     auto func4 = [&a](int i){ return a+i; };
     std::cout << "func1: " << func4(4) << '\n';
 
+    S s;
+    s.f();
 
 }
