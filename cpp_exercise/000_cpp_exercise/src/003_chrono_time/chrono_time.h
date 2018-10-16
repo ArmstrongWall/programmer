@@ -4,6 +4,7 @@
 
 #ifndef CPP_EXERCISE_CHRONO_TIME_H
 #define CPP_EXERCISE_CHRONO_TIME_H
+#include <iostream>
 
 int time();
 

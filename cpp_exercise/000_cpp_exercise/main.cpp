@@ -8,7 +8,8 @@ int main() {
 
 //    bind();
 //    thread_pool_demo();
-    time();
+//    time();
+    lambda_demo();
     return 0;
 }
 
