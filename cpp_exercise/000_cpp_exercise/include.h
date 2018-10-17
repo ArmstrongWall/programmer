@@ -14,5 +14,6 @@
 #include "src/002_thread_pool/thread_pool.h"
 #include "src/003_chrono_time/chrono_time.h"
 #include "src/004_lambda/lambda.h"
+#include "src/005_eigen/eigen.h"
 
 #endif //CONCURRENCYINACTION_INCLUDE_H

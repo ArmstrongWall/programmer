@@ -24,7 +24,7 @@ public:
         l2(); // 调用 use(0,0)
 
          auto l3 = [i, &x=x, this]{ use(i, x); }; // OK ，引用捕获
-        i = 2; x = 2; 
+        i = 2; x = 2;
         l3(); // 调用 use(1,2)
     }
 

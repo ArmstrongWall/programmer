@@ -1,3 +1,9 @@
+//
+// Created by wzq on 18-10-17.
+//
+
+#include "eigen.h"
+
 #include<iostream>
 #include<vector>
 #include <eigen3/Eigen/Dense>
@@ -5,7 +11,7 @@
 using namespace std;
 constexpr double DEG_TO_RAD = M_PI / 180.0;
 
-int main(int argc , char ** argv)
+int eigen_demo( )
 {
 
     double matrix_state_ = -0.09;
@@ -92,7 +98,24 @@ int main(int argc , char ** argv)
     cout << "Apollo roll pitch yaw " << Apollo_eulerAngles.transpose()<<endl;
 
 
+    Eigen::Matrix3d K;
+    K <<    -1, 2, 2,
+            3,-1, 1,
+            2, 2,-1;
+    Eigen::EigenSolver<Eigen::Matrix3d> es(K);
+    Eigen::MatrixXcd evecs = es.eigenvectors();//获取矩阵特征向量4*4，这里定义的MatrixXcd必须有c，表示获得的是complex复数矩阵
+    Eigen::MatrixXcd evals = es.eigenvalues();//获取矩阵特征值 4*1
+    Eigen::MatrixXd evalsReal;//注意这里定义的MatrixXd里没有c
+    evalsReal=evals.real();   //获取特征值实数部分
+    Eigen::MatrixXf::Index evalsMax;
 
+
+    evalsReal.rowwise().sum().maxCoeff(&evalsMax);//得到最大特征值的位置
+    Eigen::Vector3d q_eigen;
+    q_eigen << evecs.real()(0, evalsMax), evecs.real()(1, evalsMax), evecs.real()(2, evalsMax);//得到对应特征向量
+
+    std::cout << "evecs = "<< std::endl  <<  evecs << std::endl;
+    std::cout << "evals = "<< std::endl  <<  evals << std::endl;
 
     return 0;
 }
