@@ -8,6 +8,7 @@
 #include <mutex>
 #include <thread>
 #include <chrono>
+#include <iostream>
 
 struct Box {
     explicit Box(int num) : num_things{num} {}
