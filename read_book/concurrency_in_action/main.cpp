@@ -8,7 +8,8 @@ int main() {
 
     //RAIIWaitForThread();
     //wait_time();
-    sequentially();
+    //sequentially();
+    unprotected_mutex_demo();
     return 0;
 }
 
