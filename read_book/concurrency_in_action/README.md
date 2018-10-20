@@ -13,3 +13,25 @@ thread_planControl = std::thread(&planControl::planControlThreadLoop,this);
 2.并不是说将所有可访问的数据结构代码标记为互斥就可以完成根本上的数据保护。
 
 ### 3.2.6	std::unique_lock
+std::unqiue_lock	 使用更为自由的不变量,这样 	std::unique_lock	 实例不会总与互斥量的数
+据类型相关,使用起来要比 	std:lock_guard	 更加灵活。首先,可将 	std::adopt_lock	 作为第二
+个参数传入构造函数,对互斥量进行管理;也可以将 	std::defer_lock	 作为第二个参数传递进
+去,表明互斥量应保持解锁状态。这样,就可以被 	std::unique_lock	 对象(不是互斥量)的
+lock()函数的所获取,或传递 	std::unique_lock	 对象到 	std::lock()	 中。
+
+## C4：同步并发操作
+### 4.1.1	等待条件达成
+使用std::condition_variable条件变量去完成等待功能
+
+关键在于等待函数，data_cond.wait(lk,[]{})
+会去检查这些条件(通过调用所提供的lambda函数),当条件满足(lambda函数返回true)
+时返回。如果条件不满足(lambda函数返回false),wait()函数将解锁互斥量,并且将本线程
+置于阻塞或等待状态。当准备数据的线程调用notify_one()通知
+条件变量时,处理数据的线程从睡眠状态中苏醒,重新获取互斥锁,并且对条件再次检查,
+在条件满足的情况下,从wait()返回并继续持有锁。当条件不满足时,线程将对互斥量解锁,
+并且重新开始等待。所以这里的锁最好使用unique_lock，等待中
+的线程必须在等待期间解锁互斥量,并在这这之后对互斥量再次上锁,而 	std::lock_guard	 没
+有这么灵活。如果互斥量在线程休眠期间保持锁住状态,准备数据的线程将无法锁住互斥
+量,也无法添加数据到队列中;同样的,等待线程也永远不会知道条件何时满足。
+
+### 4.1.2	使用条件变量构建线程安全队列
