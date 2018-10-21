@@ -19,4 +19,6 @@ add_executable(ConcurrencyInAction src/main.cpp
         src/c4_1_condition_variable/condition_variable.cpp
         src/c4_1_condition_variable/condition_variable.h
         src/c4_3_threadsafe_queue/threadsafe_queue.cpp
-        src/c4_3_threadsafe_queue/threadsafe_queue.h)
+        src/c4_3_threadsafe_queue/threadsafe_queue.h
+        src/c6_1_threadsafe_stack/threadsafe_stack.cpp
+        src/c6_1_threadsafe_stack/threadsafe_stack.h)

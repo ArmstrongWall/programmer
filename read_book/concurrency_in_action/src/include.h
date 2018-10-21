@@ -17,5 +17,6 @@
 #include "c3_9_unique_lock/unique_lock.h"
 #include "c4_1_condition_variable/condition_variable.h"
 #include "c4_3_threadsafe_queue/threadsafe_queue.h"
+#include "c6_1_threadsafe_stack/threadsafe_stack.h"
 
 #endif //CONCURRENCYINACTION_INCLUDE_H
