@@ -26,26 +26,26 @@ using namespace g2o;
 //定义一个测量值结构体，里面包括一个三维世界的坐标，一个灰度
 struct Measurement
 {
-    Measurement ( Eigen::Vector3d p ,float g) : pos_world ( p ),grayscale ( g ) {}
+    Measurement ( Eigen::Vector3d p ,double g) : pos_world ( p ),grayscale ( g ) {}
     Eigen::Vector3d pos_world;
-    float grayscale;    
+    double grayscale;    
 };
 
 //根据小孔成像模型反推，2D点到3D点的变换,并且声明为内联函数，可以直接引用
-inline Eigen::Vector3d project2Dto3D( int x, int y, int d, float fx, float fy, float cx, float cy, float scale)
+inline Eigen::Vector3d project2Dto3D( int x, int y, int d, double fx, double fy, double cx, double cy, double scale)
 {
-    float zz = float (d) / scale;
-    float xx = zz* ( x - cx ) / fx;
-    float yy = zz* ( y - cy ) / fx;
+    double zz = double (d) / scale;
+    double xx = zz* ( x - cx ) / fx;
+    double yy = zz* ( y - cy ) / fx;
     
     return Eigen::Vector3d (xx,yy,zz);
 }
 
 //根据小孔成像模型，3D点到2D点的变换,并且声明为内联函数，可以直接引用
-inline Eigen::Vector2d project3Dto2D( float x, float y,float z, float fx, float fy, float cx, float cy)
+inline Eigen::Vector2d project3Dto2D( double x, double y,double z, double fx, double fy, double cx, double cy)
 {
-    float u = fx * x / z + cx;
-    float v = fy * y / z + cy;
+    double u = fx * x / z + cx;
+    double v = fy * y / z + cy;
     return Eigen::Vector2d(u,v);
 }
 
@@ -67,7 +67,7 @@ public:
     
     EdgeSE3ProjectDirect(){} //构造函数1
     
-    EdgeSE3ProjectDirect( Eigen::Vector3d point, float fx,float fy, float cx, float cy, cv::Mat* image) : x_world_( point ),fx_( fx ), fy_( fy ),cx_( cx ), cy_( cy ), image_ ( image ) {}   //构造函数2，参数是一个3D点坐标，相机内参，cv的图象
+    EdgeSE3ProjectDirect( Eigen::Vector3d point, double fx,double fy, double cx, double cy, cv::Mat* image) : x_world_( point ),fx_( fx ), fy_( fy ),cx_( cx ), cy_( cy ), image_ ( image ) {}   //构造函数2，参数是一个3D点坐标，相机内参，cv的图象
     
     virtual  void computeError() //计算误差，重写了computeError虚函数
     {
@@ -75,8 +75,8 @@ public:
         
         Eigen::Vector3d x_local = v->estimate().map (x_world_);
         
-        float x = x_local[0] * fx_ / x_local[2] + cx_;
-        float y = x_local[1] * fy_ / x_local[2] + cy_;
+        double x = x_local[0] * fx_ / x_local[2] + cx_;
+        double y = x_local[1] * fy_ / x_local[2] + cy_;
         //将3D点转换到图象上
         
         //先检查该点是否在图像上，如果不在，误差就为0，如果在，就计算误差
@@ -110,8 +110,8 @@ public:
         double invz = 1.0/xyz_trans[2];//z是倒数
         double invz_2 = invz * invz ;  //z的平方
         
-        float u = x * fx_ * invz + cx_ ;
-        float v = y * fy_ * invz + cy_ ;
+        double u = x * fx_ * invz + cx_ ;
+        double v = y * fy_ * invz + cy_ ;
         
         
         
@@ -147,13 +147,13 @@ public:
         virtual bool write ( std::ostream& out ) const {}        
     protected:
         //使用双线性插值法计算参考帧的某一点灰度直
-        inline float getPixeValue(float x,float y)
+        inline double getPixeValue(double x,double y)
         {
             uchar* data = & image_ ->data[int ( y )* image_ -> step + int ( x )];
-            float xx = x - floor ( x );
-            float yy = y - floor ( y );
+            double xx = x - floor ( x );
+            double yy = y - floor ( y );
             
-            return float (
+            return double (
                             ( 1 -xx ) * ( 1- yy ) * data[0] +
                             xx * ( 1 - yy ) * data[1] +
                             ( 1 - xx ) * yy * data[ image_->step ] +
@@ -165,7 +165,7 @@ public:
         
     public:
         Eigen::Vector3d x_world_;  // 3D point in world frame
-        float cx_ = 0 , cy_ = 0 , fx_ = 0 , fy_ = 0 ; // Camera intrinsics
+        double cx_ = 0 , cy_ = 0 , fx_ = 0 , fy_ = 0 ; // Camera intrinsics
         cv::Mat* image_ = nullptr;  // reference image
 
 
@@ -188,11 +188,11 @@ int main(int argc,char ** argv)
     cv::Mat color,depth,gray;
     vector<Measurement> measurements;//定义一个Measurement类型的向量measurements
     // 相机内参      
-    float cx = 325.5;
-    float cy = 253.5;                                                  
-    float fx = 518.0;
-    float fy = 519.0;
-    float depth_scale = 1000.0;//?????? 深度的尺度
+    double cx = 325.5;
+    double cy = 253.5;                                                  
+    double fx = 518.0;
+    double fy = 519.0;
+    double depth_scale = 1000.0;//?????? 深度的尺度
 
     Eigen::Matrix3f K;
     K<<fx,0.f,cx,0.f,fy,cy,0.f,0.f,1.0f;//内参矩阵
@@ -236,7 +236,7 @@ int main(int argc,char ** argv)
                     if(d == 0)
                         continue;
                     Eigen::Vector3d p3d = project2Dto3D(x,y,d,fx,fy,cx,cy,depth_scale);
-                    float grayscale = float (gray.ptr<uchar> (y)[x]);
+                    double grayscale = double (gray.ptr<uchar> (y)[x]);
                     measurements.push_back (Measurement (p3d,grayscale) );
                 }
             prev_color = color.clone();
@@ -280,9 +280,9 @@ int main(int argc,char ** argv)
             if( pixel_now(0,0) < 0 || pixel_now(0,0) >= color.cols || pixel_now(1,0)<0 || pixel_now(1,0) >= color.rows )
                 continue;
             
-            float b = 0;
-            float g = 250;
-            float r = 0;
+            double b = 0;
+            double g = 250;
+            double r = 0;
             img_show.ptr<uchar>( pixel_prev(1,0) )[int(pixel_prev(0,0))*3] = b;
             img_show.ptr<uchar>( pixel_prev(1,0) )[int(pixel_prev(0,0))*3+1] = g;
             img_show.ptr<uchar>( pixel_prev(1,0) )[int(pixel_prev(0,0))*3+2] = r;
