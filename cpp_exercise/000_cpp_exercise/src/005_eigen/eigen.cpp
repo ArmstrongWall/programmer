@@ -11,9 +11,18 @@
 using namespace std;
 constexpr double DEG_TO_RAD = M_PI / 180.0;
 constexpr double RAD_TO_DEG = 180.0 / M_PI;
+typedef Eigen::Matrix<double,4,6> Mat46;
+
 
 int eigen_demo( )
 {
+    Mat46              partial_point_xi = Mat46::Zero();
+
+    partial_point_xi.topLeftCorner(3,3)  = Eigen::Matrix<double,3,3>::Zero();
+    partial_point_xi.topRightCorner(3,3) = Eigen::Matrix<double,3,3>::Identity();
+
+    cout << "partial \n" << partial_point_xi<<endl;
+
 
     double matrix_state_ = -0.09;
     Eigen::MatrixXd matrix_k_(1,4);
