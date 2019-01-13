@@ -12,6 +12,7 @@ using namespace std;
 constexpr double DEG_TO_RAD = M_PI / 180.0;
 constexpr double RAD_TO_DEG = 180.0 / M_PI;
 typedef Eigen::Matrix<double,4,6> Mat46;
+typedef Eigen::Matrix<double,3,9> Mat39;
 
 
 int eigen_demo( )
@@ -23,6 +24,12 @@ int eigen_demo( )
 
     cout << "partial \n" << partial_point_xi<<endl;
 
+    Mat39 Jacobian ;
+    Jacobian.leftCols(3)       = Eigen::Matrix<double,3,3>::Zero();
+    Jacobian.middleCols(3,3)   = Eigen::Matrix<double,3,3>::Identity();
+    Jacobian.rightCols(3)      = Eigen::Matrix<double,3,3>::Zero();
+
+    cout << "Jacobian \n" << Jacobian << "\n\n" <<endl;
 
     double matrix_state_ = -0.09;
     Eigen::MatrixXd matrix_k_(1,4);
