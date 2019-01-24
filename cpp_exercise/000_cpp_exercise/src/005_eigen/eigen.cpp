@@ -4,8 +4,10 @@
 
 #include "eigen.h"
 
-#include<iostream>
-#include<vector>
+#include <iostream>
+#include <vector>
+#include <sophus/se3.hpp>
+#include <sophus/so3.hpp>
 #include <eigen3/Eigen/Dense>
 
 using namespace std;
@@ -13,11 +15,33 @@ constexpr double DEG_TO_RAD = M_PI / 180.0;
 constexpr double RAD_TO_DEG = 180.0 / M_PI;
 typedef Eigen::Matrix<double,4,6> Mat46;
 typedef Eigen::Matrix<double,3,9> Mat39;
+typedef Eigen::Matrix<double,9,9> Mat99;
+typedef Sophus::SO3<float> SO3f;
+typedef Sophus::SO3<double> SO3;
+
+typedef Sophus::SE3<float>  SE3f;
+typedef Sophus::SE3<double> SE3;
+
+int eigen_block() {
+    Eigen::Vector4d x;
+    x.segment<2>(2) << 2,2;
+    cout << "x \n" << x <<endl;
 
 
-int eigen_demo( )
-{
-    Mat46              partial_point_xi = Mat46::Zero();
+    Mat99    A = Mat99::Zero();
+    A.block<3,3>(0,0)          =  Eigen::Matrix<double,3,3>::Ones();
+    A.block<3,3>(3,0)          =  Eigen::Matrix<double,3,3>::Ones();       // P(i+1 : i+rows, j+1 : j+cols)
+    A.block<3,3>(0,3)          =  Eigen::Matrix<double,3,3>::Ones() * 2;       // P(i+1 : i+rows, j+1 : j+cols)
+    A.block<3,3>(3,3)          =  Eigen::Matrix<double,3,3>::Identity();
+    A.block<3,3>(6,0)          =  Eigen::Matrix<double,3,3>::Ones();
+    A.block<3,3>(6,3)          =  Eigen::Matrix<double,3,3>::Identity();
+    A.block<3,3>(6,6)          =  Eigen::Matrix<double,3,3>::Ones();
+
+
+    cout << "A \n" << A <<endl;
+
+
+    Mat46              partial_point_xi  = Mat46::Zero();
 
     partial_point_xi.topLeftCorner(3,3)  = Eigen::Matrix<double,3,3>::Zero();
     partial_point_xi.topRightCorner(3,3) = Eigen::Matrix<double,3,3>::Identity();
@@ -30,6 +54,38 @@ int eigen_demo( )
     Jacobian.rightCols(3)      = Eigen::Matrix<double,3,3>::Zero();
 
     cout << "Jacobian \n" << Jacobian << "\n\n" <<endl;
+}
+
+int eigen_demo() {
+
+
+
+    Eigen::Matrix<double,4,4>   imu_to_left_trans;
+    imu_to_left_trans <<
+            0.99996651999999997, 0.00430873000000000, 0.00695718000000000,   -0.04777362000000000108,
+            0.00434878000000000, -0.99997400999999997, -0.00575128000000000, -0.00223730999999999991,
+            0.00693222000000000, 0.00578135000000000, -0.99995926000000002,  -0.00160071000000000008,
+            0.0,                0.0,                   0.0,                      1.0;
+
+    std::cout << "point trans\n " << imu_to_left_trans.inverse()  << std::endl;
+
+
+    Eigen::Matrix<double,4,4> cam_imu ;
+    cam_imu <<
+    0.99996651999999997, 0.00430873000000000, 0.00695718000000000,   -0.04777362000000000108,
+    0.00434878000000000, -0.99997400999999997, -0.00575128000000000, -0.00223730999999999991,
+    0.00693222000000000, 0.00578135000000000, -0.99995926000000002,  -0.00160071000000000008,
+                    0.0,                0.0,                   0.0,                      1.0;
+
+    Eigen::Vector4d point(1,-1,30,1);
+
+    std::cout << "point trans\n " << cam_imu.inverse() * point << std::endl;
+
+
+//    Eigen::Vector3d  eulerAngles = cam_imu.eulerAngles(2,1,0);//eular angle z-y-x sequence
+//    std::cout << "eular z-y-x " << eulerAngles.transpose() * RAD_TO_DEG << std::endl;
+
+
 
     double matrix_state_ = -0.09;
     Eigen::MatrixXd matrix_k_(1,4);
@@ -57,7 +113,7 @@ int eigen_demo( )
     Eigen::AngleAxisd t_V(M_PI / 4, Eigen::Vector3d(0, 0, 1));
 
     //1.使用旋转的角度和旋转轴向量（此向量为单位向量）来初始化角轴
-    Eigen::AngleAxisd V1(M_PI / 4, Eigen::Vector3d(0, 0, 1));
+    Eigen::AngleAxisd V1(M_PI / 4, Eigen::Vector3d(0, 1, 0));
     //以（0,0,1）为旋转轴，旋转45度
     cout << "Rotation_vector1" << endl << V1.matrix() << endl;
 
@@ -159,3 +215,12 @@ int eigen_demo( )
 
     return 0;
 }
+int Sophus_demo() {
+
+    Eigen::Vector3d deg(-0.00014365,0.01394026,-0.00082318);
+    SO3 a = SO3::exp(deg);
+    std::cout << "a = \n"<< a.matrix() << std::endl;
+
+
+}
+
