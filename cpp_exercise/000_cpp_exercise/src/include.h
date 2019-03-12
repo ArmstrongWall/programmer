@@ -9,10 +9,8 @@
 #include <thread>
 #include <sys/time.h>
 #include <cmath>
-#include<stdio.h>
-#include<stdlib.h>
-#include<time.h>
-#define random(x) (rand()%x)
+
+
 
 
 #include "001_bind/bind.h"

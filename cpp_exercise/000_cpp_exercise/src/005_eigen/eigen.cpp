@@ -215,9 +215,11 @@ int eigen_demo() {
 
     return 0;
 }
+
+
 int Sophus_demo() {
 
-    Eigen::Vector3d deg(-0.00014365,0.01394026,-0.00082318);
+    Eigen::Vector3d deg(0,-45 * DEG_TO_RAD,0);
     SO3 a = SO3::exp(deg);
     std::cout << "a = \n"<< a.matrix() << std::endl;
 

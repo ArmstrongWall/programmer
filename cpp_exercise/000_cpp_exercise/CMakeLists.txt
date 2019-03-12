@@ -17,4 +17,4 @@ add_executable(cpp_exercise src/main.cpp
         src/003_chrono_time/chrono_time.cpp src/003_chrono_time/chrono_time.h
         src/004_lambda/lambda.cpp src/004_lambda/lambda.h
         src/005_eigen/eigen.cpp src/005_eigen/eigen.h
-        src/006_std_move/std_move.cpp src/006_std_move/std_move.h)
+        src/006_std_move/std_move.cpp src/006_std_move/std_move.h src/007_random/random.h)
