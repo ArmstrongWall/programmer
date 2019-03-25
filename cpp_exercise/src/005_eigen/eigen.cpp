@@ -62,7 +62,7 @@ int eigen_demo() {
 
     Eigen::Matrix<double,4,4>   imu_to_left_trans;
     imu_to_left_trans <<
-            0.99996651999999997,   0.00430873000000000,    0.00695718000000000,   -0.04777362000000000108,
+                      0.99996651999999997,   0.00430873000000000,    0.00695718000000000,   -0.04777362000000000108,
             0.00434878000000000,  -0.99997400999999997,   -0.00575128000000000,   -0.00223730999999999991,
             0.00693222000000000,   0.00578135000000000,   -0.99995926000000002,   -0.00160071000000000008,
             0.0,                   0.0,                    0.0,                   1.0;
@@ -72,7 +72,7 @@ int eigen_demo() {
 
     Eigen::Matrix<double,4,4> cam_to_imu ;
     cam_to_imu <<
-            0.0148655429818, -0.999880929698,   0.00414029679422, -0.0216401454975,
+               0.0148655429818, -0.999880929698,   0.00414029679422, -0.0216401454975,
             0.999557249008,   0.0149672133247,  0.025715529948,   -0.064676986768,
             -0.0257744366974, 0.00375618835797, 0.999660727178,    0.00981073058949,
             0.0,              0.0,              0.0,               1.0;
@@ -162,9 +162,9 @@ int eigen_demo() {
 
 //从旋转轴初始化四元数
     Eigen::Quaterniond q3 =
-                            Eigen::AngleAxisd( roll1,   Eigen::Vector3d::UnitX())*
-                            Eigen::AngleAxisd( pitch1 , Eigen::Vector3d::UnitY())*
-                            Eigen::AngleAxisd( yaw1 ,  Eigen::Vector3d::UnitZ());
+            Eigen::AngleAxisd( roll1,   Eigen::Vector3d::UnitX())*
+            Eigen::AngleAxisd( pitch1 , Eigen::Vector3d::UnitY())*
+            Eigen::AngleAxisd( yaw1 ,  Eigen::Vector3d::UnitZ());
 
     cout << "q3" << endl << q3.coeffs() << endl;
 
@@ -215,13 +215,41 @@ int eigen_demo() {
 
     return 0;
 }
-
-
 int Sophus_demo() {
 
-    Eigen::Vector3d deg(0,-45 * DEG_TO_RAD,0);
-    SO3 a = SO3::exp(deg);
-    std::cout << "a = \n"<< a.matrix() << std::endl;
+//    Eigen::Vector3d deg(-0.00014365,0.01394026,-0.00082318);
+//    SO3 a = SO3::exp(deg);
+//    std::cout << "a = \n"<< a.matrix() << std::endl;
+
+    float delta_time = 0.5;
+
+    double omega[8] = {0, M_PI/16, M_PI/8, 3*M_PI/16, M_PI/4, 3*M_PI/16, M_PI/8, M_PI/16};
+
+    double acc_x[8] = {0, 0.5, 1, 0.5, 0, -0.50, -1, -0.50};
+
+    Eigen::Vector3d v_w(0,0,0);
+    double g_norm = 9.8;
+    Eigen::Vector3d gravity(0,g_norm,0);
+
+
+    SO3   R_wb = SO3();
+    for(int i = 0; i < 8; i++) {
+
+        Eigen::Vector3d w(0,-omega[i],0);
+        Eigen::Vector3d acc(acc_x[i],0,0);
+        Eigen::Vector3d acc_body;
+        acc_body = acc - gravity;
+
+        R_wb = R_wb * SO3::exp(w*delta_time);
+
+        v_w = v_w + SO3::exp(w*delta_time) * acc_body * delta_time + gravity * delta_time;
+
+        Eigen::Matrix3d quater_to_matrix3 = R_wb.matrix();
+        Eigen::Vector3d  unreal_eulerAngles = quater_to_matrix3.eulerAngles(1,0,2);//y-x-z
+        cout <<"time " << i << ",eular y-x-z " << unreal_eulerAngles.transpose() * RAD_TO_DEG<<endl;
+        cout << "v_w is\n" << v_w <<endl<<endl;
+
+    }
 
 
 }

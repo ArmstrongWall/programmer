@@ -19,5 +19,7 @@
 #include "004_lambda/lambda.h"
 #include "005_eigen/eigen.h"
 #include "006_std_move/std_move.h"
+#include "008_insert_sort/insert_sort.h"
+
 
 #endif //CONCURRENCYINACTION_INCLUDE_H
