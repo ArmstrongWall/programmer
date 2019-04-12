@@ -28,7 +28,7 @@ int insert_sort() {
             20.48022,
     };
 
-    double t = 10.46519;
+    double t = 20.47044;
     int    i = 0;
 
     while(true) {

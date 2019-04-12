@@ -213,6 +213,13 @@ int eigen_demo() {
     std::cout << "evecs = "<< std::endl  <<  evecs << std::endl;
     std::cout << "evals = "<< std::endl  <<  evals << std::endl;
 
+
+    Eigen::Vector3d a(1,1,1);
+    Eigen::Vector3d b(3,3,3);
+
+    std::cout << "c = " << (a-b).squaredNorm() << std::endl;
+
+
     return 0;
 }
 int Sophus_demo() {
