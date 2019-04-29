@@ -10,9 +10,6 @@
 #include <sys/time.h>
 #include <cmath>
 
-
-
-
 #include "001_bind/bind.h"
 #include "002_thread_pool/thread_pool.h"
 #include "003_chrono_time/chrono_time.h"
@@ -20,6 +17,7 @@
 #include "005_eigen/eigen.h"
 #include "006_std_move/std_move.h"
 #include "008_insert_sort/insert_sort.h"
+#include "011_basic_datastructure/vector/vector.h"
 
 
 #endif //CONCURRENCYINACTION_INCLUDE_H

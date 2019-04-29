@@ -219,6 +219,30 @@ int eigen_demo() {
 
     std::cout << "c = " << (a-b).squaredNorm() << std::endl;
 
+    //验证互为相反数的两组四元数表示同一个旋转
+    double roll2  = 90.0 * DEG_TO_RAD;//x
+    double pitch2 = 90.0 * DEG_TO_RAD;//y
+    double yaw2   = 90.0 * DEG_TO_RAD;//z
+
+
+//从旋转轴初始化四元数
+    Eigen::Quaterniond q4 =
+            Eigen::AngleAxisd( roll2,   Eigen::Vector3d::UnitX())*
+            Eigen::AngleAxisd( pitch2 , Eigen::Vector3d::UnitY())*
+            Eigen::AngleAxisd( yaw2 ,  Eigen::Vector3d::UnitZ());
+
+
+    Eigen::Matrix3d quatertomatrix;
+    quatertomatrix = q3.toRotationMatrix();
+
+    Eigen::Vector3d vins(1.123792,-1.542760,0.377206);
+
+    std::cout << "vins trans\n " << quatertomatrix * vins<< std::endl;
+
+    //vins,+1.123792,-1.542760,+0.377206,gt,+0.432822,+2.284217,+0.319762
+
+
+
 
     return 0;
 }

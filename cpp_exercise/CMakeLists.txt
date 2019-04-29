@@ -19,4 +19,5 @@ add_executable(cpp_exercise src/main.cpp
         src/005_eigen/eigen.cpp src/005_eigen/eigen.h
         src/006_std_move/std_move.cpp src/006_std_move/std_move.h
         src/007_random/random.h
-        src/008_insert_sort/insert_sort.cpp src/008_insert_sort/insert_sort.h)
+        src/008_insert_sort/insert_sort.cpp src/008_insert_sort/insert_sort.h
+        src/011_basic_datastructure/vector/vector.cpp src/011_basic_datastructure/vector/vector.h)
