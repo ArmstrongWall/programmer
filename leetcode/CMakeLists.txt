@@ -12,4 +12,4 @@ include_directories (
 
 add_executable(leetcode src/main.cpp
         src/206_reverse_linked_list/reverse_linked_list.cpp
-        )
+        src/92_reverse_linked_list_II/reverse_linked_list_II.cpp src/92_reverse_linked_list_II/reverse_linked_list_II.h)
