@@ -5,9 +5,9 @@ int main() {
     //sequentially();
     //unprotected_mutex_demo();
     //unique_lock_demo();
-    //condition_variable_demo();
+    condition_variable_demo();
     //threadsafe_queue_demo();
-    threadsafe_stack_demo();
+    //threadsafe_stack_demo();
     return 0;
 }
 
