@@ -51,37 +51,6 @@ public:
     }
 };
 
-class SolutionByMei{
-public:
-       ListNode* reverseBetween(ListNode* head, int m, int n){
-             int i = 1;
-             ListNode* pNode_m_1 = nullptr;
-             ListNode* new_head = nullptr;
-             ListNode* result= head;
-             while(i <= n) {
-	    					if(i == m-1) pNode_m_1 = head;
-                if(i >= m){
-                       ListNode* pnext = head->next;
-                       head->next      = new_head;
-                       new_head        = head;
-                       head            = pnext;
-                }
-                else   head = head->next;
-                i++;
-           	 }
-             if(m == 1) {
-	    					result->next = head;//m和n+1
-                result= new_head;
-             }
-             else {
-             	   pNode_m_1->next->next = head;//m和n+1
-             	   pNode_m_1->next = new_head;//m-1和n
-             }
-             return result;
-       }
-};
-
-
 void reverse_between() {
     ListNode a(1);
     ListNode b(2);
