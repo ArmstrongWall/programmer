@@ -12,7 +12,8 @@
 
 #include "206_reverse_linked_list/reverse_linked_list.h"
 #include "92_reverse_linked_list_II/reverse_linked_list_II.h"
-
+#include "160_get_intersection_node/getIntersectionNode.h"
+#include "142_detectCycle/detectCycle.h"
 
 
 #endif //CONCURRENCYINACTION_INCLUDE_H

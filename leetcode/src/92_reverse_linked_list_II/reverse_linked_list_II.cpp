@@ -3,8 +3,6 @@
 //
 
 #include "reverse_linked_list_II.h"
-
-
 #include <iostream>
 
 struct ListNode {

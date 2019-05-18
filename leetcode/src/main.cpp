@@ -4,8 +4,9 @@
 int main() {
 
 //    reverseList();
-    reverse_between();
-
+//    reverse_between();
+//    getIntersectionNode();
+    detectCycle();
     return 0;
 }
 

@@ -12,4 +12,7 @@ include_directories (
 
 add_executable(leetcode src/main.cpp
         src/206_reverse_linked_list/reverse_linked_list.cpp
-        src/92_reverse_linked_list_II/reverse_linked_list_II.cpp src/92_reverse_linked_list_II/reverse_linked_list_II.h)
+        src/92_reverse_linked_list_II/reverse_linked_list_II.cpp
+        src/92_reverse_linked_list_II/reverse_linked_list_II.h
+        src/160_get_intersection_node/getIntersectionNode.cpp
+        src/160_get_intersection_node/getIntersectionNode.h src/142_detectCycle/detectCycle.cpp src/142_detectCycle/detectCycle.h)
