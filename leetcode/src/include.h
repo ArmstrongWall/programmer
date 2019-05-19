@@ -14,6 +14,10 @@
 #include "92_reverse_linked_list_II/reverse_linked_list_II.h"
 #include "160_get_intersection_node/getIntersectionNode.h"
 #include "142_detectCycle/detectCycle.h"
+#include "86_partition_list/partition_list.h"
+#include "138_copyRandomList/copyRandomList.h"
+#include "21_mergeTwoLists/mergeTwoLists.h"
+#include "23_mergeKLists/mergeKLists.h"
 
 
 #endif //CONCURRENCYINACTION_INCLUDE_H

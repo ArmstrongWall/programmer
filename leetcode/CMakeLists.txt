@@ -15,4 +15,8 @@ add_executable(leetcode src/main.cpp
         src/92_reverse_linked_list_II/reverse_linked_list_II.cpp
         src/92_reverse_linked_list_II/reverse_linked_list_II.h
         src/160_get_intersection_node/getIntersectionNode.cpp
-        src/160_get_intersection_node/getIntersectionNode.h src/142_detectCycle/detectCycle.cpp src/142_detectCycle/detectCycle.h)
+        src/160_get_intersection_node/getIntersectionNode.h
+        src/142_detectCycle/detectCycle.cpp
+        src/142_detectCycle/detectCycle.h
+        src/86_partition_list/partition_list.cpp
+        src/86_partition_list/partition_list.h src/138_copyRandomList/copyRandomList.cpp src/138_copyRandomList/copyRandomList.h src/21_mergeTwoLists/mergeTwoLists.cpp src/21_mergeTwoLists/mergeTwoLists.h src/23_mergeKLists/mergeKLists.cpp src/23_mergeKLists/mergeKLists.h)
