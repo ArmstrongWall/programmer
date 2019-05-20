@@ -1,8 +1,0 @@
-//
-// Created by wzq on 18-11-18.
-//
-
-#ifndef DIRECTMETHOD_FRAMEVISION_H
-#define DIRECTMETHOD_FRAMEVISION_H
-
-#endif //DIRECTMETHOD_FRAMEVISION_H

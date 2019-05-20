@@ -1,6 +1,24 @@
+# SLAM知识链接
+## 一、 滑动窗口
+1、[OKVIS 里的 marginalization](https://blog.csdn.net/fuxingyin/article/details/53426068)
+
+2、[SLAM中的marginalization 和 Schur complement](https://blog.csdn.net/heyijia0327/article/details/52822104/)
+
+3、[DSO 中的Windowed Optimization](https://blog.csdn.net/heyijia0327/article/details/53707261)
+
+4、[SLAM中的marginalization 和 Schur complement 2](https://www.cnblogs.com/Jessica-jie/p/9138959.html)
+
+5、[OKVIS理论推导(下)](https://mp.weixin.qq.com/s/UvRA_hOULokRgqJH1wk1iA?)
+
+
+
+
+## 二、 知识归类
+1、[SLAM 论文阅读和分类整理](https://blog.csdn.net/heyijia0327/article/details/82855443)
+
+
 # Viusal SLAM On WUGV 介绍
 ![pic](http://latex.codecogs.com/gif.latex?\boldsymbol{R}=\begin{pmatrix}cos\theta\cos\phi&sin\psi\sin\theta\cos\phi\-cos\psi\sin\phi&cos\psi\sin\theta\cos\phi\+sin\psi\sin\phi\\\\cos\theta\sin\phi&sin\psi\sin\theta\sin\phi+cos\psi\cos\phi&cos\phi\sin\theta\sin\phi-sin\psi\cos\phi\\\\-sin\theta&sin\psi\cos\theta&cos\psi\cos\theta\end{pmatrix}_{3\times{3}})                                 
-![pic](http://latex.codecogs.com/gif.latex?\begin{align*}&\left\{\begin{matrix}X^{'}=f\frac{X}{Z}\\Y^{'}=f\frac{Y}{Z}\\\end{matrix}\right.\tag{2.2}&\end{align*})
 
 ## 0. 解决什么问题 
 轮式无人地面交通载具(WUGV)如自动驾驶汽车，码头自动导引车，仓储运货机器人等等，都需要在无人工干预条件下自主地从
