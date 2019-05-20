@@ -6,7 +6,7 @@
 2. [数据结构与算法分析--C++语言描述（第四版）,【美】Mark Allen Weiss](read_book/data_structure_algorithm_analysis_in_cpp/src)
 3. [Unix 环境高级编程,【美】W.Richard Stevens](read_book/advance_programming_in_unix_enviroment/)
 
-### 三、 [一些算法的实现A*算法，卡尔曼滤波](algorithm/)
+### 三、 一些算法的实现A*算法，卡尔曼滤波
 1. [A*算法](algorithm/astar/src/astar/astar.cpp)
 2. [卡尔曼滤波](algorithm/kalman/Readme.md)
 3. [斑马线识别](algorithm/crosswalk_recognition/main.cpp)
