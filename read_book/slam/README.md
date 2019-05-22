@@ -10,6 +10,9 @@
 
 5、[OKVIS理论推导(下)](https://mp.weixin.qq.com/s/UvRA_hOULokRgqJH1wk1iA?)
 
+6、[A Sliding Window Filter for SLAM](http://robotics.usc.edu/publications/media/uploads/pubs/515.pdf)
+
+7、[marginalization](http://wavelab.uwaterloo.ca/slam/2017-SLAM/Lecture8-marginalization/Marginalization.pptx)
 
 
 
