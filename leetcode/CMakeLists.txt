@@ -19,4 +19,12 @@ add_executable(leetcode src/main.cpp
         src/142_detectCycle/detectCycle.cpp
         src/142_detectCycle/detectCycle.h
         src/86_partition_list/partition_list.cpp
-        src/86_partition_list/partition_list.h src/138_copyRandomList/copyRandomList.cpp src/138_copyRandomList/copyRandomList.h src/21_mergeTwoLists/mergeTwoLists.cpp src/21_mergeTwoLists/mergeTwoLists.h src/23_mergeKLists/mergeKLists.cpp src/23_mergeKLists/mergeKLists.h)
+        src/86_partition_list/partition_list.h
+        src/138_copyRandomList/copyRandomList.cpp
+        src/138_copyRandomList/copyRandomList.h
+        src/21_mergeTwoLists/mergeTwoLists.cpp
+        src/21_mergeTwoLists/mergeTwoLists.h
+        src/23_mergeKLists/mergeKLists.cpp
+        src/23_mergeKLists/mergeKLists.h
+        src/224_basicCalculator/basic_calculator.cpp
+        src/224_basicCalculator/basic_calculator.h)
