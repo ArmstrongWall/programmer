@@ -10,8 +10,8 @@ int main() {
 //    partition();
 //    copyRandomList();
 //    mergeTwoLists();
-    mergeKLists();
-
+//    mergeKLists();
+    basic_calculator();
 
 
 
