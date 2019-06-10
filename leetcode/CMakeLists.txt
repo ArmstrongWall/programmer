@@ -27,4 +27,4 @@ add_executable(leetcode src/main.cpp
         src/23_mergeKLists/mergeKLists.cpp
         src/23_mergeKLists/mergeKLists.h
         src/224_basicCalculator/basic_calculator.cpp
-        src/224_basicCalculator/basic_calculator.h)
+        src/224_basicCalculator/basic_calculator.h src/225_make_stack_with_queue/stack_use_queue.cpp src/225_make_stack_with_queue/stack_use_queue.h)

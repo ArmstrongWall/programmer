@@ -12,4 +12,4 @@
 
 ## 二、栈、队列、堆
 ### 1. [使用队列实现栈 225. Implement Stack using Queues](src/206_reverse_linked_list/reverse_linked_list.cpp)----[题目来源](https://leetcode.com/problems/implement-stack-using-queues/description/)
-### 1. [使用栈实现队列 225. Implement Stack using Queues](src/206_reverse_linked_list/reverse_linked_list.cpp)----[题目来源](https://leetcode.com/problems/implement-queue-using-stacks/description/)
+### 2. [简单计算器 224. Basic Calculator](src/224_basicCalculator/basic_calculator.cpp)----[题目来源](https://leetcode.com/problems/basic-calculator/description/)
