@@ -14,12 +14,15 @@ public:
 
     int calculate(std::string s) {
         enum {STATE_BEGIN = 0, STATE_NUMBER, STATE_OPERATION};
-        std::stack<long>   num_stack;
+        std::stack<int>   num_stack;
         std::stack<char>  operator_stack;
         bool              compute_flag  = false;
         int               state         = STATE_BEGIN;
-        long              number        = 0;
+        int               number        = 0;
 
+        if(s.empty()) {
+            return 0;
+        }
         for(int i = 0; i < s.length(); i++) {
             if(s[i] == ' ') {
                 continue;
@@ -82,12 +85,17 @@ public:
             compute(num_stack,operator_stack);
         }
 
-        return num_stack.top();
+        if(!num_stack.empty()) {
+            return num_stack.top();
+        } else {
+            return number;
+        }
+
 
     }
 
 private:
-    void compute(std::stack<long>& num_stack, std::stack<char>& operator_stack) {
+    void compute(std::stack<int>& num_stack, std::stack<char>& operator_stack) {
         if(num_stack.size() < 2 || operator_stack.empty()) {
             return;
         } else {
@@ -106,7 +114,7 @@ private:
 };
 
 int basic_calculator() {
-    std::string s = "(1+(4+5+2)-3)+(6+8)";
+    std::string s = "0";
     Solution solve;
     std::cout << "result is " << solve.calculate(s) ;
 
