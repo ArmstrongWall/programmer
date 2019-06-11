@@ -14,11 +14,11 @@ public:
 
     int calculate(std::string s) {
         enum {STATE_BEGIN = 0, STATE_NUMBER, STATE_OPERATION};
-        std::stack<int>   num_stack;
+        std::stack<long>   num_stack;
         std::stack<char>  operator_stack;
         bool              compute_flag  = false;
         int               state         = STATE_BEGIN;
-        int               number        = 0;
+        long              number        = 0;
 
         if(s.empty()) {
             return 0;
@@ -95,7 +95,7 @@ public:
     }
 
 private:
-    void compute(std::stack<int>& num_stack, std::stack<char>& operator_stack) {
+    void compute(std::stack<long>& num_stack, std::stack<char>& operator_stack) {
         if(num_stack.size() < 2 || operator_stack.empty()) {
             return;
         } else {
@@ -113,8 +113,9 @@ private:
     }
 };
 
+
 int basic_calculator() {
-    std::string s = "0";
+    std::string s = "1+121 - (14+(5-6) )";
     Solution solve;
     std::cout << "result is " << solve.calculate(s) ;
 
