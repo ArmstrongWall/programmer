@@ -14,11 +14,11 @@ public:
 
     int calculate(std::string s) {
         enum {STATE_BEGIN = 0, STATE_NUMBER, STATE_OPERATION};
-        std::stack<int>   num_stack;
+        std::stack<long>   num_stack;
         std::stack<char>  operator_stack;
         bool              compute_flag  = false;
         int               state         = STATE_BEGIN;
-        int               number        = 0;
+        long              number        = 0;
 
         for(int i = 0; i < s.length(); i++) {
             if(s[i] == ' ') {
@@ -39,7 +39,7 @@ public:
                 case STATE_NUMBER : {
                     if(s[i] >= '0' && s[i] <= '9') { // 数字的情况
                         number = number * 10 + s[i] - '0';
-                    }  else {
+                    }  else { // 符号的情况
                         num_stack.push(number);
                         number = 0;
                         if(compute_flag) {
@@ -59,16 +59,26 @@ public:
                     } else if(s[i] >= '0' && s[i] <= '9') {
                         state = STATE_NUMBER;
                         i--;
+                    } else if(s[i] == '(') {
+                        state = STATE_NUMBER;
+                        compute_flag = false;
+                    } else if(s[i] == ')') {
+                        compute(num_stack,operator_stack);
                     }
 
                     break;
+                }
+                default: {
+
                 }
 
             }
         }
 
         if(compute_flag) {
-            num_stack.push(number);
+            if(number) {
+                num_stack.push(number);
+            }
             compute(num_stack,operator_stack);
         }
 
@@ -76,7 +86,8 @@ public:
 
     }
 
-    void compute(std::stack<int>& num_stack, std::stack<char>& operator_stack) {
+private:
+    void compute(std::stack<long>& num_stack, std::stack<char>& operator_stack) {
         if(num_stack.size() < 2 || operator_stack.empty()) {
             return;
         } else {
@@ -85,9 +96,9 @@ public:
             int b = num_stack.top();
             num_stack.pop();
             if(operator_stack.top() == '+') {
-                num_stack.push(a+b);
+                num_stack.push(b+a);
             } else if(operator_stack.top() == '-') {
-                num_stack.push(a-b);
+                num_stack.push(b-a);
             }
             operator_stack.pop();
         }
@@ -95,7 +106,7 @@ public:
 };
 
 int basic_calculator() {
-    std::string s = "1+121  ";
+    std::string s = "(1+(4+5+2)-3)+(6+8)";
     Solution solve;
     std::cout << "result is " << solve.calculate(s) ;
 
