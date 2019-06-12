@@ -7,9 +7,9 @@ void sortDemo();
 int main() {
     std::cout << "Hello, D&A World!" << std::endl;
 
-    //BinaryHeapDemo();
+    BinaryHeapDemo();
     //binarySearchTreeDemo();
-    sortDemo();
+    //sortDemo();
 
     return 0;
 }

@@ -20,5 +20,6 @@
 #include "23_mergeKLists/mergeKLists.h"
 #include "224_basicCalculator/basic_calculator.h"
 #include "215_Kth_largest_num/kth_largest_num.h"
+#include "295_find_median/find_median.h"
 
 #endif //CONCURRENCYINACTION_INCLUDE_H
