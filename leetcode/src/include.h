@@ -22,5 +22,7 @@
 #include "215_Kth_largest_num/kth_largest_num.h"
 #include "295_find_median/find_median.h"
 #include "455_assign_cookies/assign_cookies.h"
+#include "78_subsets/subsets.h"
+
 
 #endif //CONCURRENCYINACTION_INCLUDE_H

@@ -14,9 +14,8 @@ int main() {
 //    basic_calculator();
 //    findKthLargest();
 //    findMedian();
-    findContentChildren();
-
-
+//    findContentChildren();
+    subsets();
 
 
 
