@@ -11,7 +11,12 @@
 
 
 ## 二、栈、队列、堆
-### 1. [使用队列实现栈 225. Implement Stack using Queues](src/206_reverse_linked_list/reverse_linked_list.cpp)----[题目来源](https://leetcode.com/problems/implement-stack-using-queues/description/)
+### 1. [！！使用队列实现栈 225. Implement Stack using Queues](src/225_make_stack_with_queue/stack_use_queue.cpp)----[题目来源](https://leetcode.com/problems/implement-stack-using-queues/description/)
 ### 2. [简单计算器 224. Basic Calculator](src/224_basicCalculator/basic_calculator.cpp)----[题目来源](https://leetcode.com/problems/basic-calculator/description/)
 ### 3. [第K大个数 215. Kth Largest Element in an Array](src/215_Kth_largest_num/kth_largest_num.cpp)----[题目来源](https://leetcode.com/problems/kth-largest-element-in-an-array/description/)
 ### 4. [寻找中位数 295. Find Median from Data Stream](src/295_find_median/find_median.cpp)----[题目来源](https://leetcode.com/problems/find-median-from-data-stream/description/)
+### 5. [！！使用栈实现队列 232. Implement Queues using Stack](src/232_make_queue_using_stacks/queue_use_stack.cpp)----[题目来源](https://leetcode.com/problems/implement-queue-using-stacks/description/)
+### 6. [！！最小栈 155. Min Stack](src/155_min_stack/min_stack.cpp)----[题目来源](https://leetcode.com/problems/min-stack/description/)
+
+## 三、贪心算法
+### 1. [分糖果 455. Assign Cookies](src/225_make_stack_with_queue/stack_use_queue.cpp)----[题目来源](https://leetcode.com/problems/implement-stack-using-queues/description/)

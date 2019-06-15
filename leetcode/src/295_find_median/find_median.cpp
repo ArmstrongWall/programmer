@@ -61,7 +61,8 @@ public:
             return static_cast<double>(min_heap.top());
         } else {
             std::cout << "findMedian error\n";
-            return 0;        }
+            return 0;
+        }
     }
 };
 

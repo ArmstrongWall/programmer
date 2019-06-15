@@ -31,4 +31,4 @@ add_executable(leetcode src/main.cpp
         src/225_make_stack_with_queue/stack_use_queue.cpp
         src/225_make_stack_with_queue/stack_use_queue.h
         src/215_Kth_largest_num/kth_largest_num.cpp
-        src/215_Kth_largest_num/kth_largest_num.h src/295_find_median/find_median.cpp src/295_find_median/find_median.h)
+        src/215_Kth_largest_num/kth_largest_num.h src/295_find_median/find_median.cpp src/295_find_median/find_median.h src/155_min_stack/min_stack.cpp src/155_min_stack/min_stack.h src/232_make_queue_using_stacks/queue_use_stack.cpp src/232_make_queue_using_stacks/queue_use_stack.h src/455_assign_cookies/assign_cookies.cpp src/455_assign_cookies/assign_cookies.h)
