@@ -15,7 +15,8 @@ int main() {
 //    findKthLargest();
 //    findMedian();
 //    findContentChildren();
-    subsets();
+//    subsets();
+    My_Stack();
 
 
 

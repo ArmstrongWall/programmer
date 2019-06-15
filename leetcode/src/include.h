@@ -23,6 +23,8 @@
 #include "295_find_median/find_median.h"
 #include "455_assign_cookies/assign_cookies.h"
 #include "78_subsets/subsets.h"
+#include "225_make_stack_with_queue/stack_use_queue.h"
+
 
 
 #endif //CONCURRENCYINACTION_INCLUDE_H
