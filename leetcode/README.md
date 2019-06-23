@@ -1,4 +1,4 @@
-# Leetcode 
+# Leetcode (20/1096)
 ## 一、链表
 #### 1. [反转链表 206. Reverse Linked List](src/206_reverse_linked_list/reverse_linked_list.cpp)----[题目来源](https://leetcode.com/problems/reverse-linked-list/)
 #### 2. [局部反转链表 92. Reverse Linked List II](src/92_reverse_linked_list_II/reverse_linked_list_II.cpp)----[题目来源](https://leetcode.com/problems/reverse-linked-list-ii/)
@@ -20,8 +20,13 @@
 
 ## 三、贪心算法
 #### 1. [分糖果 455. Assign Cookies](src/455_assign_cookies/assign_cookies.cpp)----[题目来源](https://leetcode.com/problems/assign-cookies/description/)
-#### 2. [！！最长摇摆子序列 376. Wiggle Subsequence](src/376_wiggle_subsequence/wiggle_subsequence.cpp)----[题目来源](https://leetcode.com/problems/wiggle-subsequence/description/)
+#### 2. [最长摇摆子序列 376. Wiggle Subsequence](src/376_wiggle_subsequence/wiggle_subsequence.cpp)----[题目来源](https://leetcode.com/problems/wiggle-subsequence/description/)
+#### 3. [删除K个数获得最小数 402. Remove K Digits](src/402_remove_k_digits/remove_k_dig.cpp)----[题目来源](https://leetcode.com/problems/remove-k-digits/)
+#### 4. [跳跃游戏I 55. Jump Game](src/55_jump_game/jump_game.cpp)----[题目来源](https://leetcode.com/problems/jump-game/description/)
+
+
 
 ## 四、递归、分制、回溯
 #### 1. [子集 78. Subsets](src/78_subsets/subsets.cpp)----[题目来源](https://leetcode.com/problems/subsets/)
+#### 2. [寻找波峰元素 162. Find Peak Element](src/78_subsets/subsets.cpp)----[题目来源](https://leetcode.com/problems/find-peak-element/)
 

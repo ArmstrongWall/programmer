@@ -24,6 +24,10 @@
 #include "455_assign_cookies/assign_cookies.h"
 #include "78_subsets/subsets.h"
 #include "225_make_stack_with_queue/stack_use_queue.h"
+#include "376_wiggle_subsequence/wiggle_subsequence.h"
+#include "402_remove_k_digits/remove_k_dig.h"
+#include "55_jump_game/jump_game.h"
+#include "162_find_peak/find_peak.h"
 
 
 

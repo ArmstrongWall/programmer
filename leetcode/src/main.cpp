@@ -16,11 +16,15 @@ int main() {
 //    findMedian();
 //    findContentChildren();
 //    subsets();
-    My_Stack();
+//    My_Stack();
+//    wiggleMaxLength();
+//    removeKdigits();
+    canJump();
+    findPeak();
 
 
 
-    return 0;
+        return 0;
 }
 
 
