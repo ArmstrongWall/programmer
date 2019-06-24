@@ -23,6 +23,8 @@
 #### 2. [最长摇摆子序列 376. Wiggle Subsequence](src/376_wiggle_subsequence/wiggle_subsequence.cpp)----[题目来源](https://leetcode.com/problems/wiggle-subsequence/description/)
 #### 3. [删除K个数获得最小数 402. Remove K Digits](src/402_remove_k_digits/remove_k_dig.cpp)----[题目来源](https://leetcode.com/problems/remove-k-digits/)
 #### 4. [跳跃游戏I 55. Jump Game](src/55_jump_game/jump_game.cpp)----[题目来源](https://leetcode.com/problems/jump-game/description/)
+#### 5. [跳跃游戏II 45. Jump GameII](src/45_jump_game_II/jump_game_II.cpp)----[题目来源](https://leetcode.com/problems/jump-game-ii/submissions/)
+#### 6. [射击气球 452. Minimum Number of Arrows to Burst Balloons](src/452_burst_balloons/burst_balloons.cpp)----[题目来源](https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons/)
 
 
 

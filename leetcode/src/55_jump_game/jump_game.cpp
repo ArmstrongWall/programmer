@@ -41,6 +41,7 @@ public:
                 }
             }
 
+
             if(max_index >= nums.size()-1) {
                 return true;
             }
@@ -57,7 +58,7 @@ public:
 int canJump(){
 //    std::vector<int> nums = {1,1,2,2,0,1,1};
 //    std::vector<int> nums = {3,2,1,0,4};
-    std::vector<int> nums = {0,4};
+    std::vector<int> nums = {2,3,1,1,4};
 
 //    nums.push_back(2);
 //    nums.push_back(3);
