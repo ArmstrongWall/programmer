@@ -1,4 +1,4 @@
-# Leetcode (22/1096)
+# Leetcode (28/1096)
 ## 一、链表
 #### 1. [反转链表 206. Reverse Linked List](src/206_reverse_linked_list/reverse_linked_list.cpp)----[题目来源](https://leetcode.com/problems/reverse-linked-list/)
 #### 2. [局部反转链表 92. Reverse Linked List II](src/92_reverse_linked_list_II/reverse_linked_list_II.cpp)----[题目来源](https://leetcode.com/problems/reverse-linked-list-ii/)
@@ -8,7 +8,7 @@
 #### 6. [带有随机指针链表的深度拷贝 138. Copy List with Random Pointer](src/138_copyRandomList/copyRandomList.cpp)----[题目来源](https://leetcode.com/problems/copy-list-with-random-pointer/description/)
 #### 7. [两个已排序链表的合并 21. Merge Two Sorted Lists](src/21_mergeTwoLists/mergeTwoLists.cpp)----[题目来源](https://leetcode.com/problems/merge-two-sorted-lists/description/)
 #### 8. [K个已排序链表的合并 23. Merge k Sorted Lists](src/23_mergeKLists/mergeKLists.cpp)----[题目来源](https://leetcode.com/problems/merge-k-sorted-lists/description/)
-
+8
 
 ## 二、栈、队列、堆
 #### 1. [使用队列实现栈 225. Implement Stack using Queues](src/225_make_stack_with_queue/stack_use_queue.cpp)----[题目来源](https://leetcode.com/problems/implement-stack-using-queues/description/)
@@ -17,7 +17,7 @@
 #### 4. [寻找中位数 295. Find Median from Data Stream](src/295_find_median/find_median.cpp)----[题目来源](https://leetcode.com/problems/find-median-from-data-stream/description/)
 #### 5. [使用栈实现队列 232. Implement Queues using Stack](src/232_make_queue_using_stacks/queue_use_stack.cpp)----[题目来源](https://leetcode.com/problems/implement-queue-using-stacks/description/)
 #### 6. [最小栈 155. Min Stack](src/155_min_stack/min_stack.cpp)----[题目来源](https://leetcode.com/problems/min-stack/description/)
-
+14
 ## 三、贪心算法
 #### 1. [分糖果 455. Assign Cookies](src/455_assign_cookies/assign_cookies.cpp)----[题目来源](https://leetcode.com/problems/assign-cookies/description/)
 #### 2. [最长摇摆子序列 376. Wiggle Subsequence](src/376_wiggle_subsequence/wiggle_subsequence.cpp)----[题目来源](https://leetcode.com/problems/wiggle-subsequence/description/)
@@ -25,10 +25,17 @@
 #### 4. [跳跃游戏I 55. Jump Game](src/55_jump_game/jump_game.cpp)----[题目来源](https://leetcode.com/problems/jump-game/description/)
 #### 5. [跳跃游戏II 45. Jump GameII](src/45_jump_game_II/jump_game_II.cpp)----[题目来源](https://leetcode.com/problems/jump-game-ii/submissions/)
 #### 6. [射击气球 452. Minimum Number of Arrows to Burst Balloons](src/452_burst_balloons/burst_balloons.cpp)----[题目来源](https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons/)
+20
 
-
-
-## 四、递归、分制、回溯
-#### 1. [子集 78. Subsets](src/78_subsets/subsets.cpp)----[题目来源](https://leetcode.com/problems/subsets/)
+## 四、递归、分治、回溯
+#### 1. [子集 78. Subsets](src/78_subsets/subsets.cpp)----[题目来源](https://leetcode.com/problems/subsets/)(三种方法，回溯，位运算)
 #### 2. [寻找波峰元素 162. Find Peak Element](src/78_subsets/subsets.cpp)----[题目来源](https://leetcode.com/problems/find-peak-element/)
+#### 3. [逆序数 315. Count of Smaller Numbers After Self](src/315_count_smaller_numbers/count_smaller_numbers.cpp)----[题目来源](https://leetcode.com/problems/count-of-smaller-numbers-after-self/description/)
+#### 4. [子集II 90. Subsets II](src/90_subsets_II/subsets_II.cpp)----[题目来源](https://leetcode.com/problems/subsets-ii/description/)
+#### 5. [组合数之和II 40. Combination Sum II](src/40_combination_sum_II/combination_sum_II.cpp)----[题目来源](https://leetcode.com/problems/combination-sum-ii/description/)
+#### 6. [生成括号 22. Generate Parentheses](src/22_generate_parentheses/generate_parentheses.cpp)----[题目来源](https://leetcode.com/problems/generate-parentheses/description/)
+#### 7. [N皇后问题 51. N-Queens](src/51_N_queens/n_queens.cpp)----[题目来源](https://leetcode.com/problems/n-queens/)
+27
 
+## 五、二叉树与图
+#### 1. [路劲之和 113. Path Sum II](src/113_path_sum_II/path_sum_II.cpp)----[题目来源](https://leetcode.com/problems/path-sum-ii/)

@@ -7,9 +7,9 @@ void sortDemo();
 int main() {
     std::cout << "Hello, D&A World!" << std::endl;
 
-    BinaryHeapDemo();
-    //binarySearchTreeDemo();
-    //sortDemo();
+//    BinaryHeapDemo();
+//    binarySearchTreeDemo();
+    sortDemo();
 
     return 0;
 }
@@ -47,7 +47,10 @@ void sortDemo() {
     auto sorter = new sort<int>;
     vector<int> a {34,8,64,51,32,21};
 
-    sorter->insertionSort(a);
+//    sorter->insertionSort(a);
+//    sorter->print(a);
+
+    sorter->mergeSort(a);
     sorter->print(a);
 
 }

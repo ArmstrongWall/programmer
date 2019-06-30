@@ -14,8 +14,16 @@ class sort{
 public:
     sort();
     ~sort();
+    //! classic sort method
     void insertionSort(vector<T> &a);
+    void mergeSort(vector<T> &vec);
     void shellSort(vector<T> &a);
+
+
+    //! auxiliary tool
+    void mergesort_two_vec(std::vector<T>& sub_vec_1,
+                           std::vector<T>& sub_vec_2,
+                           std::vector<T>& vec_);
     void print(vector<T> &a);
 };
 

@@ -48,12 +48,63 @@ public:
         all_sub.push_back({});
         return all_sub;
     }
+
+    std::vector<std::vector<int>> subset_get_back(std::vector<int> &nums) {
+
+        std::vector<int> items;
+        std::vector<std::vector<int>> result;
+        result.push_back(items);
+        back_generate(0,items,nums,result);
+
+        return result;
+
+    }
+
+    void back_generate(int i,
+                       std::vector<int> &items,
+                       std::vector<int> &nums,
+                       std::vector<std::vector<int>> &result) {
+
+        if(i >= nums.size()) {
+            return;
+        }
+
+
+        items.push_back(nums[i]);
+        result.push_back(items);
+        back_generate(i+1, items, nums, result);
+
+        items.pop_back();
+        back_generate(i+1, items, nums, result);
+
+
+    }
+
+    std::vector<std::vector<int>> subsets_bit(std::vector<int> &nums) {
+        std::vector<std::vector<int>> result;
+
+        int all_set_count = 1 << nums.size();
+
+        for(int i = 0; i< all_set_count; i++) {
+            std::vector<int> item;
+            for(int j = 0; j < nums.size(); j++) {
+                if( i & (1 << j) ) {
+                    item.push_back(nums[j]);
+                }
+            }
+            result.push_back(item);
+        }
+        return result;
+    }
+
+
 };
 
 void subsets() {
     Solution s;
-    std::vector<int> nums {1,2,3,4,5,6,7,8};
-    std::vector<std::vector<int>> all_sub = s.subsets(nums);
+    std::vector<int> nums {1,2,3};
+//    std::vector<std::vector<int>> all_sub = s.subsets(nums);
+    std::vector<std::vector<int>> all_sub = s.subset_get_back(nums);
     std::cout << "sub size = " << all_sub.size() << "\n";
 
     int i = 0;

@@ -31,4 +31,32 @@ add_executable(leetcode src/main.cpp
         src/225_make_stack_with_queue/stack_use_queue.cpp
         src/225_make_stack_with_queue/stack_use_queue.h
         src/215_Kth_largest_num/kth_largest_num.cpp
-        src/215_Kth_largest_num/kth_largest_num.h src/295_find_median/find_median.cpp src/295_find_median/find_median.h src/155_min_stack/min_stack.cpp src/155_min_stack/min_stack.h src/232_make_queue_using_stacks/queue_use_stack.cpp src/232_make_queue_using_stacks/queue_use_stack.h src/455_assign_cookies/assign_cookies.cpp src/455_assign_cookies/assign_cookies.h src/376_wiggle_subsequence/wiggle_subsequence.cpp src/376_wiggle_subsequence/wiggle_subsequence.h src/78_subsets/subsets.cpp src/78_subsets/subsets.h src/402_remove_k_digits/remove_k_dig.cpp src/402_remove_k_digits/remove_k_dig.h src/55_jump_game/jump_game.cpp src/55_jump_game/jump_game.h src/162_find_peak/find_peak.cpp src/162_find_peak/find_peak.h src/45_jump_game_II/jump_game_II.cpp src/45_jump_game_II/jump_game_II.h src/452_burst_balloons/burst_balloons.cpp src/452_burst_balloons/burst_balloons.h)
+        src/215_Kth_largest_num/kth_largest_num.h
+        src/295_find_median/find_median.cpp
+        src/295_find_median/find_median.h
+        src/155_min_stack/min_stack.cpp
+        src/155_min_stack/min_stack.h
+        src/232_make_queue_using_stacks/queue_use_stack.cpp
+        src/232_make_queue_using_stacks/queue_use_stack.h
+        src/455_assign_cookies/assign_cookies.cpp
+        src/455_assign_cookies/assign_cookies.h
+        src/376_wiggle_subsequence/wiggle_subsequence.cpp
+        src/376_wiggle_subsequence/wiggle_subsequence.h
+        src/78_subsets/subsets.cpp
+        src/78_subsets/subsets.h
+        src/402_remove_k_digits/remove_k_dig.cpp
+        src/402_remove_k_digits/remove_k_dig.h
+        src/55_jump_game/jump_game.cpp
+        src/55_jump_game/jump_game.h
+        src/162_find_peak/find_peak.cpp
+        src/162_find_peak/find_peak.h
+        src/45_jump_game_II/jump_game_II.cpp
+        src/45_jump_game_II/jump_game_II.h
+        src/452_burst_balloons/burst_balloons.cpp
+        src/452_burst_balloons/burst_balloons.h
+        src/315_count_smaller_numbers/count_smaller_numbers.cpp
+        src/315_count_smaller_numbers/count_smaller_numbers.h
+        src/90_subsets_II/subsets_II.cpp
+        src/90_subsets_II/subsets_II.h
+        src/113_path_sum_II/path_sum_II.cpp
+        src/113_path_sum_II/path_sum_II.h src/40_combination_sum_II/combination_sum_II.cpp src/40_combination_sum_II/combination_sum_II.h src/22_generate_parentheses/generate_parentheses.cpp src/22_generate_parentheses/generate_parentheses.h src/51_N_queens/n_queens.cpp src/51_N_queens/n_queens.h)
