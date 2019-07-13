@@ -1,4 +1,4 @@
-# Leetcode (28/1096)
+# Leetcode (32/1096)
 ## 一、链表
 #### 1. [反转链表 206. Reverse Linked List](src/206_reverse_linked_list/reverse_linked_list.cpp)----[题目来源](https://leetcode.com/problems/reverse-linked-list/)
 #### 2. [局部反转链表 92. Reverse Linked List II](src/92_reverse_linked_list_II/reverse_linked_list_II.cpp)----[题目来源](https://leetcode.com/problems/reverse-linked-list-ii/)
@@ -39,3 +39,10 @@
 
 ## 五、二叉树与图
 #### 1. [路劲之和 113. Path Sum II](src/113_path_sum_II/path_sum_II.cpp)----[题目来源](https://leetcode.com/problems/path-sum-ii/)
+#### 2. [最近公共祖先 236. Lowest Common Ancestor of a Binary Tree](src/236_lowest_commonance_ancestor/lowest_commonance_ancestor.cpp)----[题目来源](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/)
+#### 3. [二叉树就地转链表 114. Flatten Binary Tree to Linked List](src/114_flatten_binary_tree2linked_list/flatten_binary_tree2linked_list.cpp)----[题目来源](https://leetcode.com/problems/flatten-binary-tree-to-linked-list/description/)
+#### 4. [二叉树层次遍历 广度优先  breadth-first search](src/binary_tree_breadth_first_search/binary_tree_breadth_first_search.cpp)
+#### 5. [从右侧观察二叉树 199. Binary Tree Right Side View](src/199_binary_tree_right_side_view/binary_tree_right_side_view.cpp:15)----[题目来源](https://leetcode.com/problems/binary-tree-right-side-view/)
+#### 6. [图的深度优先和广度优先搜索](src/graph_depth_first_search/graph_depth_first_search.cpp)
+#### 7. [课程安排 207. Course Schedule  深搜和广搜两种方法，深搜因为空间限制无法AC，带改进](src/207_course_schedule/course_schedule.cpp)----[题目来源](https://leetcode.com/problems/course-schedule/)
+32

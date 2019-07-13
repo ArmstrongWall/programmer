@@ -34,7 +34,6 @@ public:
             item.push_back(')');
             generate(n,left,right + 1,item,result);
         }
-
     }
 };
 

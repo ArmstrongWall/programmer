@@ -5,6 +5,11 @@
 #include "40_combination_sum_II/combination_sum_II.h"
 #include "22_generate_parentheses/generate_parentheses.h"
 #include "51_N_queens/n_queens.h"
+#include "236_lowest_commonance_ancestor/lowest_commonance_ancestor.h"
+#include "114_flatten_binary_tree2linked_list/flatten_binary_tree2linked_list.h"
+#include "binary_tree_breadth_first_search/binary_tree_breadth_first_search.h"
+#include "graph_depth_first_search/graph_depth_first_search.h"
+#include "207_course_schedule/course_schedule .h"
 
 
 int main() {
@@ -32,8 +37,12 @@ int main() {
 //    count_smaller();
 //    combinationSum2();
 //    generateParenthesis();
-    n_queen();
-
+//    n_queen();
+//    lowestCommonAncestor();
+//    flatten();
+//    BFS();
+//    print_graph();
+    canFinish();
 
     return 0;
 }

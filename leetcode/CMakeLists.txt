@@ -1,14 +1,8 @@
 cmake_minimum_required(VERSION 3.9)
 project(leetcode)
 
-find_package(Eigen3 REQUIRED)
-
 SET(CMAKE_CXX_FLAGS ${CMAKE_CXX_FLAGS} "-std=c++14 -pthread")
 
-include_directories (
-        ${EIGEN3_INCLUDE_DIR}
-        ${Sophus_INCLUDE_DIRS}
-)
 
 add_executable(leetcode src/main.cpp
         src/206_reverse_linked_list/reverse_linked_list.cpp
@@ -59,4 +53,20 @@ add_executable(leetcode src/main.cpp
         src/90_subsets_II/subsets_II.cpp
         src/90_subsets_II/subsets_II.h
         src/113_path_sum_II/path_sum_II.cpp
-        src/113_path_sum_II/path_sum_II.h src/40_combination_sum_II/combination_sum_II.cpp src/40_combination_sum_II/combination_sum_II.h src/22_generate_parentheses/generate_parentheses.cpp src/22_generate_parentheses/generate_parentheses.h src/51_N_queens/n_queens.cpp src/51_N_queens/n_queens.h)
+        src/113_path_sum_II/path_sum_II.h
+        src/40_combination_sum_II/combination_sum_II.cpp
+        src/40_combination_sum_II/combination_sum_II.h
+        src/22_generate_parentheses/generate_parentheses.cpp
+        src/22_generate_parentheses/generate_parentheses.h
+        src/51_N_queens/n_queens.cpp
+        src/51_N_queens/n_queens.h
+        src/236_lowest_commonance_ancestor/lowest_commonance_ancestor.cpp
+        src/236_lowest_commonance_ancestor/lowest_commonance_ancestor.h
+        src/114_flatten_binary_tree2linked_list/flatten_binary_tree2linked_list.cpp
+        src/114_flatten_binary_tree2linked_list/flatten_binary_tree2linked_list.h
+        src/binary_tree_breadth_first_search/binary_tree_breadth_first_search.cpp
+        src/binary_tree_breadth_first_search/binary_tree_breadth_first_search.h
+        src/199_binary_tree_right_side_view/binary_tree_right_side_view.cpp
+        src/199_binary_tree_right_side_view/binary_tree_right_side_view.h
+        src/graph_depth_first_search/graph_depth_first_search.cpp
+        src/graph_depth_first_search/graph_depth_first_search.h "src/207_course_schedule/course_schedule .cpp" "src/207_course_schedule/course_schedule .h")
