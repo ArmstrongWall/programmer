@@ -44,5 +44,8 @@
 #### 4. [二叉树层次遍历 广度优先  breadth-first search](src/binary_tree_breadth_first_search/binary_tree_breadth_first_search.cpp)
 #### 5. [从右侧观察二叉树 199. Binary Tree Right Side View](src/199_binary_tree_right_side_view/binary_tree_right_side_view.cpp:15)----[题目来源](https://leetcode.com/problems/binary-tree-right-side-view/)
 #### 6. [图的深度优先和广度优先搜索](src/graph_depth_first_search/graph_depth_first_search.cpp)
-#### 7. [课程安排 207. Course Schedule  深搜和广搜两种方法，深搜因为空间限制无法AC，带改进](src/207_course_schedule/course_schedule.cpp)----[题目来源](https://leetcode.com/problems/course-schedule/)
+#### 7. [课程安排 207. Course Schedule  深搜和广搜两种方法，深搜因为空间限制无法AC，需改进](src/207_course_schedule/course_schedule.cpp)----[题目来源](https://leetcode.com/problems/course-schedule/)
 32
+
+## 六、二分查找与二叉查找树
+#### 1. [二分查找(递归与循环)](src/binary_search/binary_search.cpp)

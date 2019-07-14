@@ -69,4 +69,4 @@ add_executable(leetcode src/main.cpp
         src/199_binary_tree_right_side_view/binary_tree_right_side_view.cpp
         src/199_binary_tree_right_side_view/binary_tree_right_side_view.h
         src/graph_depth_first_search/graph_depth_first_search.cpp
-        src/graph_depth_first_search/graph_depth_first_search.h "src/207_course_schedule/course_schedule .cpp" "src/207_course_schedule/course_schedule .h")
+        src/graph_depth_first_search/graph_depth_first_search.h "src/207_course_schedule/course_schedule .cpp" "src/207_course_schedule/course_schedule .h" src/binary_search/binary_search.cpp src/binary_search/binary_search.h)

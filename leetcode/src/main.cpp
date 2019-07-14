@@ -10,6 +10,7 @@
 #include "binary_tree_breadth_first_search/binary_tree_breadth_first_search.h"
 #include "graph_depth_first_search/graph_depth_first_search.h"
 #include "207_course_schedule/course_schedule .h"
+#include "binary_search/binary_search.h"
 
 
 int main() {
@@ -42,7 +43,9 @@ int main() {
 //    flatten();
 //    BFS();
 //    print_graph();
-    canFinish();
+//    canFinish();
+
+    binary_search();
 
     return 0;
 }
