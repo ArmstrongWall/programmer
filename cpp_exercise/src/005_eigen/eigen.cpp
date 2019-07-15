@@ -21,6 +21,8 @@ typedef Sophus::SO3<double> SO3;
 
 typedef Sophus::SE3<float>  SE3f;
 typedef Sophus::SE3<double> SE3;
+typedef Eigen::Matrix<double,6,1> Vec6;
+
 
 int eigen_block() {
     Eigen::Vector4d x;
@@ -281,6 +283,17 @@ int Sophus_demo() {
         cout << "v_w is\n" << v_w <<endl<<endl;
 
     }
+
+    // 最后，演示一下更新
+    Vec6 update_se3; //更新量
+    update_se3.setZero();
+    update_se3(0,0) = 1e-4d;
+    SE3 SE3_updated = SE3()*SE3::exp(update_se3);
+    cout<<"SE3 updated = "<<endl<<SE3_updated.matrix()<<endl;
+
+    update_se3(0,0) = -1e-4d;
+    SE3_updated = SE3_updated*SE3::exp(update_se3);
+    cout<<"again SE3 updated = "<<endl<<SE3_updated.matrix()<<endl;
 
 
 }
