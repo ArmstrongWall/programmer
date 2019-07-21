@@ -11,6 +11,7 @@
 #include "graph_depth_first_search/graph_depth_first_search.h"
 #include "207_course_schedule/course_schedule .h"
 #include "binary_search/binary_search.h"
+#include "35_search_insert_position/search_insert_position.h"
 
 
 int main() {
@@ -45,7 +46,8 @@ int main() {
 //    print_graph();
 //    canFinish();
 
-    binary_search();
+//    binary_search();
+    searchInsert();
 
     return 0;
 }

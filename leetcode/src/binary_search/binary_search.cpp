@@ -12,7 +12,7 @@ bool binary_search_recursion( std::vector<int> &sort_array,
         return false;
     }
 
-    int mid =  (begin + end) / 2;
+    int mid = (begin + end) / 2;
     if(target == sort_array[mid]) {
         return true;
     }
