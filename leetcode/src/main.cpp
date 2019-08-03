@@ -12,6 +12,7 @@
 #include "207_course_schedule/course_schedule .h"
 #include "binary_search/binary_search.h"
 #include "35_search_insert_position/search_insert_position.h"
+#include "33_search_rotated_sorted_array/search_rotated_sorted_array.h"
 
 
 int main() {
@@ -47,8 +48,8 @@ int main() {
 //    canFinish();
 
 //    binary_search();
-    searchInsert();
-
+//    searchInsert();
+    searchrotated();
     return 0;
 }
 

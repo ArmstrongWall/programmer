@@ -8,8 +8,8 @@ int main() {
     std::cout << "Hello, D&A World!" << std::endl;
 
 //    BinaryHeapDemo();
-//    binarySearchTreeDemo();
-    sortDemo();
+    binarySearchTreeDemo();
+//    sortDemo();
 
     return 0;
 }
@@ -39,6 +39,9 @@ void binarySearchTreeDemo() {
     auto tree2 = new binarySearchTree<int>{*tree1};
     std::cout << std::endl << "tree2" << std::endl;
     tree2->printTree();
+
+    std::cout << "tree2->contains" << tree2->contains(23);
+
 }
 
 void sortDemo() {
