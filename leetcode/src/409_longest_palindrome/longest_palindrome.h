@@ -1,0 +1,8 @@
+//
+// Created by Johnny on 2019/8/4.
+//
+
+#ifndef LEETCODE_LONGEST_PALINDROME_H
+#define LEETCODE_LONGEST_PALINDROME_H
+
+#endif //LEETCODE_LONGEST_PALINDROME_H

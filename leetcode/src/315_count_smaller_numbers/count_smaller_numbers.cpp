@@ -6,6 +6,7 @@
 #include <iostream>
 #include <algorithm>
 #include <assert.h>
+#include <ctime>
 
 #include "count_smaller_numbers.h"
 

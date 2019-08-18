@@ -38,7 +38,7 @@
 27
 
 ## 五、二叉树与图
-#### 1. [路劲之和 113. Path Sum II](src/113_path_sum_II/path_sum_II.cpp)----[题目来源](https://leetcode.com/problems/path-sum-ii/)
+#### 1. [路径之和 113. Path Sum II](src/113_path_sum_II/path_sum_II.cpp)----[题目来源](https://leetcode.com/problems/path-sum-ii/)
 #### 2. [最近公共祖先 236. Lowest Common Ancestor of a Binary Tree](src/236_lowest_commonance_ancestor/lowest_commonance_ancestor.cpp)----[题目来源](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/)
 #### 3. [二叉树就地转链表 114. Flatten Binary Tree to Linked List](src/114_flatten_binary_tree2linked_list/flatten_binary_tree2linked_list.cpp)----[题目来源](https://leetcode.com/problems/flatten-binary-tree-to-linked-list/description/)
 #### 4. [二叉树层次遍历 广度优先  breadth-first search](src/binary_tree_breadth_first_search/binary_tree_breadth_first_search.cpp)
@@ -56,3 +56,7 @@
 36
 
 ## 七、哈希表与字符串
+#### 1. [拉链哈希函数](src/hash/hash.cpp)
+#### 2. [409. 最长回文串](src/409_longest_palindrome/longest_palindrome.cpp)----[题目来源](https://leetcode-cn.com/problems/longest-palindrome/)
+#### 3. [290. 单词规律](src/290_word_pattern/word_pattern.cpp)----[题目来源](https://leetcode-cn.com/problems/word-pattern/)
+38

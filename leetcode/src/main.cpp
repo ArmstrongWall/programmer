@@ -13,6 +13,7 @@
 #include "binary_search/binary_search.h"
 #include "35_search_insert_position/search_insert_position.h"
 #include "33_search_rotated_sorted_array/search_rotated_sorted_array.h"
+#include "hash/hash.h"
 
 
 int main() {
@@ -46,10 +47,11 @@ int main() {
 //    BFS();
 //    print_graph();
 //    canFinish();
-
 //    binary_search();
 //    searchInsert();
-    searchrotated();
+//    searchrotated();
+    hash();
+
     return 0;
 }
 
