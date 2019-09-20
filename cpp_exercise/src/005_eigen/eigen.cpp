@@ -4,11 +4,14 @@
 
 #include "eigen.h"
 
+
+
 #include <iostream>
 #include <vector>
 #include <sophus/se3.hpp>
 #include <sophus/so3.hpp>
 #include <eigen3/Eigen/Dense>
+#include <Eigen/Sparse>
 
 using namespace std;
 constexpr double DEG_TO_RAD = M_PI / 180.0;
@@ -56,6 +59,24 @@ int eigen_block() {
     Jacobian.rightCols(3)      = Eigen::Matrix<double,3,3>::Zero();
 
     cout << "Jacobian \n" << Jacobian << "\n\n" <<endl;
+
+
+    int n = 10;  // size of the image
+    int m = n*n;  // number of unknows (=number of pixels)
+
+    Eigen::VectorXd b(m);
+    b.setIdentity();
+    Eigen::SparseMatrix<double> SpMat(m,m);
+    SpMat.setIdentity();
+
+
+
+    Eigen::SimplicialCholesky<Eigen::SparseMatrix<double>> chol(SpMat);  // performs a Cholesky factorization of A
+    Eigen::VectorXd res = chol.solve(b);         // use the factorization to solve for the given right hand side
+
+    cout << "SpMat \n" << SpMat << "\n\n" <<endl;
+
+
 }
 
 int eigen_demo() {
