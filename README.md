@@ -12,4 +12,3 @@
 3. [斑马线识别](algorithm/crosswalk_recognition/main.cpp)
 4. [直接法VSLAM](algorithm/direct_slam/src/direct_semidense.cpp)
 ### 四、 [LeetCode学习](leetcode/README.md)
-### 五、 [SLAM资料整理](read_book/slam/README.md)
