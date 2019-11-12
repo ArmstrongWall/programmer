@@ -61,3 +61,6 @@
 #### 2. [409. 最长回文串](src/409_longest_palindrome/longest_palindrome.cpp)----[题目来源](https://leetcode-cn.com/problems/longest-palindrome/)
 #### 3. [290. 单词规律](src/290_word_pattern/word_pattern.cpp)----[题目来源](https://leetcode-cn.com/problems/word-pattern/)
 38
+
+## 其他
+#### 1. [1. 两数之和](src/1_two_sum/two_sum.cpp)----[题目来源](https://leetcode-cn.com/problems/two-sum/)时间复杂度太高
