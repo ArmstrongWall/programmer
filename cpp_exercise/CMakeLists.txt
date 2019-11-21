@@ -23,7 +23,8 @@ add_executable(cpp_exercise src/main.cpp
         src/006_std_move/std_move.cpp src/006_std_move/std_move.h
         src/007_random/random.h
         src/008_insert_sort/insert_sort.cpp src/008_insert_sort/insert_sort.h
-        src/011_basic_datastructure/vector/vector.cpp src/011_basic_datastructure/vector/vector.h src/024_eigen_sparse/eigen_sparse.cpp src/024_eigen_sparse/eigen_sparse.h)
+        src/011_basic_datastructure/vector/vector.cpp src/011_basic_datastructure/vector/vector.h src/024_eigen_sparse/eigen_sparse.cpp src/024_eigen_sparse/eigen_sparse.h
+        src/002_thread_pool/thread_pool2.h)
 
 
 target_link_libraries(cpp_exercise Qt4::QtGui Qt4::QtDBus)

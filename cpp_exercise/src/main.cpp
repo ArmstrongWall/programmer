@@ -6,7 +6,7 @@ int main() {
 
 
 //    bind();
-//    thread_pool_demo();
+    thread_pool_demo();
 //    time();
 //    lambda_demo();
 //    eigen_demo();
@@ -16,7 +16,7 @@ int main() {
 //    insert_sort();
 //    vector_assign();
 //    vector_swap();
-    eigen_sparse();
+//    eigen_sparse();
 
     return 0;
 }
