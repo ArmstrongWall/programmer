@@ -18,5 +18,6 @@
 #include "c4_1_condition_variable/condition_variable.h"
 #include "c4_3_threadsafe_queue/threadsafe_queue.h"
 #include "c6_1_threadsafe_stack/threadsafe_stack.h"
+#include "c9_1_thread_pool/thread_pool.h"
 
 #endif //CONCURRENCYINACTION_INCLUDE_H
