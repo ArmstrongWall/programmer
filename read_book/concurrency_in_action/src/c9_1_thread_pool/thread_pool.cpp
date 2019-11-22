@@ -72,13 +72,12 @@ T parallel_accumulate(Iterator first,Iterator last,T init)
     unsigned long const num_blocks=(length+block_size-1)/block_size;
     std::vector<std::future<T> > futures(num_blocks-1);
     thread_pool pool;
-    Iterator block_start=first;
+    Iterator block_start = first;
     for (unsigned long i = 0; i < (num_blocks - 1); ++i)
     {
         Iterator block_end = block_start;
         std::advance(block_end, block_size);
-        futures[i] = pool.submit([block_start, block_end]()
-                                 {
+        futures[i] = pool.submit([block_start, block_end]() {
                                      accumulate_block<Iterator, T> a;
                                      return a(block_start, block_end);
                                  });
@@ -103,7 +102,7 @@ int thread_pool_demo() {
     int initialValue{0};
     double t1,t2,sum_time = 0;
 
-    for(int i = 0; i < 8000; i++) {
+    for(int i = 0; i < 2000; i++) {
 
         t1 = get_machine_timestamp_s();
         long parallelResult = parallel_accumulate(values.begin(), values.end(), 0);
@@ -116,7 +115,7 @@ int thread_pool_demo() {
     std::cout << "no para ........................." <<"\n";
 
 
-    for(int i = 0; i < 2000; i++) {
+    for(int i = 0; i < 1000; i++) {
         int sum = 0;
         t1 = get_machine_timestamp_s();
         for(auto x : values) {
