@@ -101,30 +101,30 @@ int thread_pool_demo() {
 //    }
 
     int initialValue{0};
-    double t1,t2;
-    for(int i = 0; i < 2000; i++) {
+    double t1,t2,sum_time = 0;
+
+    for(int i = 0; i < 8000; i++) {
 
         t1 = get_machine_timestamp_s();
         long parallelResult = parallel_accumulate(values.begin(), values.end(), 0);
         t2 = get_machine_timestamp_s();
-        std::cout << "para time : " << t2 - t1 << ",res :" << parallelResult <<"\n";
-
-
+        sum_time += t2 - t1;
+        std::cout << "para time : " << sum_time/(i+1)  << ",res :" << parallelResult <<"\n";
     }
 
     sleep(1);
     std::cout << "no para ........................." <<"\n";
 
 
-    for(int i = 0; i < 1000; i++) {
+    for(int i = 0; i < 2000; i++) {
         int sum = 0;
         t1 = get_machine_timestamp_s();
         for(auto x : values) {
             sum += x;
         }
         t2 = get_machine_timestamp_s();
-        std::cout << "puto time : " << t2 - t1 << ",res :" << sum <<"\n";
-
+        sum_time += t2 - t1;
+        std::cout << "norm time : " << sum_time/(i+1)  << ",res :" << sum <<"\n";
 
     }
 
