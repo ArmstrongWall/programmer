@@ -39,8 +39,10 @@
 #include <unistd.h>
 #include <functional>
 #include <numeric>
+#include <eigen3/Eigen/Dense>
 
 #include"thread_pool.h"
+typedef Eigen::Matrix<double,6,6> Mat66;
 
 
 double get_machine_timestamp_s() {
@@ -62,9 +64,27 @@ struct accumulate_block {
     }
 };
 
+template<typename Iterator>
+Mat66 sum_value_mat(Iterator first, Iterator last) {
+    Mat66 value;
+    for(auto it = first; it < last; it++) {
+        value += *it;
+    }
+    return value;
+}
+
 template<typename Iterator,typename T>
-T parallel_accumulate(Iterator first,Iterator last,T init)
-{
+T sum_value(Iterator first, Iterator last) {
+    T value;
+    for(auto it = first; it < last; it++) {
+        value += *it;
+    }
+    return value;
+}
+
+
+template<typename Iterator,typename T>
+T parallel_accumulate(Iterator first,Iterator last,T init) {
     unsigned long const length=std::distance(first,last);
     if(!length)
         return init;
@@ -73,14 +93,49 @@ T parallel_accumulate(Iterator first,Iterator last,T init)
     std::vector<std::future<T> > futures(num_blocks-1);
     thread_pool pool;
     Iterator block_start = first;
-    for (unsigned long i = 0; i < (num_blocks - 1); ++i)
-    {
+    for (unsigned long i = 0; i < (num_blocks - 1); ++i) {
         Iterator block_end = block_start;
         std::advance(block_end, block_size);
+//        futures[i] = pool.submit([block_start, block_end]() {
+//                                     accumulate_block<Iterator, T> a;
+//                                     return a(block_start, block_end);});
+
         futures[i] = pool.submit([block_start, block_end]() {
-                                     accumulate_block<Iterator, T> a;
-                                     return a(block_start, block_end);
-                                 });
+            return sum_value<Iterator, T>(block_start, block_end);
+        });
+
+        block_start = block_end;
+    }
+    T last_result   = accumulate_block<Iterator,T>()(block_start,last);
+    T result        = init;
+    for(unsigned long i = 0; i<(num_blocks-1);++i) {
+        result      += futures[i].get();
+    }
+    result          += last_result;
+    return result;
+}
+
+template<typename Iterator,typename T>
+T parallel_accumulate_mat(Iterator first,Iterator last,T init) {
+    unsigned long const length=std::distance(first,last);
+    if(!length)
+        return init;
+    unsigned long const block_size = 1000;
+    unsigned long const num_blocks=(length+block_size-1)/block_size;
+    std::vector<std::future<T> > futures(num_blocks-1);
+    thread_pool pool;
+    Iterator block_start = first;
+    for (unsigned long i = 0; i < (num_blocks - 1); ++i) {
+        Iterator block_end = block_start;
+        std::advance(block_end, block_size);
+//        futures[i] = pool.submit([block_start, block_end]() {
+//                                     accumulate_block<Iterator, T> a;
+//                                     return a(block_start, block_end);});
+
+        futures[i] = pool.submit([block_start, block_end]() {
+            return sum_value_mat<Iterator>(block_start, block_end);
+        });
+
         block_start = block_end;
     }
     T last_result   = accumulate_block<Iterator,T>()(block_start,last);
@@ -99,10 +154,11 @@ int thread_pool_demo() {
 //        values[i] = i;
 //    }
 
-    int initialValue{0};
+    long count = 1000;
+
     double t1,t2,sum_time = 0;
 
-    for(int i = 0; i < 2000; i++) {
+    for(int i = 0; i < count; i++) {
 
         t1 = get_machine_timestamp_s();
         long parallelResult = parallel_accumulate(values.begin(), values.end(), 0);
@@ -114,8 +170,8 @@ int thread_pool_demo() {
     sleep(1);
     std::cout << "no para ........................." <<"\n";
 
-
-    for(int i = 0; i < 1000; i++) {
+    sum_time = 0;
+    for(int i = 0; i < count; i++) {
         int sum = 0;
         t1 = get_machine_timestamp_s();
         for(auto x : values) {
@@ -124,9 +180,51 @@ int thread_pool_demo() {
         t2 = get_machine_timestamp_s();
         sum_time += t2 - t1;
         std::cout << "norm time : " << sum_time/(i+1)  << ",res :" << sum <<"\n";
+    }
+
+    return 0;
+
+}
+
+int thread_pool_demo_mat() {
+
+    long num = 20000;
+    long count = 10;
+
+    std::vector<Mat66> values(num); // empty vector
+
+    for(long i = 0; i < num; i++) {
+        values[i].setOnes();
+    }
+
+    double t1,t2,sum_time = 0;
+
+    for(int i = 0; i < count; i++) {
+        Mat66 sum = Mat66::Zero();
+        t1 = get_machine_timestamp_s();
+        for(auto x : values) {
+            sum += x;
+        }
+        t2 = get_machine_timestamp_s();
+        sum_time += t2 - t1;
+        if(i == count - 1)
+            std::cout << "norm time : " << sum_time/(i+1)  << ",res :\n" << sum <<"\n";
 
     }
 
+
+    std::cout << "para ........................." <<"\n";
+
+    sum_time = 0;
+    for(int i = 0; i < count; i++) {
+
+        t1 = get_machine_timestamp_s();
+        auto parallelResult = parallel_accumulate_mat(values.begin(), values.end(), Mat66::Zero().eval());
+        t2 = get_machine_timestamp_s();
+        sum_time += t2 - t1;
+        if(i == count - 1)
+            std::cout << "para time : " << sum_time/(i+1)  << ",res :\n" << parallelResult << std::flush <<"\n";
+    }
 
 
 

@@ -4,6 +4,8 @@ project(concurrency_in_action)
 set(CMAKE_CXX_STANDARD 11)
 SET(CMAKE_CXX_FLAGS ${CMAKE_CXX_FLAGS} "-std=c++11 -pthread")
 
+find_package(Eigen3 REQUIRED)
+
 add_executable(ConcurrencyInAction src/main.cpp
         src/c1_start_thread/c1StartThread.cpp
         src/c2_1_3_wait_threadRAII/RAIIWaitForThread.h

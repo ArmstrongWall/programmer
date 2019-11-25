@@ -454,6 +454,6 @@ public:
 };
 
 int thread_pool_demo();
-
+int thread_pool_demo_mat();
 
 #endif //CONCURRENCY_IN_ACTION_THREAD_POOL_H
