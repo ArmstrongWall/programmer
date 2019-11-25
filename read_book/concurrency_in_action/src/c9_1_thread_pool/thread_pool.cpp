@@ -66,7 +66,7 @@ struct accumulate_block {
 
 template<typename Iterator>
 Mat66 sum_value_mat(Iterator first, Iterator last) {
-    Mat66 value;
+    Mat66 value = Mat66::Zero();
     for(auto it = first; it < last; it++) {
         value += *it;
     }
@@ -116,11 +116,11 @@ T parallel_accumulate(Iterator first,Iterator last,T init) {
 }
 
 template<typename Iterator,typename T>
-T parallel_accumulate_mat(Iterator first,Iterator last,T init) {
+T parallel_accumulate_mat(Iterator first,Iterator last,T init, unsigned long const block_size) {
     unsigned long const length=std::distance(first,last);
     if(!length)
         return init;
-    unsigned long const block_size = 1000;
+//    unsigned long const block_size = 25000;
     unsigned long const num_blocks=(length+block_size-1)/block_size;
     std::vector<std::future<T> > futures(num_blocks-1);
     thread_pool pool;
@@ -188,12 +188,13 @@ int thread_pool_demo() {
 
 int thread_pool_demo_mat() {
 
-    long num = 20000;
+    long num = 200000;
     long count = 10;
 
     std::vector<Mat66> values(num); // empty vector
 
     for(long i = 0; i < num; i++) {
+//        values[i].setRandom();
         values[i].setOnes();
     }
 
@@ -215,18 +216,18 @@ int thread_pool_demo_mat() {
 
     std::cout << "para ........................." <<"\n";
 
+
     sum_time = 0;
+
     for(int i = 0; i < count; i++) {
 
         t1 = get_machine_timestamp_s();
-        auto parallelResult = parallel_accumulate_mat(values.begin(), values.end(), Mat66::Zero().eval());
+        auto parallelResult = parallel_accumulate_mat(values.begin(), values.end(), Mat66::Zero().eval(),5000);
         t2 = get_machine_timestamp_s();
         sum_time += t2 - t1;
         if(i == count - 1)
             std::cout << "para time : " << sum_time/(i+1)  << ",res :\n" << parallelResult << std::flush <<"\n";
     }
-
-
 
 
 
