@@ -138,7 +138,7 @@ T parallel_accumulate_mat(Iterator first,Iterator last,T init, unsigned long con
 
         block_start = block_end;
     }
-    T last_result   = accumulate_block<Iterator,T>()(block_start,last);
+    T last_result   = sum_value_mat<Iterator>(block_start,last);
     T result        = init;
     for(unsigned long i = 0; i<(num_blocks-1);++i) {
         result      += futures[i].get();
@@ -194,8 +194,8 @@ int thread_pool_demo_mat() {
     std::vector<Mat66> values(num); // empty vector
 
     for(long i = 0; i < num; i++) {
-//        values[i].setRandom();
-        values[i].setOnes();
+        values[i].setRandom();
+//        values[i].setOnes();
     }
 
     double t1,t2,sum_time = 0;
