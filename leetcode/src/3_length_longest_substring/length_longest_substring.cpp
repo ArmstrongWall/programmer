@@ -34,13 +34,67 @@
  *----------------------------------------------------------------------------*
  *                                                                            *
  */
-
+#include <vector>
+#include <iostream>
+#include <map>
+#include <set>
 #include "length_longest_substring.h"
 
 
 class Solution {
 public:
-    int lengthOfLongestSubstring(string s) {
+    int lengthOfLongestSubstring(std::string s) {
 
+        int head = 0, tail = 0, result = 0;
+        std::map<char,int> slidingw;
+        while (true) {
+            if(tail == s.size()) {
+                break;
+            }
+
+            if(slidingw.find(s[tail]) == slidingw.end()) {
+                slidingw[s[tail]] = tail;
+            } else {//if there has been repeated word
+                int next_head = slidingw[s[tail]] + 1;
+                for(int i = head; i <= slidingw[s[tail]]; i++) {
+                    slidingw.erase(s[i]);
+                }
+                head = next_head;
+                slidingw[s[tail]] = tail;
+
+            }
+            slidingw.size() > result ? result = slidingw.size() : result;
+            tail++;
+
+        }
+        return result;
     }
 };
+
+void test_lengthOfLongestSubstring() {
+    Solution s;
+    s.lengthOfLongestSubstring("bpfbhmipx");
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

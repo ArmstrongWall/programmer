@@ -19,23 +19,23 @@
  * and interest in and to the SOFTWARE not expressly granted are reserved by UISEE or its
  * licensors or suppliers.
  *
- * @file   length_longest_substring.h
+ * @file   min_window.h
  * @brief  
  * @author Ziqiang Wang
  * @email  ziqiang.wang@uisee.com
- * @Date   19-11-26
+ * @Date   19-11-30
  *----------------------------------------------------------------------------*
  *  Remark         : Description                                              *
  *----------------------------------------------------------------------------*
  *  Change History :                                                          *
  *  <Date>     | <Version> | <Author>       | <Description>                   *
  *----------------------------------------------------------------------------*
- *  19-11-26    | 1.0.0.0   | Ziqiang Wang   | Create file                     *
+ *  19-11-30    | 1.0.0.0   | Ziqiang Wang   | Create file                     *
  *----------------------------------------------------------------------------*
  *                                                                            *
  */
 
-#ifndef LEETCODE_LENGTH_LONGEST_SUBSTRING_H
-#define LEETCODE_LENGTH_LONGEST_SUBSTRING_H
-void test_lengthOfLongestSubstring();
-#endif //LEETCODE_LENGTH_LONGEST_SUBSTRING_H
+#ifndef LEETCODE_MIN_WINDOW_H
+#define LEETCODE_MIN_WINDOW_H
+
+#endif //LEETCODE_MIN_WINDOW_H

@@ -14,6 +14,7 @@
 #include "35_search_insert_position/search_insert_position.h"
 #include "33_search_rotated_sorted_array/search_rotated_sorted_array.h"
 #include "hash/hash.h"
+#include "3_length_longest_substring/length_longest_substring.h"
 
 
 int main() {
@@ -50,8 +51,8 @@ int main() {
 //    binary_search();
 //    searchInsert();
 //    searchrotated();
-    hash();
-
+//    hash();
+    test_lengthOfLongestSubstring();
     return 0;
 }
 
