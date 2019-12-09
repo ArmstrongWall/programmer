@@ -62,7 +62,9 @@
 #### 3. [290. 单词规律](src/290_word_pattern/word_pattern.cpp)----[题目来源](https://leetcode-cn.com/problems/word-pattern/)
 #### 4. [49. 字母异位词分组](src/49_group_anagrams/group_anagrams.cpp)----[题目来源](https://leetcode-cn.com/problems/group-anagrams/)
 #### 5. [3. 无重复字符的最长子串](src/3_length_longest_substring/length_longest_substring.cpp)----[题目来源](https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/)
-
+#### 6. [76. 最小覆盖子串](src/76_min_window/min_window.cpp)----[题目来源](https://leetcode-cn.com/problems/minimum-window-substring/submissions/)
+此题做了两次，第一次是没理解题意，以为目标中没有重复字母，第二次是使用滑窗，但是用了std::map，插入删除的时间复杂度较高，
+是O(nlgn)而不是O(n),时间超时了。
 
 40
 

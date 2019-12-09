@@ -35,12 +35,213 @@
  *                                                                            *
  */
 #include <string>
-
+#include <vector>
+#include <map>
+#include <set>
+#include <iostream>
 #include "min_window.h"
 
 class Solution {
 public:
-    std::string minWindow(std::string s, std::string t) {
+    std::string minWindow_fail(std::string s, std::string t) {
+        std::map<char, std::vector<int>> has_find;
+        std::set<char> target;
+        for(auto & x : t) {
+            target.insert(x);
+        }
+        std::cout << "target is ";
+        for(auto &y : target) {
+            std::cout  << y << ",";
+        }
+        std::cout << "\n";
+
+        for(int i = 0; i < s.size(); i++) {
+            if(target.find(s[i]) != target.end()) {
+                if(has_find.find(s[i]) == has_find.end()) {
+                    has_find[s[i]] = {i};
+                } else {
+                    has_find[s[i]].push_back(i);
+                }
+            }
+        }
+        std::cout << "has_find is \n";
+        for(auto &x : has_find) {
+            std::cout << "one is ";
+            for(auto &y : x.second) {
+                std::cout  << y << ",";
+            }
+            std::cout << "\n";
+        }
+
+        if(has_find.size() != target.size()) {
+            return {};
+        }
+
+        std::set<int> order,res;
+        int min = INT_MAX;
+        full_order(has_find,order,min, res);
+        std::string re;
+
+        for(int i = *(res.begin()); i <= *(--res.end()); i++) {
+            re.push_back(s[i]);
+        }
+        return re;
+    }
+
+    void full_order(std::map<char, std::vector<int>> has_find, std::set<int> &order, int &min, std::set<int> &res) {
+        if(has_find.empty()) {
+            int now_interval = *(--order.end()) - *(order.begin());
+            if(min > now_interval) {
+                min = now_interval;
+                res = order;
+            }
+            return;
+        }
+
+        auto it   = has_find.begin();
+        std::map<char, std::vector<int>> has_find_copy = has_find;
+        auto it_c = has_find_copy.begin();
+        has_find_copy.erase(it_c);
+        for(auto &x : (*it).second) {
+            order.insert(x);
+            full_order(has_find_copy,order,min,res);
+            order.erase(x);
+        }
+    }
+
+    std::string minWindow_time_limit(std::string s, std::string t) {
+        std::map<char, std::vector<int>> has_find;
+        std::map<char, std::vector<int>> has_find_backup;
+        std::map<char, int> target;
+
+        for(int i = 0; i < t.size(); i++) {
+            if(target.find(t[i]) == target.end()) {
+                target[t[i]] = 1;
+            } else {
+                target[t[i]]++;
+            }
+        }
+
+        int head = 0, tail = 0, real_head = 0, real_tail = 0, min_length = INT_MAX;
+        std::string res;
+        bool find_win = false;
+        for(;tail < s.size(); tail++) {
+            has_find[s[tail]].push_back(tail);
+
+            while (head <= tail) {
+                if(target.find(s[head]) == target.end()) {//在目标值中没有找到
+                    head++;
+                } else if(has_find[s[head]].size() > target[s[head]]){
+                    has_find[s[head]].erase(has_find[s[head]].begin());
+                    head++;
+                } else {
+                    break;
+                }
+            }
+
+            bool win_ok = is_window_ok(has_find,target);
+            if(win_ok) {
+                find_win = true;
+                int length = tail - head;
+                if(min_length > length) {
+                    min_length = length;
+                    res = s.substr(head,length + 1);
+                }
+            }
+        }
+
+        if(!find_win) {
+            return "";
+        }
+        return res;
+
 
     }
+
+    bool is_window_ok(std::map<char, std::vector<int>> has_find, std::map<char, int> target) {
+        for(auto &x : target) {
+            if(has_find[x.first].size() < x.second) return false;
+        }
+        return true;
+    }
+
+private:
+    bool is_window_ok(int map_s[], int map_t[], std::vector<int> &vec_t){
+        for (int i = 0; i < vec_t.size(); i++){
+            if (map_s[vec_t[i]] < map_t[vec_t[i]]){
+                return false;
+            }
+        }
+        return true;
+    }
+public:
+    std::string minWindow(std::string s, std::string t) {
+        const int MAX_ARRAY_LEN = 128;
+        int map_t[MAX_ARRAY_LEN] = {0};
+        int map_s[MAX_ARRAY_LEN] = {0};
+        std::vector<int> vec_t;
+        for (int i = 0; i < t.length(); i++){
+            map_t[t[i]]++;
+        }
+        for (int i = 0; i < MAX_ARRAY_LEN; i++){
+            if (map_t[i] > 0){
+                vec_t.push_back(i);
+            }
+        }
+
+        int window_begin = 0;
+        std::string result;
+        for (int i = 0; i < s.length(); i++){
+            map_s[s[i]]++;
+            while(window_begin < i){
+                char begin_ch = s[window_begin];
+                if (map_t[begin_ch] == 0){
+                    window_begin++;
+                }
+                else if	(map_s[begin_ch] > map_t[begin_ch]){
+                    map_s[begin_ch]--;
+                    window_begin++;
+                }
+                else{
+                    break;
+                }
+            }
+            if (is_window_ok(map_s, map_t, vec_t)){
+                int new_window_len = i - window_begin + 1;
+                if (result == "" || result.length() > new_window_len){
+                    result = s.substr(window_begin, new_window_len);
+                }
+            }
+        }
+        return result;
+    }
+
 };
+
+int test_min_window() {
+
+//    std::map<char, std::vector<int>> test_m;
+//    test_m['A'] = {3,5};
+//    test_m['B'] = {4,6};
+//    test_m['C'] = {7,8};
+//    std::set<int> order,res;
+//    Solution s;
+//    int min = INT_MAX;
+//    s.full_order(test_m,order,min, res);
+//    std::cout << "res is ";
+//    for(auto &x : res) {
+//        std::cout  << x << ",";
+//    }
+//    std::cout <<",min is " << min << "\n";
+
+    Solution s;
+
+    std::cout << "min win: "<< s.minWindow("cabwefgewcwaefgcf","cae") << "\n";
+    std::cout << "min win: "<< s.minWindow("ab","b") << "\n";
+    std::cout << "min win: "<< s.minWindow("cfabccd","ccab") << "\n";
+    std::cout << "min win: "<< s.minWindow("aa","aa") << "\n";
+    std::cout << "min win: "<< s.minWindow("ADOBECODEBANC","ABC") << "\n";
+    std::cout << "min win: "<< s.minWindow("a","aa") << "\n";
+    std::cout << "min win: "<< s.minWindow("obzcopzocynyrsgsarijyxnkpnukkrvzuwdjldxndmnvevpgmxrmvfwkutwekrffnloyqnntbdohyfqndhzyoykiripdzwiojyoznbtogjyfpouuxvumtewmmnqnkadvzrvouqfbbdiqremqzgevkbhyoznacqwbhtrcjwfkzpdstpjswnpiqxjhywjanhdwavajrhwtwzlrqwmombxcaijzevbtcfsdcuovckoalcseaesmhrrizcjgxkbartdtotpsefsrjmvksqyahpijsrppdqpvmuocofuunonybjivbjviyftsyiicbzxnwnrmvlgkzticetyfcvqcbjvbufdxgcmesdqnowzpshuwcseenwjqhgsdlxatamysrohfnixfprdsljyyfhrnnjsagtuihuczilgvtfcjwgdhpbixlzmakebszxbhrdibpoxiwztshwczamwnninzmqrmpsviydkptjzpktksrortapgpxwojofxeasoyvyprjoguhqobehugwdvtzlenrcttuitsiijswpogicjolfxhiscjggzzissfcnxnvgftxvbfzkukqrtalvktdjsodmtgzqtuyaqvvrbuexgwqzwduixzrpnvegddyyywaquxjxrnuzlmyipuqotkghfkpknqinoidifnfyczzonxydtqroazxhjnrxfbmtlqcsfhshjrxwqvblovaouxwempdrrplefnxmwrwfjtebrfnfanvvmtbzjesctdgbsfnpxlwihalyiafincfcwgdfkvhebphtxukwgjgplrntsuchyjjuqozakiglangxkttsczhnswjksnuqwflmumpexxrznzwxurrysaokwxxqkrggytvsgkyfjrewrcvntomnoazmzycjrjrqemimyhriyxgrzcfuqtjhvjtuhwfzhwpljzajitrhryaqchnuawbxhxrpvyqcvhpggrpplhychyulijhkglinibedauhvdydkqszdbzfkzbvhldstocgydnbfjkcnkfxcyyfbzmmyojgzmasccaahpdnzproaxnexnkamwmkmwslksfpwirexxtymkmojztgmfhydvlqtddewjvsrmyqjrpycbmndhupmdqqabiuelacuvxnhxgtpvrtwfgzpcrbhhtikbcqpctlxszgpfbgcsbaaiapmtsucocmpecgixshrrnhyrpalralbccnxvjzjllarqhznzghswqsnfuyywmzbopyjyauknxddgdthlabjqtwxpxwljvoxkpjjpfvccyikbbrpdsyvlxscuoofkecwtnfkvcnzbxkeabtdusyhrqklhaqreupakxkfzxgawqfwsaboszvlshwzhosojjotgyagygguzntrouhiweuomqptfjjqsxlbylhwtpssdlltgubczxslqjgxuqnmpynnlwjgmebrpokxjnbiltvbebyytnnjlcwyzignmhedwqbfdepqakrelrdfesqrumptwwgifmmbepiktxavhuavlfaqxqhreznbvvlakzeoomykkzftthoemqwliednfsqcnbexbimrvkdhllcesrlhhjsspvfupxwdybablotibypmjutclgjurbmhztboqatrdwsomnxnmocvixxvfiqwmednahdqhxjkvcyhpxxdmzzuyyqdjibvmfkmonfxmohhshpkhmntnoplphqyprveyfsmsxjfosmicdsjrieeytpnbhlsziwxnpmgoxneqbnufhfwrjbqcsdfarybzwaplmxckkgclvwqdbpumsmqkswmjwnkuqbicykoisqwoootrdpdvcuiuswfqmrkctsgrevcxnyncmivsxbpbxzxpwchiwtkroqisnmrbmefbmatmdknaklpgpyqlsccgunaibsloyqpnsibwuowebomrmcegejozypjzjunjmeygozcjqbnrpakdermjcckartbcppmbtkhkmmtcngteigjnxxyzaibtdcwutkvpwezisskfaeljmxyjwykwglqlnofhycwuivdbnpintuyhtyqpwaoelgpbuwiuyeqhbvkqlsfgmeoheexbhnhutxvnvfjwlzfmvpcghiowocdsjcvqrdmkcizxnivbianfpsnzabxqecinhgfyjrjlbikrrgsbgfgyxtzzwwpayapfgueroncpxogouyrdgzdfucfrywtywjeefkvtzxlwmrniselyeodysirqflpduvibfdvedgcrzpzrunpadvawfsmmddqzaaahfxlifobffbyzqqbtlcpquedzjvykvarayfldvmkapjcfzfbmhscdwhciecsbdledspgpdtsteuafzbrjuvmsfrajtulwirzagiqjdiehefmfifocadxfuxrpsemavncdxuoaetjkavqicgndjkkfhbvbhjdcygfwcwyhpirrfjziqonbyxhibelinpllxsjzoiifscwzlyjdmwhnuovvugfhvquuleuzmehggdfubpzolgbhwyeqekzccuypaspozwuhbzbdqdtejuniuuyagackubauvriwneeqfhtwkocuipcelcfrcjcymcuktegiikyosumeioatfcxrheklookaqekljtvtdwhxsteajevpjviqzudnjnqbucnfvkybggaybebljwcstmktgnipdyrxbgewqczzkaxmeazpzbjsntltjwlmuclxirwytvxgvxscztryubtjweehapvxrguzzsatozzjytnamfyiitreyxmanhzeqwgpoikcjlokebksgkaqetverjegqgkicsyqcktmwjwakivtsxjwrgakphqincqrxqhzbcnxljzwturmsaklhnvyungjrxaonjqomdnxpnvihmwzphkyuhwqwdboabepmwgyatyrgtboiypxfavbjtrgwswyvcqhzwibpisydtmltbkydhznbsvxktyfxopwkxzbftzknnwipghuoijrbgqnzovxckvojvsqqraffwowfvqvfcmiicwitrhxdeombgesxexedlakitfovtydxunqnwqqdeeekiwjnwoshqcsljiicgobbbuqakjdonjawgjlezdnqhfdqnmsuavxdpnfzwipmspiabveaarshzwxmirgkmfncvtdrdvfxkpxlkdokxgtwcskmjryyymcthfnkasinihaunohkxaibtsqelockaefjmsuolebtnepauwmrxutspjwaxbmahsjtkfkxlnszribmeofbkyvbjscjtqjakuwvcgunvnonvqbbggfshauqsyznokqbhowjusypfnecffenojfvlblgzntqzlrgzprvhqnpfrrkzxznieiuivajivzijsqijigtatifmbplzqahuidegfoobpymkputzamzvweiyvvzlwihgmmmrcburbgbsdxrfjsbiylitghgcpqjbevvgypxcybubyoijijrhuzcdijfybqbfowlookqmlnplbxvjjosfqviygqyhgamuwzjklbyzopkrnhbywtfoqomweldmlrhjqswctubiknzzvcztyehouvnyiqnvkufaobehxhrjvtisxjlxoumipzjarwvbsaegdkpbsjmpevjbewzuqnfhoohhmdjgfpmjzdmtmykqvtucptwfidpwtwffzolffzqfdearclkyeecuzabjeqhxpmfodsvisnpxrqowdawheydfyhoexvcmihdlzavtqlshdhdgjzpozvvackebhgqppvcrvymljfvooauxcjnbejdivikcoaugxwzsulgfqdtefpehbrlhaoqxwcancuvbqutnfbuygoemditeagmcveatgaikwflozgdhkyfqmjcruyyuemwbqwxyyfiwnvlmbovlmccaoguieu","cjgamyzjwxrgwedhsexosmswogckohesskteksqgrjonnrwhywxqkqmywqjlxnfrayykqotkzhxmbwvzstrcjfchvluvbaobymlrcgbbqaprwlsqglsrqvynitklvzmvlamqipryqjpmwhdcsxtkutyfoiqljfhxftnnjgmbpdplnuphuksoestuckgopnlwiyltezuwdmhsgzzajtrpnkkswsglhrjprxlvwftbtdtacvclotdcepuahcootzfkwqhtydwrgqrilwvbpadvpzwybmowluikmsfkvbebrxletigjjlealczoqnnejvowptikumnokysfjyoskvsxztnqhcwsamopfzablnrxokdxktrwqjvqfjimneenqvdxufahsshiemfofwlyiionrybfchuucxtyctixlpfrbngiltgtbwivujcyrwutwnuajcxwtfowuuefpnzqljnitpgkobfkqzkzdkwwpksjgzqvoplbzzjuqqgetlojnblslhpatjlzkbuathcuilqzdwfyhwkwxvpicgkxrxweaqevziriwhjzdqanmkljfatjifgaccefukavvsfrbqshhswtchfjkausgaukeapanswimbznstubmswqadckewemzbwdbogogcysfxhzreafwxxwczigwpuvqtathgkpkijqiqrzwugtr") << "\n";
+
+}

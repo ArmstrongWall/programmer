@@ -15,6 +15,7 @@
 #include "33_search_rotated_sorted_array/search_rotated_sorted_array.h"
 #include "hash/hash.h"
 #include "3_length_longest_substring/length_longest_substring.h"
+#include "76_min_window/min_window.h"
 
 
 int main() {
@@ -52,7 +53,8 @@ int main() {
 //    searchInsert();
 //    searchrotated();
 //    hash();
-    test_lengthOfLongestSubstring();
+//    test_lengthOfLongestSubstring();
+    test_min_window();
     return 0;
 }
 

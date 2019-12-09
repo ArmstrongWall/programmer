@@ -43,7 +43,7 @@
 
 class Solution {
 public:
-    int lengthOfLongestSubstring(std::string s) {
+    static int lengthOfLongestSubstring(std::string s) {
 
         int head = 0, tail = 0, result = 0;
         std::map<char,int> slidingw;
@@ -72,8 +72,8 @@ public:
 };
 
 void test_lengthOfLongestSubstring() {
-    Solution s;
-    s.lengthOfLongestSubstring("bpfbhmipx");
+
+    Solution::lengthOfLongestSubstring("bpfbhmipx");
 
 }
 

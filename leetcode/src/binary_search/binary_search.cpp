@@ -52,6 +52,7 @@ std::vector<int> search_array(std::vector<int> &sort_array,
     return result;
 }
 
+
 int binary_search(){
     int A[] = {-1, 2, 5, 20, 90, 100, 207, 800};
     int B[] = {50, 90, 3, -1, 207, 80};

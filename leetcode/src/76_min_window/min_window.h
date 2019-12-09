@@ -37,5 +37,5 @@
 
 #ifndef LEETCODE_MIN_WINDOW_H
 #define LEETCODE_MIN_WINDOW_H
-
+int test_min_window();
 #endif //LEETCODE_MIN_WINDOW_H
