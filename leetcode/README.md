@@ -45,7 +45,7 @@
 #### 4. [二叉树层次遍历 广度优先  breadth-first search](src/binary_tree_breadth_first_search/binary_tree_breadth_first_search.cpp)
 #### 5. [从右侧观察二叉树 199. Binary Tree Right Side View](src/199_binary_tree_right_side_view/binary_tree_right_side_view.cpp:15)----[题目来源](https://leetcode.com/problems/binary-tree-right-side-view/)
 #### 6. [图的深度优先和广度优先搜索](src/graph_depth_first_search/graph_depth_first_search.cpp)
-#### 7. [课程安排 207. Course Schedule  深搜和广搜两种方法，深搜因为空间限制无法AC，需改进](src/207_course_schedule/course_schedule.cpp)----[题目来源](https://leetcode.com/problems/course-schedule/)
+#### 7. [课程安排 207. Course Schedule](src/207_course_schedule/course_schedule.cpp)----[题目来源](https://leetcode.com/problems/course-schedule/) 深搜和广搜两种方法，深搜因为空间限制无法AC，需改进
 32
 
 ## 六、二分查找与二叉查找树
@@ -62,11 +62,11 @@
 #### 3. [290. 单词规律](src/290_word_pattern/word_pattern.cpp)----[题目来源](https://leetcode-cn.com/problems/word-pattern/)
 #### 4. [49. 字母异位词分组](src/49_group_anagrams/group_anagrams.cpp)----[题目来源](https://leetcode-cn.com/problems/group-anagrams/)
 #### 5. [3. 无重复字符的最长子串](src/3_length_longest_substring/length_longest_substring.cpp)----[题目来源](https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/)
-#### 6. [76. 最小覆盖子串](src/76_min_window/min_window.cpp)----[题目来源](https://leetcode-cn.com/problems/minimum-window-substring/submissions/)
-此题做了两次，第一次是没理解题意，以为目标中没有重复字母，第二次是使用滑窗，但是用了std::map，插入删除的时间复杂度较高，
-是O(nlgn)而不是O(n),时间超时了。
+#### 6. [76. 最小覆盖子串](src/76_min_window/min_window.cpp)----[题目来源](https://leetcode-cn.com/problems/minimum-window-substring/submissions/) 此题做了两次，第一次是没理解题意，以为目标中没有重复字母，第二次是使用滑窗，但是用了std::map，插入删除的时间复杂度较高，是O(nlgn)而不是O(n),时间超时了。
+42
 
-40
+## 八、搜索
+#### 1. [200. 岛屿数量](src/200_num_islands/num_islands.cpp)----[题目来源](https://leetcode-cn.com/problems/number-of-islands/)
 
 ## 其他
-#### 1. [1. 两数之和](src/1_two_sum/two_sum.cpp)----[题目来源](https://leetcode-cn.com/problems/two-sum/)时间复杂度太高
+#### 1. [1. 两数之和](src/1_two_sum/two_sum.cpp)----[题目来源](https://leetcode-cn.com/problems/two-sum/) 时间复杂度太高

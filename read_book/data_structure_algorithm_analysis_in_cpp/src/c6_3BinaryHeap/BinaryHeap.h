@@ -32,6 +32,6 @@ private:
 
 };
 
-
+void BinaryHeapDemo();
 
 #endif //DATASTRUCTUREALGORITHMANALYSISINCPP_BINARYHEAP_H

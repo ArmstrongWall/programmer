@@ -4,6 +4,7 @@
 #include <iostream>
 #include "BinaryHeap.h"
 
+
 template <typename T>
 BinaryHeap<T>::BinaryHeap(unsigned long capacity) {
     array.resize(capacity);
@@ -52,4 +53,15 @@ void BinaryHeap<T>::printBinaryHeap(const T &node,const unsigned long & index) {
 //    for(auto x : array) {
 //        cout << x << endl;
 //    }
+}
+
+void BinaryHeapDemo() {
+    std::cout << "Binary Heap Demo" << std::endl;
+    auto heap = new BinaryHeap<int>;
+    std::cout << "before insert" << std::endl;
+    heap->printBinaryHeap();
+
+    heap->insert(14);
+    std::cout << "after insert" << std::endl;
+    heap->printBinaryHeap();
 }

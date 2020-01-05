@@ -4,7 +4,7 @@
 #include <vector>
 #include <iostream>
 #include <queue>
-#include "course_schedule .h"
+#include "course_schedule.h"
 
 
 

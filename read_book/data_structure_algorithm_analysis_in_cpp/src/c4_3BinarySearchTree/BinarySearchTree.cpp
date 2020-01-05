@@ -250,3 +250,23 @@ int binarySearchTree<T>::height(binaryNode<T> *tree) const {
         return 1+max(height(tree->right),height(tree->left));
     }
 }
+
+
+void binarySearchTreeDemo() {
+    std::cout << "binary Search Tree Demo" << std::endl;
+    //define a tree
+    auto tree1 = new binarySearchTree<int>;
+    std::cout << "tree1" << std::endl;
+    tree1->printTree();
+
+    //get tree height
+    std::cout << "tree1 height is" <<tree1->height()<< std::endl;
+
+    //clone a tree
+    auto tree2 = new binarySearchTree<int>{*tree1};
+    std::cout << std::endl << "tree2" << std::endl;
+    tree2->printTree();
+
+    std::cout << "tree2->contains" << tree2->contains(23);
+
+}

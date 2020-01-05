@@ -27,4 +27,6 @@ public:
     void print(vector<T> &a);
 };
 
+void sortDemo();
+
 #endif //DATASTRUCTUREALGORITHMANALYSISINCPP_SORT_H

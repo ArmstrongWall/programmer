@@ -9,13 +9,14 @@
 #include "114_flatten_binary_tree2linked_list/flatten_binary_tree2linked_list.h"
 #include "binary_tree_breadth_first_search/binary_tree_breadth_first_search.h"
 #include "graph_depth_first_search/graph_depth_first_search.h"
-#include "207_course_schedule/course_schedule .h"
+#include "207_course_schedule/course_schedule.h"
 #include "binary_search/binary_search.h"
 #include "35_search_insert_position/search_insert_position.h"
 #include "33_search_rotated_sorted_array/search_rotated_sorted_array.h"
 #include "hash/hash.h"
 #include "3_length_longest_substring/length_longest_substring.h"
 #include "76_min_window/min_window.h"
+#include "200_num_islands/num_islands.h"
 
 
 int main() {
@@ -54,7 +55,8 @@ int main() {
 //    searchrotated();
 //    hash();
 //    test_lengthOfLongestSubstring();
-    test_min_window();
+//    test_min_window();
+    numIslands();
     return 0;
 }
 

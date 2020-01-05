@@ -69,4 +69,36 @@ add_executable(leetcode src/main.cpp
         src/199_binary_tree_right_side_view/binary_tree_right_side_view.cpp
         src/199_binary_tree_right_side_view/binary_tree_right_side_view.h
         src/graph_depth_first_search/graph_depth_first_search.cpp
-        src/graph_depth_first_search/graph_depth_first_search.h "src/207_course_schedule/course_schedule .cpp" "src/207_course_schedule/course_schedule .h" src/binary_search/binary_search.cpp src/binary_search/binary_search.h src/35_search_insert_position/search_insert_position.cpp src/35_search_insert_position/search_insert_position.h src/34_search_range/search_range.cpp src/34_search_range/search_range.h src/33_search_rotated_sorted_array/search_rotated_sorted_array.cpp src/33_search_rotated_sorted_array/search_rotated_sorted_array.h src/449_serialize_deserialize_BST/serialize_deserialize_BST.cpp src/449_serialize_deserialize_BST/serialize_deserialize_BST.h src/hash/hash.cpp src/hash/hash.h src/409_longest_palindrome/longest_palindrome.cpp src/409_longest_palindrome/longest_palindrome.h src/290_word_pattern/word_pattern.cpp src/290_word_pattern/word_pattern.h src/49_group_anagrams/group_anagrams.cpp src/49_group_anagrams/group_anagrams.h src/1_two_sum/two_sum.cpp src/1_two_sum/two_sum.h src/3_length_longest_substring/length_longest_substring.cpp src/3_length_longest_substring/length_longest_substring.h src/79_exist/exist.cpp src/79_exist/exist.h src/76_min_window/min_window.cpp src/76_min_window/min_window.h)
+        src/graph_depth_first_search/graph_depth_first_search.h
+        src/207_course_schedule/course_schedule.cpp
+        src/207_course_schedule/course_schedule.h
+        src/binary_search/binary_search.cpp
+        src/binary_search/binary_search.h
+        src/35_search_insert_position/search_insert_position.cpp
+        src/35_search_insert_position/search_insert_position.h
+        src/34_search_range/search_range.cpp
+        src/34_search_range/search_range.h
+        src/33_search_rotated_sorted_array/search_rotated_sorted_array.cpp
+        src/33_search_rotated_sorted_array/search_rotated_sorted_array.h
+        src/449_serialize_deserialize_BST/serialize_deserialize_BST.cpp
+        src/449_serialize_deserialize_BST/serialize_deserialize_BST.h
+        src/hash/hash.cpp
+        src/hash/hash.h
+        src/409_longest_palindrome/longest_palindrome.cpp
+        src/409_longest_palindrome/longest_palindrome.h
+        src/290_word_pattern/word_pattern.cpp
+        src/290_word_pattern/word_pattern.h
+        src/49_group_anagrams/group_anagrams.cpp
+        src/49_group_anagrams/group_anagrams.h
+        src/1_two_sum/two_sum.cpp
+        src/1_two_sum/two_sum.h
+        src/3_length_longest_substring/length_longest_substring.cpp
+        src/3_length_longest_substring/length_longest_substring.h
+        src/79_exist/exist.cpp
+        src/79_exist/exist.h
+        src/76_min_window/min_window.cpp
+        src/76_min_window/min_window.h
+        src/200_num_islands/num_islands.cpp
+        src/200_num_islands/num_islands.h
+        src/127_ladder_length/ladder_length.cpp
+        src/127_ladder_length/ladder_length.h)

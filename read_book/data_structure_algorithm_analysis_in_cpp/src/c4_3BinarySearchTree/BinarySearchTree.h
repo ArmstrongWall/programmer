@@ -101,5 +101,7 @@ private:
     int height(binaryNode<T> * tree) const;
 
 };
+void binarySearchTreeDemo();
+
 
 #endif //DATASTRUCTUREALGORITHMANALYSISINCPP_BINARYSEARCHTREE_H

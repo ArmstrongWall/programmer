@@ -97,3 +97,17 @@ void sort<T>::shellSort(vector<T> &a) {
 }
 
 
+void sortDemo() {
+    std::cout << "insertion Sort Demo" << std::endl;
+
+    auto sorter = new sort<int>;
+    vector<int> a {34,8,64,51,32,21};
+
+//    sorter->insertionSort(a);
+//    sorter->print(a);
+
+    sorter->mergeSort(a);
+    sorter->print(a);
+
+}
+

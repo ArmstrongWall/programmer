@@ -1,0 +1,8 @@
+//
+// Created by Johnny on 2019/12/18.
+//
+
+#ifndef LEETCODE_LADDER_LENGTH_H
+#define LEETCODE_LADDER_LENGTH_H
+
+#endif //LEETCODE_LADDER_LENGTH_H
