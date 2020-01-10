@@ -9,7 +9,8 @@ int main() {
     //threadsafe_queue_demo();
     //threadsafe_stack_demo();
 //    thread_pool_demo();
-    thread_pool_demo_mat();
+//    thread_pool_demo_mat();
+    thread_pool_demo_opencv();
     return 0;
 }
 

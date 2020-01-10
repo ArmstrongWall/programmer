@@ -40,9 +40,13 @@
 #include <functional>
 #include <numeric>
 #include <eigen3/Eigen/Dense>
+#include <opencv2/opencv.hpp>
+#include <memory>
+
 
 #include"thread_pool.h"
 typedef Eigen::Matrix<double,6,6> Mat66;
+typedef Eigen::Matrix<float ,3,1> Vec3f;
 
 
 double get_machine_timestamp_s() {
@@ -147,6 +151,8 @@ T parallel_accumulate_mat(Iterator first,Iterator last,T init, unsigned long con
     return result;
 }
 
+
+
 int thread_pool_demo() {
 
     std::vector<long> values(1000000,10); // empty vector
@@ -234,4 +240,137 @@ int thread_pool_demo_mat() {
     return 0;
 
 }
+thread_pool pool;
+std::unique_ptr<Vec3f[]>     gray_pyramid;
+std::unique_ptr<Vec3f[]>     gray_pyramid_para;
 
+
+template<typename Iterator>
+int cacl_gray_para(Iterator first,Iterator last, Iterator head) {
+
+    for(auto it = first; it < last; it++) {
+        gray_pyramid_para[it - head][0] = *it;
+    }
+    return 1;
+}
+
+
+void inverseColor4_para(cv::Mat &srcImage) {
+
+    auto first = srcImage.begin<uchar>();
+    auto last  = srcImage.end<uchar>();
+
+    long const length = std::distance(first,last);
+
+    unsigned long const block_size = 45120;//45120;
+    unsigned long const num_blocks = length / block_size;
+    std::vector<std::future<int>> futures(num_blocks);
+
+    auto block_start = first;
+
+    for (unsigned long i = 0; i < num_blocks; ++i) {
+        auto block_end = block_start;
+        std::advance(block_end, block_size);
+
+        futures[i] = pool.submit([block_start, block_end,first]() {
+            return cacl_gray_para(block_start, block_end,first);
+        });
+
+        block_start = block_end;
+    }
+    int last_result = cacl_gray_para(block_start,last,first);
+
+    for(unsigned long i = 0; i< num_blocks;++i) {
+        last_result += futures[i].get();
+    }
+}
+
+
+// 注意srcImage为3通道的彩色图片
+void inverseColor4(cv::Mat &srcImage)
+{
+    // 初始化源图像迭代器
+    cv::MatConstIterator_<uchar> srcIterStart = srcImage.begin<uchar>();
+    cv::MatConstIterator_<uchar> srcIterEnd   = srcImage.end<uchar>();
+
+    for(auto it = srcIterStart; it < srcIterEnd; it++) {
+        gray_pyramid[it - srcIterStart][0] = *it;
+        //迭代器递增
+    }
+}
+
+cv::Mat show_images() {
+
+    int h = 480;
+    int w = 752;
+
+    std::shared_ptr<cv::Mat> pra_frame = std::make_shared<cv::Mat>(h, w, CV_8UC1);
+
+    for (int x = 0; x < w ; x++)
+        for (int y = 0; y < h ; y++) {
+            (*pra_frame).at<uchar>(y,x) = (uchar)gray_pyramid[x + y*w][0];
+        }
+
+    cv::imshow("PYRAMID", *pra_frame);
+    cv::waitKey();
+
+    return *pra_frame;
+}
+
+cv::Mat show_images_para() {
+
+    int h = 480;
+    int w = 752;
+
+    std::shared_ptr<cv::Mat> pra_frame = std::make_shared<cv::Mat>(h, w, CV_8UC1);
+
+    for (int x = 0; x < w ; x++)
+        for (int y = 0; y < h ; y++) {
+            (*pra_frame).at<uchar>(y,x) = (uchar)gray_pyramid_para[x + y*w][0];
+        }
+
+    cv::imshow("PYRAMID", *pra_frame);
+    cv::waitKey();
+
+    return *pra_frame;
+}
+
+int thread_pool_demo_opencv() {
+
+    gray_pyramid      = std::make_unique<Vec3f[]>(752 * 480);
+    gray_pyramid_para = std::make_unique<Vec3f[]>(752 * 480);
+
+//    cv::Mat image = cv::imread("1.png",0);
+//    inverseColor4_para(image);
+//    show_images();
+
+    for(int i = 0; i < 6; i++) {
+
+        cv::Mat image = cv::imread(std::to_string(i)+".png",0);
+        if (image.empty())
+        {
+            std::cerr << "Load image failed!" << std::endl;
+            return 0;
+        }
+        cv::imshow("src", image);
+
+
+
+        double t1,t2;
+
+        t1 = get_machine_timestamp_s();
+        inverseColor4_para(image);
+        t2 = get_machine_timestamp_s();
+        std::cout << "para time : " << t2 - t1  <<"\n";
+        show_images_para();
+
+        t1 = get_machine_timestamp_s();
+        inverseColor4(image);
+        t2 = get_machine_timestamp_s();
+        std::cout << "norm time : " << t2 - t1  <<"\n";
+        show_images();
+
+
+    }
+
+}

@@ -455,5 +455,5 @@ public:
 
 int thread_pool_demo();
 int thread_pool_demo_mat();
-
+int thread_pool_demo_opencv();
 #endif //CONCURRENCY_IN_ACTION_THREAD_POOL_H

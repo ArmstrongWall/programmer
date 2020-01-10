@@ -1,10 +1,10 @@
 cmake_minimum_required(VERSION 3.9)
 project(concurrency_in_action)
 
-set(CMAKE_CXX_STANDARD 11)
-SET(CMAKE_CXX_FLAGS ${CMAKE_CXX_FLAGS} "-std=c++11 -pthread")
+SET(CMAKE_CXX_FLAGS ${CMAKE_CXX_FLAGS} "-std=c++14 -pthread")
 
 find_package(Eigen3 REQUIRED)
+find_package( OpenCV REQUIRED )
 
 add_executable(ConcurrencyInAction src/main.cpp
         src/c1_start_thread/c1StartThread.cpp
@@ -29,5 +29,5 @@ add_executable(ConcurrencyInAction src/main.cpp
         src/c9_1_thread_pool/thread_pool.h)
 
 target_link_libraries(ConcurrencyInAction
-        atomic
+        atomic ${OpenCV_LIBS}
         )
