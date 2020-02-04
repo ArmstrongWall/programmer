@@ -1,10 +1,46 @@
 //
 // Created by wzq on 18-10-16.
 //
+#include <functional>
+#include <vector>
 
 #include "lambda.h"
-#include <functional>
 
+class Data {
+public:
+    Data()  = default;
+    ~Data() = default;
+
+    std::vector<int> a;
+};
+
+class A {
+
+public:
+    A()  = default;
+    ~A() = default;
+
+    std::vector<int> a;
+    Data d;
+
+    void la_de() {
+
+        int b = 1;
+        a.push_back(1);
+
+        auto func1 = [data = std::move(a)]{
+            std::cout << *data.begin() << "\n";
+        };
+
+        func1();
+
+        std::cout << a.size();
+
+
+    }
+
+
+};
 
 
 int lambda_demo(){
@@ -31,5 +67,8 @@ int lambda_demo(){
 
     S s;
     s.f();
+
+    A v;
+    v.la_de();
 
 }

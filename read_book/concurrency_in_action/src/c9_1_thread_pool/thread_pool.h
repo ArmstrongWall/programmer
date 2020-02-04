@@ -40,11 +40,11 @@
 
 #include <cassert>
 
-#include<vector>
-#include<thread>
-#include<atomic>
-#include<future>
-
+#include <vector>
+#include <thread>
+#include <atomic>
+#include <future>
+#include <type_traits>
 #include <queue>
 #include <mutex>
 #include <iostream>
@@ -404,8 +404,8 @@ public:
 
 class thread_pool {
     std::atomic_bool done;
-//    threadsafe_lock_queue<function_wrapper> work_queue;
-    MPMCQueue<function_wrapper> work_queue;
+    threadsafe_lock_queue<function_wrapper> work_queue;
+//    MPMCQueue<function_wrapper> work_queue;
     std::vector<std::thread> threads;
     join_threads joiner;
 

@@ -257,8 +257,15 @@ int cacl_gray_para(Iterator first,Iterator last, Iterator head) {
 
 void inverseColor4_para(cv::Mat &srcImage) {
 
+    auto color_first       = &gray_pyramid[0];
+    auto color_last        = &gray_pyramid[1000];
+
+    long const length1 = std::distance(color_first,color_last);
+    std::cout <<"len" << length1;
+
     auto first = srcImage.begin<uchar>();
     auto last  = srcImage.end<uchar>();
+
 
     long const length = std::distance(first,last);
 
@@ -267,6 +274,7 @@ void inverseColor4_para(cv::Mat &srcImage) {
     std::vector<std::future<int>> futures(num_blocks);
 
     auto block_start = first;
+    block_start += 240 *752;
 
     for (unsigned long i = 0; i < num_blocks; ++i) {
         auto block_end = block_start;
@@ -329,7 +337,7 @@ cv::Mat show_images_para() {
             (*pra_frame).at<uchar>(y,x) = (uchar)gray_pyramid_para[x + y*w][0];
         }
 
-    cv::imshow("PYRAMID", *pra_frame);
+    cv::imshow("PARA", *pra_frame);
     cv::waitKey();
 
     return *pra_frame;
