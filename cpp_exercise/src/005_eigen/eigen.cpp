@@ -319,3 +319,25 @@ int Sophus_demo() {
 
 }
 
+int rotationMatrixFromGravity() {
+
+
+
+    Eigen::Vector3d acc;
+    acc << 8.9529947378,	-0.1062387083,	-3.92266;
+
+    auto roll  = (atan2(acc[1], acc[2])*180.0)/M_PI;
+    auto pitch = (atan2(-acc[0], sqrt(acc[1]*acc[1] + acc[2]*acc[2]))*180.0)/M_PI;
+    std::cout << "\nroll:\n"<< roll;
+    std::cout << "\npitch:\n"<< pitch;
+
+    Eigen::Quaterniond q1 =
+            Eigen::AngleAxisd( pitch * DEG_TO_RAD , Eigen::Vector3d::UnitY()) *
+            Eigen::AngleAxisd( roll * DEG_TO_RAD ,  Eigen::Vector3d::UnitX()) ;
+
+    SE3 T_WB;
+    T_WB.setRotationMatrix(q1.toRotationMatrix());
+
+    std::cout << "Acc body:\n"<< T_WB.rotationMatrix().transpose() * (Eigen::Vector3d(0,0,0) - Eigen::Vector3d(0,0,-9.80579)) << std::flush;
+
+}

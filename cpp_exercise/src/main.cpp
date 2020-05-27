@@ -1,5 +1,4 @@
 #include "include.h"
-#include "024_eigen_sparse/eigen_sparse.h"
 
 using namespace std;
 int main() {
@@ -8,7 +7,7 @@ int main() {
 //    bind();
 //    thread_pool_demo();
 //    time();
-    lambda_demo();
+//    lambda_demo();
 //    eigen_demo();
 //    Sophus_demo();
 //    eigen_block();
@@ -17,6 +16,7 @@ int main() {
 //    vector_assign();
 //    vector_swap();
 //    eigen_sparse();
+    rotationMatrixFromGravity();
 
     return 0;
 }

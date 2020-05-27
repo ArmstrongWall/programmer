@@ -9,4 +9,6 @@ int eigen_demo( );
 int eigen_block();
 int Sophus_demo();
 
+int rotationMatrixFromGravity();
+
 #endif //CPP_EXERCISE_EIGEN_H
