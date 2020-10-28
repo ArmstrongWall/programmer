@@ -8,8 +8,8 @@ int main() {
 
 //    BinaryHeapDemo();
 //    binarySearchTreeDemo();
-//    sortDemo();
-    value_order_map();
+    sortDemo();
+//    value_order_map();
     return 0;
 }
 

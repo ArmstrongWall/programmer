@@ -16,14 +16,23 @@ public:
     ~sort();
     //! classic sort method
     void insertionSort(vector<T> &a);
-    void mergeSort(vector<T> &vec);
-    void shellSort(vector<T> &a);
+    void insertionSort1(vector<T> &a);
 
+    void mergeSort(vector<T> &vec);
+    void mergeSort1(vector<T> &vec);
+
+    void shellSort(vector<T> &a);
+    void bubbleSort(vector<T> &vec);
+    void selectSort(vector<T> &vec);
 
     //! auxiliary tool
     void mergesort_two_vec(std::vector<T>& sub_vec_1,
                            std::vector<T>& sub_vec_2,
                            std::vector<T>& vec_);
+    void mergesort_two_vec1(std::vector<T>& sub_vec_1,
+                           std::vector<T>& sub_vec_2,
+                           std::vector<T>& vec_);
+
     void print(vector<T> &a);
 };
 
