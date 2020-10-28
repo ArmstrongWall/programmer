@@ -39,6 +39,7 @@
 #include <map>
 #include <set>
 #include <iostream>
+#include <climits>
 #include "min_window.h"
 
 class Solution {

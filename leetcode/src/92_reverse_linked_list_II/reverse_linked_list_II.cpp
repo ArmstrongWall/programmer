@@ -50,6 +50,40 @@ public:
         }
     }
 };
+class Solution1 {
+public:
+    ListNode* reverseBetween(ListNode* head, int m, int n) {
+
+        int i = 1;
+        ListNode* ori_head       = head;
+        ListNode* part_head_last = head;
+        ListNode* part_head      = head;
+        ListNode* travel         = nullptr;
+        while(head) {
+            if(i < m) {
+                part_head_last = head;
+                head           = head->next;
+            }
+            if(i >= m && i <= n) {
+                if(i == m) {
+                    part_head = head;
+                    travel    = part_head_last;
+                }
+                ListNode* next = head->next;
+                head->next     = travel;
+                travel         = head;
+                head           = next;
+                if(i == n) {
+                    part_head->next      = head;
+                    part_head_last->next = travel;
+                    break;
+                }
+            }
+            i++;
+        }
+        return ori_head;
+    }
+};
 
 void reverse_between() {
     ListNode a(1);
@@ -71,7 +105,7 @@ void reverse_between() {
     }
 
     Solution s;
-    ListNode* reverse_head = s.reverseBetween(&a,3,4);
+    ListNode* reverse_head = s.reverseBetween(&a,2,4);
 
     std::cout << "after reverse_between" << std::endl;
 
