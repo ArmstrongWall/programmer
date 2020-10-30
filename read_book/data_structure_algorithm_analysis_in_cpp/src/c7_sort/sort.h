@@ -23,7 +23,11 @@ public:
 
     void shellSort(vector<T> &a);
     void bubbleSort(vector<T> &vec);
+
+
     void selectSort(vector<T> &vec);
+    T median3(vector<T> &vec, int left, int right);
+    void qiuckSort(vector<T> &vec, int left, int right);
 
     //! auxiliary tool
     void mergesort_two_vec(std::vector<T>& sub_vec_1,

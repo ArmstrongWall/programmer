@@ -169,6 +169,8 @@ void sort<T>::bubbleSort(vector<T> &vec) {
     }
 
 }
+
+
 template <typename T>
 void sort<T>::selectSort(vector<T> &vec) {
     for(int i = 0; i < vec.size(); i++) {
@@ -188,21 +190,45 @@ void sort<T>::shellSort(vector<T> &a) {
     //use insertionSort to different group
 }
 
+template <typename T>
+T sort<T>::median3(vector<T> &vec, int left, int right) {
+    int center = (left + right) / 2;
+    if(vec[left] > vec[center]) {
+        swap(vec[center],vec[left]);
+    }
+    if(vec[center] > vec[right]) {
+        swap(vec[center],vec[right]);
+    }
+    if(vec[left] > vec[center]) {
+        swap(vec[left],vec[center]);
+    }
+    swap(vec[right-1], vec[center]);
+    return vec[right-1];
+}
+
+template <typename T>
+void sort<T>::qiuckSort(vector<T> &vec, int left, int right) {
+    T pvoit = median3(vec,left,right);
+
+
+}
 
 void sortDemo() {
     std::cout << "Sort Demo" << std::endl;
 
     auto sorter = new sort<int>;
-    vector<int> a {34,8,64,51,32,21};
+    vector<int> a {8, 1, 4, 9, 6, 3, 5, 2, 7, 0};
 
 //    sorter->insertionSort(a);
-//    sorter->print(a);
+//    sorter->insertionSort1(a);
 
-//    sorter->mergeSort(a);
-    sorter->mergeSort1(a);
 //    sorter->bubbleSort(a);
 //    sorter->selectSort(a);
-//    sorter->insertionSort1(a);
+
+//    sorter->mergeSort(a);
+//    sorter->mergeSort1(a);
+
+    sorter->qiuckSort(a,0,a.size() - 1);
     sorter->print(a);
 
 }
