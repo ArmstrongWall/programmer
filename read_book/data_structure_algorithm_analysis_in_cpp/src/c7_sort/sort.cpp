@@ -16,8 +16,9 @@ sort<T>::~sort() {
 template <typename T>
 void sort<T>::print(vector<T> &a) {
     for(auto x: a) {
-        cout << x << endl;
+        cout << x << ", ";
     }
+    std::cout << std::endl;
 }
 
 template <typename T>
@@ -208,8 +209,27 @@ T sort<T>::median3(vector<T> &vec, int left, int right) {
 
 template <typename T>
 void sort<T>::qiuckSort(vector<T> &vec, int left, int right) {
+
+    if(left >= right) {
+        return;
+    }
     T pvoit = median3(vec,left,right);
 
+    int i = left;
+    int j = right - 1;
+    while (true) {
+        while (vec[++i] < pvoit) {}
+        while (vec[--j] > pvoit) {}
+        if(i < j) {
+            swap(vec[i],vec[j]);
+        } else {
+            break;
+        }
+    }
+
+    swap(vec[i],vec[right-1]);
+    qiuckSort(vec,left,i-1);
+    qiuckSort(vec,i+1,right);
 
 }
 
@@ -228,7 +248,7 @@ void sortDemo() {
 //    sorter->mergeSort(a);
 //    sorter->mergeSort1(a);
 
-    sorter->qiuckSort(a,0,a.size() - 1);
+    sorter->qiuckSort(a,0,a.size()-1);
     sorter->print(a);
 
 }

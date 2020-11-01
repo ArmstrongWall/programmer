@@ -46,6 +46,7 @@
 #### 5. [从右侧观察二叉树 199. Binary Tree Right Side View](src/199_binary_tree_right_side_view/binary_tree_right_side_view.cpp:15)----[题目来源](https://leetcode.com/problems/binary-tree-right-side-view/)
 #### 6. [图的深度优先和广度优先搜索](src/graph_depth_first_search/graph_depth_first_search.cpp)
 #### 7. [课程安排 207. Course Schedule](src/207_course_schedule/course_schedule.cpp)----[题目来源](https://leetcode.com/problems/course-schedule/) 深搜和广搜两种方法，深搜因为空间限制无法AC，需改进
+#### 8. [104. 二叉树的最大深度](src/104_maxDepth/maxDepth.cpp)----[题目来源](https://leetcode-cn.com/problems/maximum-depth-of-binary-tree/)
 32
 
 ## 六、二分查找与二叉查找树
@@ -70,6 +71,8 @@
 
 ## 九、动态规划
 #### 1. [70. 爬楼梯](src/70_climbStairs/climbStairs.cpp)----[题目来源](https://leetcode-cn.com/problems/climbing-stairs/)
+#### 2. [198. 打家劫舍](src/198_rob/rob.cpp)----[题目来源](https://leetcode-cn.com/problems/house-robber/)
+
 
 
 ## 其他
