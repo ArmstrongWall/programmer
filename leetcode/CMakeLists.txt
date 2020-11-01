@@ -101,4 +101,4 @@ add_executable(leetcode src/main.cpp
         src/200_num_islands/num_islands.cpp
         src/200_num_islands/num_islands.h
         src/127_ladder_length/ladder_length.cpp
-        src/127_ladder_length/ladder_length.h)
+        src/127_ladder_length/ladder_length.h src/70_climbStairs/climbStairs.cpp src/70_climbStairs/climbStairs.h)
