@@ -17,7 +17,7 @@
 #include "3_length_longest_substring/length_longest_substring.h"
 #include "76_min_window/min_window.h"
 #include "200_num_islands/num_islands.h"
-#include "searchMatrix/searchMatrix.h"
+#include "offer04_searchMatrix/searchMatrix.h"
 
 
 int main() {

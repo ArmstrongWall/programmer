@@ -1,5 +1,6 @@
-# Leetcode (40/1096)
-## 一、链表
+# Leetcode 
+
+## 一、数组、链表
 #### 1. [反转链表 206. Reverse Linked List](src/206_reverse_linked_list/reverse_linked_list.cpp)----[题目来源](https://leetcode.com/problems/reverse-linked-list/)
 ![pic](illustration/1.png)
 #### 2. [局部反转链表 92. Reverse Linked List II](src/92_reverse_linked_list_II/reverse_linked_list_II.cpp)----[题目来源](https://leetcode.com/problems/reverse-linked-list-ii/)
@@ -9,7 +10,7 @@
 #### 6. [带有随机指针链表的深度拷贝 138. Copy List with Random Pointer](src/138_copyRandomList/copyRandomList.cpp)----[题目来源](https://leetcode.com/problems/copy-list-with-random-pointer/description/)
 #### 7. [两个已排序链表的合并 21. Merge Two Sorted Lists](src/21_mergeTwoLists/mergeTwoLists.cpp)----[题目来源](https://leetcode.com/problems/merge-two-sorted-lists/description/)
 #### 8. [K个已排序链表的合并 23. Merge k Sorted Lists](src/23_mergeKLists/mergeKLists.cpp)----[题目来源](https://leetcode.com/problems/merge-k-sorted-lists/description/)
-8
+#### 9. [剑指 Offer 03 找出数组中重复的数字](src/offer03_findRepeatNumber/findRepeatNumber.cpp)
 
 ## 二、栈、队列、堆
 #### 1. [使用队列实现栈 225. Implement Stack using Queues](src/225_make_stack_with_queue/stack_use_queue.cpp)----[题目来源](https://leetcode.com/problems/implement-stack-using-queues/description/)
@@ -18,7 +19,7 @@
 #### 4. [寻找中位数 295. Find Median from Data Stream](src/295_find_median/find_median.cpp)----[题目来源](https://leetcode.com/problems/find-median-from-data-stream/description/)
 #### 5. [使用栈实现队列 232. Implement Queues using Stack](src/232_make_queue_using_stacks/queue_use_stack.cpp)----[题目来源](https://leetcode.com/problems/implement-queue-using-stacks/description/)
 #### 6. [最小栈 155. Min Stack](src/155_min_stack/min_stack.cpp)----[题目来源](https://leetcode.com/problems/min-stack/description/)
-14
+
 ## 三、贪心算法
 #### 1. [分糖果 455. Assign Cookies](src/455_assign_cookies/assign_cookies.cpp)----[题目来源](https://leetcode.com/problems/assign-cookies/description/)
 #### 2. [最长摇摆子序列 376. Wiggle Subsequence](src/376_wiggle_subsequence/wiggle_subsequence.cpp)----[题目来源](https://leetcode.com/problems/wiggle-subsequence/description/)
@@ -26,7 +27,7 @@
 #### 4. [跳跃游戏I 55. Jump Game](src/55_jump_game/jump_game.cpp)----[题目来源](https://leetcode.com/problems/jump-game/description/)
 #### 5. [跳跃游戏II 45. Jump GameII](src/45_jump_game_II/jump_game_II.cpp)----[题目来源](https://leetcode.com/problems/jump-game-ii/submissions/)
 #### 6. [射击气球 452. Minimum Number of Arrows to Burst Balloons](src/452_burst_balloons/burst_balloons.cpp)----[题目来源](https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons/)
-20
+
 
 ## 四、递归、分治、回溯
 #### 1. [子集 78. Subsets](src/78_subsets/subsets.cpp)----[题目来源](https://leetcode.com/problems/subsets/)(三种方法，回溯，位运算)
@@ -36,7 +37,7 @@
 #### 5. [组合数之和II 40. Combination Sum II](src/40_combination_sum_II/combination_sum_II.cpp)----[题目来源](https://leetcode.com/problems/combination-sum-ii/description/)
 #### 6. [生成括号 22. Generate Parentheses](src/22_generate_parentheses/generate_parentheses.cpp)----[题目来源](https://leetcode.com/problems/generate-parentheses/description/)
 #### 7. [N皇后问题 51. N-Queens](src/51_N_queens/n_queens.cpp)----[题目来源](https://leetcode.com/problems/n-queens/)
-27
+
 
 ## 五、二叉树与图
 #### 1. [路径之和 113. Path Sum II](src/113_path_sum_II/path_sum_II.cpp)----[题目来源](https://leetcode.com/problems/path-sum-ii/)
@@ -47,7 +48,7 @@
 #### 6. [图的深度优先和广度优先搜索](src/graph_depth_first_search/graph_depth_first_search.cpp)
 #### 7. [课程安排 207. Course Schedule](src/207_course_schedule/course_schedule.cpp)----[题目来源](https://leetcode.com/problems/course-schedule/) 深搜和广搜两种方法，深搜因为空间限制无法AC，需改进
 #### 8. [104. 二叉树的最大深度](src/104_maxDepth/maxDepth.cpp)----[题目来源](https://leetcode-cn.com/problems/maximum-depth-of-binary-tree/)
-32
+
 
 ## 六、二分查找与二叉查找树
 #### 1. [二分查找(递归与循环)](src/binary_search/binary_search.cpp)!!!(while(begin <= end),等号很重要，考察点)
@@ -55,7 +56,8 @@
 #### 3. [区间查找 34. Find First and Last Position of Element in Sorted Array](src/34_search_range/search_range.cpp)----[题目来源](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/)
 #### 4. [旋转数组查找 33. Search in Rotated Sorted Array](src/33_search_rotated_sorted_array/search_rotated_sorted_array.cpp)----[题目来源](https://leetcode.com/problems/search-in-rotated-sorted-array/description/)
 #### 5. [二叉查找树编码与解码 449. Serialize and Deserialize BST](src/449_serialize_deserialize_BST/serialize_deserialize_BST.cpp)----[题目来源](https://leetcode.com/problems/serialize-and-deserialize-bst/description/)
-36
+#### 6. [剑指 Offer 04 排序矩阵查找](src/offer04_searchMatrix/searchMatrix.cpp)
+
 
 ## 七、哈希表与字符串
 #### 1. [拉链哈希函数](src/hash/hash.cpp)
@@ -64,7 +66,7 @@
 #### 4. [49. 字母异位词分组](src/49_group_anagrams/group_anagrams.cpp)----[题目来源](https://leetcode-cn.com/problems/group-anagrams/)
 #### 5. [3. 无重复字符的最长子串](src/3_length_longest_substring/length_longest_substring.cpp)----[题目来源](https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/)
 #### 6. [76. 最小覆盖子串](src/76_min_window/min_window.cpp)----[题目来源](https://leetcode-cn.com/problems/minimum-window-substring/submissions/) 此题做了两次，第一次是没理解题意，以为目标中没有重复字母，第二次是使用滑窗，但是用了std::map，插入删除的时间复杂度较高，是O(nlgn)而不是O(n),时间超时了。
-42
+#### 7. [1. 两数之和](src/1_two_sum/two_sum.cpp)----[题目来源](https://leetcode-cn.com/problems/two-sum/)
 
 ## 八、搜索
 #### 1. [200. 岛屿数量](src/200_num_islands/num_islands.cpp)----[题目来源](https://leetcode-cn.com/problems/number-of-islands/)
@@ -75,5 +77,3 @@
 
 
 
-## 其他
-#### 1. [1. 两数之和](src/1_two_sum/two_sum.cpp)----[题目来源](https://leetcode-cn.com/problems/two-sum/) 时间复杂度太高
