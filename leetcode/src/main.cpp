@@ -1,3 +1,4 @@
+#include <astar/astar.h>
 #include "include.h"
 #include "452_burst_balloons/burst_balloons.h"
 #include "315_count_smaller_numbers/count_smaller_numbers.h"
@@ -18,7 +19,7 @@
 #include "76_min_window/min_window.h"
 #include "200_num_islands/num_islands.h"
 #include "offer04_searchMatrix/searchMatrix.h"
-#include "listToTree/listToTree.h"
+#include "0_listToTree/listToTree.h"
 
 
 int main() {
@@ -61,8 +62,8 @@ int main() {
 //    numIslands();
 //    searchMatrix();
 
-    listToTree();
-
+//    listToTree();
+    test_astar();
 
 
 

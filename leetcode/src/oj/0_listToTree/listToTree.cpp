@@ -88,25 +88,6 @@ int listToTree() {
     std::vector<std::vector<std::string>> s = {{"d1", "d0", "IT"},{ "d2", "d0", "RD"}, {"d0", "", "The Company"}, {"d3", "d0", "HR"}};
     Solution sl;
     sl.listToTree(s,4,3);
-
-    std::vector<int> list;
-    list.push_back(1);
-    list.push_back(2);
-    list.push_back(3);
-    list.push_back(4);
-    list.push_back(5);
-    list.push_back(6);
-
-
-    std::vector<int> temlist;
-
-    std::cout <<  "keeeeeeeee";
-    temlist.assign(list.begin() + 2, list.begin() + 3);
-
-    for(int i = 0; i < temlist.size(); i++) {
-        std::cout << temlist[i] << ",";
-    }
-
     return 0;
 }
 
