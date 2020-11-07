@@ -2,7 +2,6 @@
 
 ## 一、数组、链表
 #### 1. [反转链表 206. Reverse Linked List](src/206_reverse_linked_list/reverse_linked_list.cpp)----[题目来源](https://leetcode.com/problems/reverse-linked-list/)
-![pic](illustration/1.png)
 #### 2. [局部反转链表 92. Reverse Linked List II](src/92_reverse_linked_list_II/reverse_linked_list_II.cpp)----[题目来源](https://leetcode.com/problems/reverse-linked-list-ii/)
 #### 3. [求两个链表的交点 160. Intersection of Two Linked Lists](src/160_get_intersection_node/getIntersectionNode.cpp)----[题目来源](https://leetcode.com/problems/intersection-of-two-linked-lists/description/)
 #### 4. [链表求环 142. Linked List Cycle II](src/142_detectCycle/detectCycle.cpp)----[题目来源](https://leetcode.com/problems/linked-list-cycle-ii/)
@@ -37,7 +36,7 @@
 #### 5. [组合数之和II 40. Combination Sum II](src/40_combination_sum_II/combination_sum_II.cpp)----[题目来源](https://leetcode.com/problems/combination-sum-ii/description/)
 #### 6. [生成括号 22. Generate Parentheses](src/22_generate_parentheses/generate_parentheses.cpp)----[题目来源](https://leetcode.com/problems/generate-parentheses/description/)
 #### 7. [N皇后问题 51. N-Queens](src/51_N_queens/n_queens.cpp)----[题目来源](https://leetcode.com/problems/n-queens/)
-
+#### 8. [剑指 Offer 06. 从尾到头打印链表](src/offer06_reversePrint/reversePrint.cpp)
 
 ## 五、二叉树与图
 #### 1. [路径之和 113. Path Sum II](src/113_path_sum_II/path_sum_II.cpp)----[题目来源](https://leetcode.com/problems/path-sum-ii/)
@@ -67,13 +66,20 @@
 #### 5. [3. 无重复字符的最长子串](src/3_length_longest_substring/length_longest_substring.cpp)----[题目来源](https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/)
 #### 6. [76. 最小覆盖子串](src/76_min_window/min_window.cpp)----[题目来源](https://leetcode-cn.com/problems/minimum-window-substring/submissions/) 此题做了两次，第一次是没理解题意，以为目标中没有重复字母，第二次是使用滑窗，但是用了std::map，插入删除的时间复杂度较高，是O(nlgn)而不是O(n),时间超时了。
 #### 7. [1. 两数之和](src/1_two_sum/two_sum.cpp)----[题目来源](https://leetcode-cn.com/problems/two-sum/)
+#### 8. [队列转多叉树](src/listToTree/listToTree.cpp)
+#### 9. [剑指 Offer 05. 替换空格](src/offer05_replaceSpace/replaceSpace.cpp)
 
 ## 八、搜索
 #### 1. [200. 岛屿数量](src/200_num_islands/num_islands.cpp)----[题目来源](https://leetcode-cn.com/problems/number-of-islands/)
 
 ## 九、动态规划
-#### 1. [70. 爬楼梯](src/70_climbStairs/climbStairs.cpp)----[题目来源](https://leetcode-cn.com/problems/climbing-stairs/)
+#### 1. [70. 爬楼梯，剑指 Offer 10- I. 斐波那契数列，剑指 Offer 10- II. 青蛙跳台阶问题](src/70_climbStairs/climbStairs.cpp)
 #### 2. [198. 打家劫舍](src/198_rob/rob.cpp)----[题目来源](https://leetcode-cn.com/problems/house-robber/)
+#### 3. [剑指 Offer 10- I. 斐波那契数列](src/198_rob/rob.cpp)
 
 
+
+#图解
+#### 1. [反转链表 206. Reverse Linked List](src/206_reverse_linked_list/reverse_linked_list.cpp)----[题目来源](https://leetcode.com/problems/reverse-linked-list/)
+![pic](illustration/1.png)
 

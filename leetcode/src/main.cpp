@@ -18,6 +18,7 @@
 #include "76_min_window/min_window.h"
 #include "200_num_islands/num_islands.h"
 #include "offer04_searchMatrix/searchMatrix.h"
+#include "listToTree/listToTree.h"
 
 
 int main() {
@@ -58,7 +59,13 @@ int main() {
 //    test_lengthOfLongestSubstring();
 //    test_min_window();
 //    numIslands();
-    searchMatrix();
+//    searchMatrix();
+
+    listToTree();
+
+
+
+
     return 0;
 }
 
