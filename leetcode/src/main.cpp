@@ -1,4 +1,5 @@
 #include <astar/astar.h>
+#include <sort/sort.h>
 #include "include.h"
 #include "452_burst_balloons/burst_balloons.h"
 #include "315_count_smaller_numbers/count_smaller_numbers.h"
@@ -63,7 +64,8 @@ int main() {
 //    searchMatrix();
 
 //    listToTree();
-    test_astar();
+//    test_astar();
+    sortDemo();
 
 
 

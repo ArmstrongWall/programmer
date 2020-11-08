@@ -120,4 +120,4 @@ add_executable(leetcode src/main.cpp
         src/oj/offer05_replaceSpace/replaceSpace.cpp
         src/oj/offer05_replaceSpace/replaceSpace.h
         src/oj/offer06_reversePrint/reversePrint.cpp
-        src/oj/offer06_reversePrint/reversePrint.h src/ds_basic_knowledge/astar/astar.cpp src/ds_basic_knowledge/astar/astar.h)
+        src/oj/offer06_reversePrint/reversePrint.h src/ds_basic_knowledge/astar/astar.cpp src/ds_basic_knowledge/astar/astar.h src/ds_basic_knowledge/sort/sort.cpp src/ds_basic_knowledge/sort/sort.h)

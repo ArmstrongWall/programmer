@@ -29,14 +29,17 @@
 
 
 ## 四、递归、分治、回溯
-#### 1. [子集 78. Subsets](src/oj/78_subsets/subsets.cpp)----[题目来源](https://leetcode.com/problems/subsets/)(三种方法，回溯，位运算)
-#### 2. [寻找波峰元素 162. Find Peak Element](src/oj/78_subsets/subsets.cpp)----[题目来源](https://leetcode.com/problems/find-peak-element/)
-#### 3. [逆序数 315. Count of Smaller Numbers After Self](src/oj/315_count_smaller_numbers/count_smaller_numbers.cpp)----[题目来源](https://leetcode.com/problems/count-of-smaller-numbers-after-self/description/)
-#### 4. [子集II 90. Subsets II](src/oj/90_subsets_II/subsets_II.cpp)----[题目来源](https://leetcode.com/problems/subsets-ii/description/)
-#### 5. [组合数之和II 40. Combination Sum II](src/oj/40_combination_sum_II/combination_sum_II.cpp)----[题目来源](https://leetcode.com/problems/combination-sum-ii/description/)
-#### 6. [生成括号 22. Generate Parentheses](src/oj/22_generate_parentheses/generate_parentheses.cpp)----[题目来源](https://leetcode.com/problems/generate-parentheses/description/)
-#### 7. [N皇后问题 51. N-Queens](src/oj/51_N_queens/n_queens.cpp)----[题目来源](https://leetcode.com/problems/n-queens/)
-#### 8. [剑指 Offer 06. 从尾到头打印链表](src/oj/offer06_reversePrint/reversePrint.cpp)
+
+| 序号 | 知识点 | 题目 | 题源 | 难度 |
+|:----:|:-----|------|:----:|:----:|
+|   1  |回溯，位运算|   [非重复元素数组所有子集](src/oj/78_subsets/subsets.cpp)   | L78 | 中等
+|   2  |回溯        |   [有重复元素数组所有子集](src/oj/90_subsets_II/subsets_II.cpp)    |   L90   |  中等
+|   3  |回溯，剪枝  |   [找出数组中和为目标值的组合](src/oj/40_combination_sum_II/combination_sum_II.cpp)   |   L40    |  中等
+|   4  |回溯        |   [N皇后问题](src/oj/51_N_queens/n_queens.cpp)   |   L51    |  困难
+|   5  |递归        |   [生成所有括号](src/oj/22_generate_parentheses/generate_parentheses.cpp)   |   L22    |  中等
+|   6  |分治，递归  |   [逆序数，计算右侧小于当前元素的个数](src/oj/315_count_smaller_numbers/count_smaller_numbers.cpp)   |   L315    |  困难
+|   7  |递归        |   [从尾到头打印链表](src/oj/offer06_reversePrint/reversePrint.cpp)   |   O6    |  简单
+
 
 ## 五、二叉树与图
 #### 1. [路径之和 113. Path Sum II](src/oj/113_path_sum_II/path_sum_II.cpp)----[题目来源](https://leetcode.com/problems/path-sum-ii/)
@@ -53,9 +56,10 @@
 #### 1. [二分查找(递归与循环)](src/ds_basic_knowledge/binary_search/binary_search.cpp)!!!(while(begin <= end),等号很重要，考察点)
 #### 2. [插入位置 35. Search Insert Position](src/oj/35_search_insert_position/search_insert_position.cpp)----[题目来源](https://leetcode.com/problems/search-insert-position/)
 #### 3. [区间查找 34. Find First and Last Position of Element in Sorted Array](src/oj/34_search_range/search_range.cpp)----[题目来源](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/)
-#### 4. [旋转数组查找 33. Search in Rotated Sorted Array](src/oj/33_search_rotated_sorted_array/search_rotated_sorted_array.cpp)----[题目来源](https://leetcode.com/problems/search-in-rotated-sorted-array/description/)
+#### 4. [旋转数组查找 33. Search in Rotated Sorted Array](src/oj/33_search_rotated_sorted_array/search_rotated_sorted_array.cpp)
 #### 5. [二叉查找树编码与解码 449. Serialize and Deserialize BST](src/oj/449_serialize_deserialize_BST/serialize_deserialize_BST.cpp)----[题目来源](https://leetcode.com/problems/serialize-and-deserialize-bst/description/)
-#### 6. [剑指 Offer 04 排序矩阵查找](src/oj/offer04_searchMatrix/searchMatrix.cpp)
+#### 6. [排序矩阵查找 Of04](src/oj/offer04_searchMatrix/searchMatrix.cpp)
+#### 7. [寻找波峰元素 L162](src/oj/162_find_peak/find_peak.cpp)
 
 
 ## 七、哈希表与字符串
@@ -79,6 +83,13 @@
 #### 3. [剑指 Offer 10- I. 斐波那契数列](src/oj/198_rob/rob.cpp)
 
 ## 十、排序算法
+
+#### 1. [冒泡排序](src/oj/70_climbStairs/climbStairs.cpp)
+#### 2. [插入排序](src/ds_basic_knowledge/sort/sort.cpp)
+#### 3. [选择排序](src/oj/70_climbStairs/climbStairs.cpp)
+#### 4. [快速排序](src/ds_basic_knowledge/sort/sort.cpp)
+#### 5. [归并排序](src/oj/70_climbStairs/climbStairs.cpp)
+
 
 
 
