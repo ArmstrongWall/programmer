@@ -39,7 +39,7 @@
 |   5  |递归        |   [生成所有括号](src/oj/22_generate_parentheses/generate_parentheses.cpp)   |   L22    |  中等
 |   6  |分治，递归  |   [逆序数，计算右侧小于当前元素的个数](src/oj/315_count_smaller_numbers/count_smaller_numbers.cpp)   |   L315    |  困难
 |   7  |递归        |   [从尾到头打印链表](src/oj/offer06_reversePrint/reversePrint.cpp)   |   O6    |  简单
-
+|   8  |回溯        |   [矩阵中的路径](src/oj/offer12_exist/exist.cpp)   |   O12    |  中等
 
 ## 五、二叉树与图
 #### 1. [路径之和 113. Path Sum II](src/oj/113_path_sum_II/path_sum_II.cpp)----[题目来源](https://leetcode.com/problems/path-sum-ii/)
