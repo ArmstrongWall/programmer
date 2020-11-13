@@ -1,32 +1,37 @@
-# 数据结构与算法实践
+# 我的数据结构与算法实践
 
 ## 一、数组、链表
-#### 1. [反转链表 206. Reverse Linked List](src/oj/206_reverse_linked_list/reverse_linked_list.cpp)----[题目来源](https://leetcode.com/problems/reverse-linked-list/)
-#### 2. [局部反转链表 92. Reverse Linked List II](src/oj/92_reverse_linked_list_II/reverse_linked_list_II.cpp)----[题目来源](https://leetcode.com/problems/reverse-linked-list-ii/)
-#### 3. [求两个链表的交点 160. Intersection of Two Linked Lists](src/oj/160_get_intersection_node/getIntersectionNode.cpp)----[题目来源](https://leetcode.com/problems/intersection-of-two-linked-lists/description/)
-#### 4. [链表求环 142. Linked List Cycle II](src/oj/142_detectCycle/detectCycle.cpp)----[题目来源](https://leetcode.com/problems/linked-list-cycle-ii/)
-#### 5. [链表划分 86. Partition List](src/oj/86_partition_list/partition_list.cpp)----[题目来源](https://leetcode.com/problems/partition-list/description/)
-#### 6. [带有随机指针链表的深度拷贝 138. Copy List with Random Pointer](src/oj/138_copyRandomList/copyRandomList.cpp)----[题目来源](https://leetcode.com/problems/copy-list-with-random-pointer/description/)
-#### 7. [两个已排序链表的合并 21. Merge Two Sorted Lists](src/oj/21_mergeTwoLists/mergeTwoLists.cpp)----[题目来源](https://leetcode.com/problems/merge-two-sorted-lists/description/)
-#### 8. [K个已排序链表的合并 23. Merge k Sorted Lists](src/oj/23_mergeKLists/mergeKLists.cpp)----[题目来源](https://leetcode.com/problems/merge-k-sorted-lists/description/)
-#### 9. [剑指 Offer 03 找出数组中重复的数字](src/oj/offer03_findRepeatNumber/findRepeatNumber.cpp)
+| 序号 | 知识点 | 题目 | 题源 | 难度 | 解决状态 |
+|:----:|:-----|------|:----:|:----:|:----:|
+|   1  |链表|   [反转链表](src/oj/206_reverse_linked_list/reverse_linked_list.cpp)   | L206 | 简单 | √
+|   2  |链表|   [局部反转链表](src/oj/92_reverse_linked_list_II/reverse_linked_list_II.cpp)    |   L92   |  中等 | √
+|   3  |链表|   [求两个链表的交点](src/oj/160_get_intersection_node/getIntersectionNode.cpp)   |   L160    |  简单 | √
+|   4  |链表|   [链表求环](src/oj/142_detectCycle/detectCycle.cpp)   |   L142    |  中等 | √
+|   5  |链表|   [链表划分](src/oj/86_partition_list/partition_list.cpp)   |   L86    |  中等 | √
+|   6  |链表|   [带有随机指针链表的深度拷贝](src/oj/138_copyRandomList/copyRandomList.cpp)   |   L138    |  中等 | √
+|   7  |链表|   [两个已排序链表的合并](src/oj/21_mergeTwoLists/mergeTwoLists.cpp)   |   L21    |  简单 | √
+|   8  |链表|   [K个已排序链表的合并](src/oj/23_mergeKLists/mergeKLists.cpp)   |   L23    |  困难 | √
+|   9  |数组|   [找出数组中重复的数字](src/oj/offer03_findRepeatNumber/findRepeatNumber.cpp)   |   O3    |  简单 | √
 
 ## 二、栈、队列、堆
-#### 1. [使用队列实现栈 225. Implement Stack using Queues](src/oj/225_make_stack_with_queue/stack_use_queue.cpp)----[题目来源](https://leetcode.com/problems/implement-stack-using-queues/description/)
-#### 2. [简单计算器 224. Basic Calculator](src/oj/224_basicCalculator/basic_calculator.cpp)----[题目来源](https://leetcode.com/problems/basic-calculator/description/)
-#### 3. [第K大个数 215. Kth Largest Element in an Array](src/oj/215_Kth_largest_num/kth_largest_num.cpp)----[题目来源](https://leetcode.com/problems/kth-largest-element-in-an-array/description/)
-#### 4. [寻找中位数 295. Find Median from Data Stream](src/oj/295_find_median/find_median.cpp)----[题目来源](https://leetcode.com/problems/find-median-from-data-stream/description/)
-#### 5. [使用栈实现队列 232. Implement Queues using Stack](src/oj/232_make_queue_using_stacks/queue_use_stack.cpp)----[题目来源](https://leetcode.com/problems/implement-queue-using-stacks/description/)
-#### 6. [最小栈 155. Min Stack](src/oj/155_min_stack/min_stack.cpp)----[题目来源](https://leetcode.com/problems/min-stack/description/)
+| 序号 | 知识点 | 题目 | 题源 | 难度 | 解决状态 |
+|:----:|:-----|------|:----:|:----:|:----:|
+|   1  |队列|   [使用队列实现栈](src/oj/225_make_stack_with_queue/stack_use_queue.cpp)   | L225 | 简单 | √
+|   2  |栈|   [使用栈实现队列](src/oj/232_make_queue_using_stacks/queue_use_stack.cpp)    |   L232   |  简单 | √
+|   3  |队列|   [简单计算器](src/oj/224_basicCalculator/basic_calculator.cpp)   |   L224    |  困难 | √
+|   4  |堆|   [第K大个数](src/oj/215_Kth_largest_num/kth_largest_num.cpp)   |   L215    |  中等 | √
+|   5  |堆|   [寻找中位数](src/oj/295_find_median/find_median.cpp)   |   L295    |  困难 | √
+|   6  |栈|   [最小栈](src/oj/155_min_stack/min_stack.cpp)   |   L155    |  中等 | √
 
 ## 三、贪心算法
-#### 1. [分糖果 455. Assign Cookies](src/oj/455_assign_cookies/assign_cookies.cpp)----[题目来源](https://leetcode.com/problems/assign-cookies/description/)
-#### 2. [最长摇摆子序列 376. Wiggle Subsequence](src/oj/376_wiggle_subsequence/wiggle_subsequence.cpp)----[题目来源](https://leetcode.com/problems/wiggle-subsequence/description/)
-#### 3. [删除K个数获得最小数 402. Remove K Digits](src/oj/402_remove_k_digits/remove_k_dig.cpp)----[题目来源](https://leetcode.com/problems/remove-k-digits/)
-#### 4. [跳跃游戏I 55. Jump Game](src/oj/55_jump_game/jump_game.cpp)----[题目来源](https://leetcode.com/problems/jump-game/description/)
-#### 5. [跳跃游戏II 45. Jump GameII](src/oj/45_jump_game_II/jump_game_II.cpp)----[题目来源](https://leetcode.com/problems/jump-game-ii/submissions/)
-#### 6. [射击气球 452. Minimum Number of Arrows to Burst Balloons](src/oj/452_burst_balloons/burst_balloons.cpp)----[题目来源](https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons/)
-
+| 序号 | 知识点 | 题目 | 题源 | 难度 | 解决状态 |
+|:----:|:-----|------|:----:|:----:|:----:|
+|   1  |链表|   [分糖果](src/oj/455_assign_cookies/assign_cookies.cpp)   | L455 | 简单 | √
+|   2  |链表|   [最长摇摆子序列](src/oj/376_wiggle_subsequence/wiggle_subsequence.cpp)    |   L376   |  中等 | √
+|   3  |链表|   [删除K个数获得最小数](src/oj/402_remove_k_digits/remove_k_dig.cpp)   |   L402    |  中等 | √
+|   4  |链表|   [跳跃游戏I](src/oj/55_jump_game/jump_game.cpp)   |   L55    |  中等 | √
+|   5  |链表|   [跳跃游戏II](src/oj/45_jump_game_II/jump_game_II.cpp)   |   L45    |  困难 | √
+|   6  |链表|   [用最少数量的箭引爆气球](src/oj/452_burst_balloons/burst_balloons.cpp)   |   L452    |  中等 | √
 
 ## 四、递归、分治、回溯
 
