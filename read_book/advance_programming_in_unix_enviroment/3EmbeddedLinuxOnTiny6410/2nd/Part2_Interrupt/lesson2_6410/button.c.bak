@@ -1,3 +1,0 @@
-#define GPNCON0 (volatile long*)0x7F008830
-#define GPLCON1 (volatile long*)0x7F008814
-

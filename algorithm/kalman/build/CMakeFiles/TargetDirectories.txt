@@ -1,2 +1,0 @@
-/home/cerelon/programmer/algorithm/kalman/build/CMakeFiles/kalmanfilter.dir
-/home/cerelon/programmer/algorithm/kalman/build/CMakeFiles/project.dir

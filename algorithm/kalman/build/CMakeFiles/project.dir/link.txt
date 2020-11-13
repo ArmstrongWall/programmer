@@ -1,1 +1,0 @@
-/usr/bin/c++   -std=c++11 -g    CMakeFiles/project.dir/src/main.cc.o  -o project -rdynamic libkalmanfilter.so -Wl,-rpath,/home/cerelon/programmer/algorithm/kalman/build 
