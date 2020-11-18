@@ -278,7 +278,7 @@ void sortDemo() {
 
 //    sorter->qiuckSort(a,0,a.size()-1);
     sorter->qiuckSort_easy(a,0,a.size()-1);
-
     sorter->print(a);
+
 
 }

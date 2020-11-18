@@ -65,8 +65,13 @@ int main() {
 
 //    listToTree();//
 //    test_astar();
-//    sortDemo();
-    knapsack();
+    sortDemo();
+    string s = "ss";
+    if(s[2] == '\0') {
+        cout << "true";
+    }
+
+//    knapsack();
     return 0;
 }
 

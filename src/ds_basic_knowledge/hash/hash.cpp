@@ -23,11 +23,11 @@ void hash_table_insert(int table_len, ListNode * node, ListNode * hash_map[]) {
     hash_map[hash_key]  = node;
 }
 
-bool search(ListNode *hash_table[], int value, int table_len){
+bool search(ListNode *hash_table[], int value, int table_len) {
     int hash_key = hashkey_func(value, table_len);
     ListNode *head = hash_table[hash_key];
-    while(head){
-        if (head->val == value){
+    while(head) {
+        if(head->val == value) {
             return true;
         }
         head = head->next;

@@ -68,7 +68,14 @@
 
 
 ## 七、哈希表与字符串
-#### 1. [拉链哈希函数](src/ds_basic_knowledge/hash/hash.cpp)
+
+| 序号 | 知识点 | 题目 | 题源 | 难度 | 解决状态 |
+|:----:|:-----|------|:----:|:----:|:----:|
+|   1  | |   [拉链哈希函数](src/ds_basic_knowledge/hash/hash.cpp)   |  | 基础知识| √
+|   2  |字符串 |   [两个超长正整数的加法](src/oj/nhj78_string_plus/string_plus.cpp)   |NH78  | 中等| √
+|   3  |字符串, 回溯 |   [正则表达式匹配](src/oj/10_isMatch/isMatch.cpp)   |O10  | 困难| √
+
+
 #### 2. [409. 最长回文串](src/oj/409_longest_palindrome/longest_palindrome.cpp)----[题目来源](https://leetcode-cn.com/problems/longest-palindrome/)
 #### 3. [290. 单词规律](src/oj/290_word_pattern/word_pattern.cpp)----[题目来源](https://leetcode-cn.com/problems/word-pattern/)
 #### 4. [49. 字母异位词分组](src/oj/49_group_anagrams/group_anagrams.cpp)----[题目来源](https://leetcode-cn.com/problems/group-anagrams/)
@@ -78,13 +85,16 @@
 #### 8. [队列转多叉树](src/oj/0_listToTree/listToTree.cpp)
 #### 9. [剑指 Offer 05. 替换空格](src/oj/offer05_replaceSpace/replaceSpace.cpp)
 
+
+
 ## 八、搜索
 | 序号 | 知识点 | 题目 | 题源 | 难度 | 解决状态 |
 |:----:|:-----|------|:----:|:----:|:----:|
-|   1  | |   [二叉树的深度优先搜索](src/ds_basic_knowledge/binary_tree_breadth_first_search/binary_tree_breadth_first_search.cpp)   |  | 基础知识| √
+|   1  | |   [二叉树的广度优先搜索](src/ds_basic_knowledge/binary_tree_breadth_first_search/binary_tree_breadth_first_search.cpp)   |  | 基础知识| √
 |   2  | |   [图的深度，广度优先搜索](src/ds_basic_knowledge/graph_depth_first_search/graph_depth_first_search.cpp)   |  | 基础知识| √
 |   3  | |   [A星搜索](src/ds_basic_knowledge/astar/astar.cpp)   |  | 基础知识| √
 |   4  |深搜，广搜 |   [岛屿数量](src/ds_basic_knowledge/astar/astar.cpp)   |  | L200| √
+|   5  |广搜 |   [腐烂的橘子](src/oj/994_orangesRotting/orangesRotting.cpp)   |  | L994| √
 
 
 ## 九、动态规划
