@@ -12,6 +12,7 @@ void knapsack() {
     int carry = 12;
     vector<vector<int>> dp(weight.size(),vector<int>(carry + 1, 0));
 
+    //思路是看第i个包在重量为j(1到总重量自增)的时候的取舍
     for(int i = 1; i < dp.size(); i++) {
         for(int j = 1; j < dp[0].size(); j++) {
 

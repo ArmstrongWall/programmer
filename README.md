@@ -47,14 +47,17 @@
 |   8  |回溯        |   [矩阵中的路径](src/oj/offer12_exist/exist.cpp)   |   O12    |  中等 | √
 
 ## 五、二叉树与图
-#### 1. [路径之和 113. Path Sum II](src/oj/113_path_sum_II/path_sum_II.cpp)----[题目来源](https://leetcode.com/problems/path-sum-ii/)
-#### 2. [最近公共祖先 236. Lowest Common Ancestor of a Binary Tree](src/oj/236_lowest_commonance_ancestor/lowest_commonance_ancestor.cpp)----[题目来源](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/)
-#### 3. [二叉树就地转链表 114. Flatten Binary Tree to Linked List](src/oj/114_flatten_binary_tree2linked_list/flatten_binary_tree2linked_list.cpp)----[题目来源](https://leetcode.com/problems/flatten-binary-tree-to-linked-list/description/)
-#### 4. [二叉树层次遍历 广度优先  breadth-first search](src/ds_basic_knowledge/binary_tree_breadth_first_search/binary_tree_breadth_first_search.cpp)
-#### 5. [从右侧观察二叉树 199. Binary Tree Right Side View](src/oj/199_binary_tree_right_side_view/binary_tree_right_side_view.cpp:15)----[题目来源](https://leetcode.com/problems/binary-tree-right-side-view/)
-#### 6. [图的深度优先和广度优先搜索](src/ds_basic_knowledge/graph_depth_first_search/graph_depth_first_search.cpp)
-#### 7. [课程安排 207. Course Schedule](src/oj/207_course_schedule/course_schedule.cpp)----[题目来源](https://leetcode.com/problems/course-schedule/) 深搜和广搜两种方法，深搜因为空间限制无法AC，需改进
-#### 8. [104. 二叉树的最大深度](src/oj/104_maxDepth/maxDepth.cpp)----[题目来源](https://leetcode-cn.com/problems/maximum-depth-of-binary-tree/)
+| 序号 | 知识点 | 题目 | 题源 | 难度 | 解决状态 |
+|:----:|:-----|------|:----:|:----:|:----:|
+|   1  | |   [二叉树层次遍历，广度优先搜索](src/ds_basic_knowledge/binary_tree_breadth_first_search/binary_tree_breadth_first_search.cpp)   |  | 基础知识| √
+|   2  | 二叉树 |   [路径之和](src/oj/113_path_sum_II/path_sum_II.cpp)   | L113 | 中等 | √
+|   3  | 二叉树 |   [树的子结构](src/oj/offer26_sub_tree/isSubStructure.cpp)   | O26 | 中等 | √
+|   4  | 二叉树 |   [翻转二叉树](src/oj/226_invertTree/invertTree.cpp)   | L226 | 简单 | √
+|   5  | 二叉树 |   [对称二叉树](src/oj/101_isSymmetric/isSymmetric.cpp)   | L101 | 简单 | √
+|   6  | 二叉树 |   [最近公共祖先](src/oj/236_lowest_commonance_ancestor/lowest_commonance_ancestor.cpp)   | L236 | 中等 | √
+|   7  | 二叉树 |   [二叉树就地转链表](src/oj/114_flatten_binary_tree2linked_list/flatten_binary_tree2linked_list.cpp)   | L114 | 中等 | √
+|   8  | 二叉树 |   [从右侧观察二叉树](src/oj/199_binary_tree_right_side_view/binary_tree_right_side_view.cpp)   | L199 | 中等 | √
+|   9  | 二叉树 |   [二叉树的最大深度](src/oj/104_maxDepth/maxDepth.cpp)   | L104 | 简单| √
 
 
 ## 六、二分查找与二叉查找树
@@ -87,14 +90,14 @@
 
 
 
-## 八、搜索
+## 八、图与搜索
 | 序号 | 知识点 | 题目 | 题源 | 难度 | 解决状态 |
 |:----:|:-----|------|:----:|:----:|:----:|
-|   1  | |   [二叉树的广度优先搜索](src/ds_basic_knowledge/binary_tree_breadth_first_search/binary_tree_breadth_first_search.cpp)   |  | 基础知识| √
-|   2  | |   [图的深度，广度优先搜索](src/ds_basic_knowledge/graph_depth_first_search/graph_depth_first_search.cpp)   |  | 基础知识| √
-|   3  | |   [A星搜索](src/ds_basic_knowledge/astar/astar.cpp)   |  | 基础知识| √
-|   4  |深搜，广搜 |   [岛屿数量](src/ds_basic_knowledge/astar/astar.cpp)   |  | L200| √
-|   5  |广搜 |   [腐烂的橘子](src/oj/994_orangesRotting/orangesRotting.cpp)   |  | L994| √
+|   1  | |   [图的深度，广度优先搜索](src/ds_basic_knowledge/graph_depth_first_search/graph_depth_first_search.cpp)   |  | 基础知识| √
+|   2  | |   [A星搜索](src/ds_basic_knowledge/astar/astar.cpp)   |  | 基础知识| √
+|   3  |深搜，广搜 |   [岛屿数量](src/ds_basic_knowledge/astar/astar.cpp)   |  | L200| √
+|   4  |广搜 |   [腐烂的橘子](src/oj/994_orangesRotting/orangesRotting.cpp)   |  | L994| √
+|   5  |深搜，广搜 |   [课程安排](src/oj/207_course_schedule/course_schedule.cpp)   |  | L207| √
 
 
 ## 九、动态规划
@@ -106,6 +109,8 @@
 |   4  |动态规划|   [青蛙跳台阶](src/oj/70_climbStairs/climbStairs.cpp)   |   O10    |  简单| √
 |   5  |动态规划|   [打家劫舍](src/oj/198_rob/rob.cpp)   |   L198    |  简单| √
 |   6  |动态规划|   [购物单](src/oj/nhj16_get/get_things.cpp)   |   NH16    |  中等| 40%通过
+|   7  |动态规划|   [整数拆分](src/oj/offer14_cuttingRope/cuttingRope.cpp)   |   L343    |  中等| √
+
 
 
 

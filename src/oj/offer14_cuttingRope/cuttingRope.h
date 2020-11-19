@@ -1,0 +1,8 @@
+//
+// Created by wzq on 2020/11/19.
+//
+
+#ifndef LEETCODE_CUTTINGROPE_H
+#define LEETCODE_CUTTINGROPE_H
+
+#endif //LEETCODE_CUTTINGROPE_H

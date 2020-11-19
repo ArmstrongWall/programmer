@@ -1,0 +1,8 @@
+//
+// Created by wzq on 2020/11/19.
+//
+
+#ifndef LEETCODE_ISSUBSTRUCTURE_H
+#define LEETCODE_ISSUBSTRUCTURE_H
+
+#endif //LEETCODE_ISSUBSTRUCTURE_H
