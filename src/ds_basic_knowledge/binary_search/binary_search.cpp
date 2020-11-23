@@ -27,7 +27,7 @@ bool binary_search_recursion( std::vector<int> &sort_array,
 bool binary_search_cycle(std::vector<int> &sort_array, int target){
     int begin = 0;
     int end = sort_array.size() - 1;
-    while(begin <= end){
+    while(begin <= end){ //!!!等号很重要，考察点
         int mid = (begin + end) / 2;
         if (target == sort_array[mid]){
             return true;

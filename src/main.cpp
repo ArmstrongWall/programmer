@@ -1,6 +1,7 @@
 #include <astar/astar.h>
 #include <sort/sort.h>
 #include <0_1_knapsack/knapsack.h>
+#include <binary_search_tree/binary_search_tree.h>
 #include "include.h"
 #include "452_burst_balloons/burst_balloons.h"
 #include "315_count_smaller_numbers/count_smaller_numbers.h"
@@ -22,6 +23,8 @@
 #include "200_num_islands/num_islands.h"
 #include "offer04_searchMatrix/searchMatrix.h"
 #include "0_listToTree/listToTree.h"
+#include "cpp_basic_knowledge/multichild.h"
+#include "cpp_basic_knowledge/virtual.h"
 
 int main() {
 
@@ -65,13 +68,14 @@ int main() {
 
 //    listToTree();//
 //    test_astar();
-    sortDemo();
-    string s = "ss";
-    if(s[2] == '\0') {
-        cout << "true";
-    }
-
+//    sortDemo();
 //    knapsack();
+//    binarySearchTreeDemo();
+
+//C++基础知识
+//    multichild();
+    test_virtual();
+
     return 0;
 }
 

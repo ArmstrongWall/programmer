@@ -61,7 +61,11 @@
 
 
 ## 六、二分查找与二叉查找树
-#### 1. [二分查找(递归与循环)](src/ds_basic_knowledge/binary_search/binary_search.cpp)!!!(while(begin <= end),等号很重要，考察点)
+| 序号 | 知识点 | 题目 | 题源 | 难度 | 解决状态 |
+|:----:|:-----|------|:----:|:----:|:----:|
+|   1  | |   [二分查找(递归与循环)](src/ds_basic_knowledge/binary_search/binary_search.cpp)   |  | 基础知识| √
+|   2  | |   [二叉查找/搜索/排序树](src/ds_basic_knowledge/binary_search_tree/binary_search_tree.cpp)   |  | 基础知识| √
+
 #### 2. [插入位置 35. Search Insert Position](src/oj/35_search_insert_position/search_insert_position.cpp)----[题目来源](https://leetcode.com/problems/search-insert-position/)
 #### 3. [区间查找 34. Find First and Last Position of Element in Sorted Array](src/oj/34_search_range/search_range.cpp)----[题目来源](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/)
 #### 4. [旋转数组查找 33. Search in Rotated Sorted Array](src/oj/33_search_rotated_sorted_array/search_rotated_sorted_array.cpp)
@@ -112,15 +116,142 @@
 |   7  |动态规划|   [整数拆分](src/oj/offer14_cuttingRope/cuttingRope.cpp)   |   L343    |  中等| √
 
 
-
-
 ## 十、排序算法
 
-#### 1. [冒泡排序](src/oj/70_climbStairs/climbStairs.cpp)
-#### 2. [插入排序](src/ds_basic_knowledge/sort/sort.cpp)
-#### 3. [选择排序](src/oj/70_climbStairs/climbStairs.cpp)
-#### 4. [快速排序](src/ds_basic_knowledge/sort/sort.cpp)
-#### 5. [归并排序](src/oj/70_climbStairs/climbStairs.cpp)
+排序算法 | 平均时间复杂度 | 最差时间复杂度 | 空间复杂度 | 数据对象稳定性 | 解决状态 | 分析
+---|---|---|---|---|---|---
+[冒泡排序](src/ds_basic_knowledge/sort/bubbleSort.cpp) | O(n<sup>2</sup>)|O(n<sup>2</sup>)|O(1)|稳定| √
+[选择排序](src/ds_basic_knowledge/sort/selectSort.cpp) | O(n<sup>2</sup>)|O(n<sup>2</sup>)|O(1)|数组不稳定、链表稳定| √
+[插入排序](src/ds_basic_knowledge/sort/insertionSort.cpp) | O(n<sup>2</sup>)|O(n<sup>2</sup>)|O(1)|稳定| √
+[快速排序](src/ds_basic_knowledge/sort/qiuckSort.cpp) | O(n*log<sub>2</sub>n) |  O(n<sup>2</sup>) | O(log<sub>2</sub>n) | 不稳定| √
+[堆排序]() | O(n*log<sub>2</sub>n)|O(n*log<sub>2</sub>n)|O(1)|不稳定| ×
+[归并排序](src/ds_basic_knowledge/sort/mergeSort.cpp) | O(n*log<sub>2</sub>n) | O(n*log<sub>2</sub>n)|O(n)|稳定| √ | 可用于外部排序，即读取磁盘而非内存上的数据
+[希尔排序](src/ds_basic_knowledge/sort/shellSort.cpp) | O(n*log<sup>2</sup>n)|O(n<sup>2</sup>)|O(1)|不稳定| ×
+[计数排序]() | O(n+m)|O(n+m)|O(n+m)|稳定| ×
+[桶排序]() | O(n)|O(n)|O(m)|稳定| ×
+[基数排序]() | O(k*n)|O(n<sup>2</sup>)| |稳定| ×
+
+> * 均按从小到大排列
+> * k：代表数值中的 “数位” 个数
+> * n：代表数据规模
+> * m：代表数据的最大值减最小值
+> * 来自：[数据结构与算法分析--C++语言描述（第四版）,【美】Mark Allen Weiss]()
+
+
+# 二、C/C++语言常识
+
+### 1.STL 容器
+
+容器 | 底层数据结构 | 时间复杂度 | 有无序 | 可不可重复 | 其他
+---|---|---|---|---|---
+[array](https://github.com/huihut/interview/tree/master/STL#array)|数组|随机读改 O(1)|无序|可重复|支持随机访问
+[vector](https://github.com/huihut/interview/tree/master/STL#vector)|数组|随机读改、尾部插入、尾部删除 O(1)<br/>头部插入、头部删除 O(n)|无序|可重复|支持随机访问
+[deque](https://github.com/huihut/interview/tree/master/STL#deque)|双端队列|头尾插入、头尾删除 O(1)|无序|可重复|一个中央控制器 + 多个缓冲区，支持首尾快速增删，支持随机访问
+[forward_list](https://github.com/huihut/interview/tree/master/STL#forward_list)|单向链表|插入、删除 O(1)|无序|可重复|不支持随机访问
+[list](https://github.com/huihut/interview/tree/master/STL#list)|双向链表|插入、删除 O(1)|无序|可重复|不支持随机访问
+[stack](https://github.com/huihut/interview/tree/master/STL#stack)|deque / list|顶部插入、顶部删除 O(1)|无序|可重复|deque 或 list 封闭头端开口，不用 vector 的原因应该是容量大小有限制，扩容耗时
+[queue](https://github.com/huihut/interview/tree/master/STL#queue)|deque / list|尾部插入、头部删除 O(1)|无序|可重复|deque 或 list 封闭头端开口，不用 vector 的原因应该是容量大小有限制，扩容耗时
+[priority_queue](https://github.com/huihut/interview/tree/master/STL#priority_queue)|vector + max-heap|插入、删除 O(log<sub>2</sub>n)|有序|可重复|vector容器+heap处理规则
+[set](https://github.com/huihut/interview/tree/master/STL#set)|红黑树|插入、删除、查找 O(log<sub>2</sub>n)|有序|不可重复|
+[multiset](https://github.com/huihut/interview/tree/master/STL#multiset)|红黑树|插入、删除、查找 O(log<sub>2</sub>n)|有序|可重复|
+[map](https://github.com/huihut/interview/tree/master/STL#map)|红黑树|插入、删除、查找 O(log<sub>2</sub>n)|有序|不可重复|
+[multimap](https://github.com/huihut/interview/tree/master/STL#multimap)|红黑树|插入、删除、查找 O(log<sub>2</sub>n)|有序|可重复|
+[unordered_set](https://github.com/huihut/interview/tree/master/STL#unordered_set)|哈希表|插入、删除、查找 O(1) 最差 O(n)|无序|不可重复|
+[unordered_multiset](https://github.com/huihut/interview/tree/master/STL#unordered_multiset)|哈希表|插入、删除、查找 O(1) 最差 O(n)|无序|可重复|
+[unordered_map](https://github.com/huihut/interview/tree/master/STL#unordered_map)|哈希表|插入、删除、查找 O(1) 最差 O(n)|无序|不可重复|
+[unordered_multimap](https://github.com/huihut/interview/tree/master/STL#unordered_multimap)|哈希表|插入、删除、查找 O(1) 最差 O(n)|无序|可重复|
+
+### 2.运算符优先级
+|优先级| 运算符 | 说明|结合性|
+|:----:|:-----|------|:----:|
+| 1 |::| 范围解析| 
+| 2 | 	++   --| 后缀自增/后缀自减| 
+| 2 | 	() 	|括号| 
+| 2 | 	[] |	数组下标
+| 2 |   .  | 	成员选择（对象）
+| 2 |   -> | 成员选择（指针）
+| 3 |  ++   -- |	前缀自增/前缀自减
+| 3 |  + - |	加/减
+| 3 |  !   ~ |	逻辑非/按位取反
+| 3 |  (type) |	强制类型转换
+| 3 |  * |	取指针指向的值
+| 3 |  & |	某某的地址
+| 3 |  sizeof |	某某的大小
+| 4 | .*   ->* 	|成员对象选择,成员指针选择 |	自左向右
+|5 |	*   / % | 乘法/除法/取余
+|6 |	+   - |	加号/减号
+|7 |	<<   >> |	位左移/位右移
+|8 |	<   <= |	小于/小于等于
+|8| >   >= 	|大于/大于等于
+|9 |	==   != 	|等于/不等于
+|10 |	& 	|按位与 
+|11 |	^ 	|按位异或
+|12 |	&#124; |按位或 | 5&#124;7等于7，不等于1
+|13 |	&& 	|与运算 |具有短路特性当且仅当左边非零才计算右边
+|14 |	&#124;&#124;  |或运算 | 5&#124;&#124;7等于1
+|15 |	?: |	三目运算符 	自右向左
+|16 |	= |	赋值
+|16 | +=   −= |	加减后赋值
+|16 | *=   /=   %= |	乘除余后赋值
+|16 | <<=   >>= 	|位左右移后赋值
+|16 | &=     ^=   &#124;= |	位运算后赋值
+
+### 3.类多重继承初始化顺序
+[代码示例](src/cpp_basic_knowledge/multichild.h)
+
+(1)、根据继承顺序，父类构造函数，回退到基类先开始
+
+(2)、类成员初始化
+
+(3)、构造函数体部分初始化
+```
+Class A {}
+Class B : public A {}
+Class C : public A {}
+class D : public B,public A {}
+```
+此例中，根据继承的顺序，先退到B的父类A构造一次，再到B构造，
+
+重新退到C的父类A再构造一次，再到C构造，
+
+最后执行自己的D。
+
+(4)、如果存在虚继承：
+```
+Class A {}
+Class B : virtual public A {}
+Class C : virtual public A {}
+class D : public B,public A {}
+```
+则虚基类的构造要最先执行，并且执行一次，
+
+然后再次先调用B类，再C类的构造函数时，且A类的构造函数不再调用执行
+
+最后D自己的构造
+
+### 4.多态，虚函数
+[代码示例](src/cpp_basic_knowledge/virtual.h)
+
+(1)、普通继承/多重继承下的虚函数表
+
+在有继承情况下，只要基类有虚函数，子类不论实现或没实现，都有虚函数表。
+子类中与基类虚函数同名的函数，也会自动加上virtual。首先，子类会继承基类的虚函数表，如果重写了基类的虚函数会更新虚函数表。如果没有重写任何基类的虚函数，那么子类和基类的虚函数表是内容是一致的。
+但是，基类的虚函数表和子类的虚函数表不是同一个表。
+
+(2)、多继承情况下的虚函数表（同时继承多个基类）
+
+在多继承情况下，有多少个基类就有多少个虚函数表指针，前提是基类要有虚函数才算上这个基类。
+
+注意：
+1.子类虚函数会覆盖每一个父类的每一个同名虚函数。
+
+2.父类中没有的虚函数而子类有，填入第一个虚函数表中，且用父类指针是不能调用。
+
+3.父类中有的虚函数而子类没有，则不覆盖。仅子类和该父类指针能调用。
+
+下图详解两种情况的虚函数表内存分布
+
+![pic](illustration/virtual.png)
 
 
 # 二、工程师算法常识
