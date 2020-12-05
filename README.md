@@ -65,13 +65,12 @@
 |:----:|:-----|------|:----:|:----:|:----:|
 |   1  | |   [二分查找(递归与循环)](src/ds_basic_knowledge/binary_search/binary_search.cpp)   |  | 基础知识| √
 |   2  | |   [二叉查找/搜索/排序树](src/ds_basic_knowledge/binary_search_tree/binary_search_tree.cpp)   |  | 基础知识| √
-
-#### 2. [插入位置 35. Search Insert Position](src/oj/35_search_insert_position/search_insert_position.cpp)----[题目来源](https://leetcode.com/problems/search-insert-position/)
-#### 3. [区间查找 34. Find First and Last Position of Element in Sorted Array](src/oj/34_search_range/search_range.cpp)----[题目来源](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/)
-#### 4. [旋转数组查找 33. Search in Rotated Sorted Array](src/oj/33_search_rotated_sorted_array/search_rotated_sorted_array.cpp)
-#### 5. [二叉查找树编码与解码 449. Serialize and Deserialize BST](src/oj/449_serialize_deserialize_BST/serialize_deserialize_BST.cpp)----[题目来源](https://leetcode.com/problems/serialize-and-deserialize-bst/description/)
-#### 6. [排序矩阵查找 Of04](src/oj/offer04_searchMatrix/searchMatrix.cpp)
-#### 7. [寻找波峰元素 L162](src/oj/162_find_peak/find_peak.cpp)
+|   3  | 二分查找 |   [插入位置](src/oj/35_search_insert_position/search_insert_position.cpp)   | L35 | 简单| √
+|   4  | 二分查找 |   [区间查找](src/oj/34_search_range/search_range.cpp)   | L34 | 中等| √
+|   5  | 二分查找 |   [旋转数组查找](src/oj/33_search_rotated_sorted_array/search_rotated_sorted_array.cpp)   | L33 | 中等| √
+|   6  | 二叉查找树 |   [二叉查找树编码与解码](src/oj/449_serialize_deserialize_BST/serialize_deserialize_BST.cpp)   | L449 | 中等| √
+|   7  | 二分查找 |   [排序矩阵查找](src/oj/offer04_searchMatrix/searchMatrix.cpp)   | O4 | 中等| √
+|   8  | 二分查找 |   [寻找波峰元素](src/oj/162_find_peak/find_peak.cpp)   | L162 | 中等| √
 
 
 ## 七、哈希表与字符串
@@ -81,17 +80,14 @@
 |   1  | |   [拉链哈希函数](src/ds_basic_knowledge/hash/hash.cpp)   |  | 基础知识| √
 |   2  |字符串 |   [两个超长正整数的加法](src/oj/nhj78_string_plus/string_plus.cpp)   |NH78  | 中等| √
 |   3  |字符串, 回溯 |   [正则表达式匹配](src/oj/10_isMatch/isMatch.cpp)   |O10  | 困难| √
-
-
-#### 2. [409. 最长回文串](src/oj/409_longest_palindrome/longest_palindrome.cpp)----[题目来源](https://leetcode-cn.com/problems/longest-palindrome/)
-#### 3. [290. 单词规律](src/oj/290_word_pattern/word_pattern.cpp)----[题目来源](https://leetcode-cn.com/problems/word-pattern/)
-#### 4. [49. 字母异位词分组](src/oj/49_group_anagrams/group_anagrams.cpp)----[题目来源](https://leetcode-cn.com/problems/group-anagrams/)
-#### 5. [3. 无重复字符的最长子串](src/oj/3_length_longest_substring/length_longest_substring.cpp)----[题目来源](https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/)
-#### 6. [76. 最小覆盖子串](src/oj/76_min_window/min_window.cpp)----[题目来源](https://leetcode-cn.com/problems/minimum-window-substring/submissions/) 此题做了两次，第一次是没理解题意，以为目标中没有重复字母，第二次是使用滑窗，但是用了std::map，插入删除的时间复杂度较高，是O(nlgn)而不是O(n),时间超时了。
-#### 7. [1. 两数之和](src/oj/1_two_sum/two_sum.cpp)----[题目来源](https://leetcode-cn.com/problems/two-sum/)
-#### 8. [队列转多叉树](src/oj/0_listToTree/listToTree.cpp)
-#### 9. [剑指 Offer 05. 替换空格](src/oj/offer05_replaceSpace/replaceSpace.cpp)
-
+|   4  |哈希表 |   [最长回文串](src/oj/409_longest_palindrome/longest_palindrome.cpp)   | L409  | 简单 | √
+|   5  |哈希表 |   [单词规律](src/oj/290_word_pattern/word_pattern.cpp)   | L290  | 简单 | √
+|   6  |哈希表 |   [字母异位词分组](src/oj/49_group_anagrams/group_anagrams.cpp)   | L49  | 中等 | √
+|   7  |哈希表 |   [无重复字符的最长子串](src/oj/3_length_longest_substring/length_longest_substring.cpp)   | L3  | 中等 | √
+|   8  |哈希表 |   [最小覆盖子串](src/oj/76_min_window/min_window.cpp)   | L76  | 困难 | √
+|   9  |哈希表 |   [两数之和](src/oj/1_two_sum/two_sum.cpp)   | L1  | 困难 | √
+|   10 |哈希表 |   [队列转多叉树](src/oj/0_listToTree/listToTree.cpp)   | 牛客网  | 困难 | √
+|   11 |哈希表 |   [替换空格](src/oj/offer05_replaceSpace/replaceSpace.cpp)   | O5  | 简单 | √
 
 
 ## 八、图与搜索
@@ -99,9 +95,9 @@
 |:----:|:-----|------|:----:|:----:|:----:|
 |   1  | |   [图的深度，广度优先搜索](src/ds_basic_knowledge/graph_depth_first_search/graph_depth_first_search.cpp)   |  | 基础知识| √
 |   2  | |   [A星搜索](src/ds_basic_knowledge/astar/astar.cpp)   |  | 基础知识| √
-|   3  |深搜，广搜 |   [岛屿数量](src/ds_basic_knowledge/astar/astar.cpp)   |  | L200| √
-|   4  |广搜 |   [腐烂的橘子](src/oj/994_orangesRotting/orangesRotting.cpp)   |  | L994| √
-|   5  |深搜，广搜 |   [课程安排](src/oj/207_course_schedule/course_schedule.cpp)   |  | L207| √
+|   3  |深搜，广搜 |   [岛屿数量](src/oj/200_num_islands/num_islands.cpp)   | L200 | 中等 | √
+|   4  |广搜 |   [腐烂的橘子](src/oj/994_orangesRotting/orangesRotting.cpp)   | L994 | 中等 | √
+|   5  |深搜，广搜 |   [课程安排](src/oj/207_course_schedule/course_schedule.cpp)   | L207 | 中等 | √
 
 
 ## 九、动态规划
@@ -198,60 +194,58 @@
 
 ### 3.类多重继承初始化顺序
 [代码示例](src/cpp_basic_knowledge/multichild.h)
-
-(1)、根据继承顺序，父类构造函数，回退到基类先开始
-
-(2)、类成员初始化
-
-(3)、构造函数体部分初始化
+#### 如果无虚继承：
+* 根据继承顺序，父类构造函数，回退到基类先开始
+* 类成员初始化
+* 构造函数体部分初始化
 ```
 Class A {}
 Class B : public A {}
 Class C : public A {}
 class D : public B,public A {}
 ```
-此例中，根据继承的顺序，先退到B的父类A构造一次，再到B构造，
-
-重新退到C的父类A再构造一次，再到C构造，
-
-最后执行自己的D。
-
-(4)、如果存在虚继承：
+1. 此例中，根据继承的顺序，先退到B的父类A构造一次，再到B构造，
+2. 重新退到C的父类A再构造一次，再到C构造，
+3. 最后执行自己的D。
+#### 如果存在虚继承：
 ```
 Class A {}
 Class B : virtual public A {}
 Class C : virtual public A {}
 class D : public B,public A {}
 ```
-则虚基类的构造要最先执行，并且执行一次，
-
-然后再次先调用B类，再C类的构造函数时，且A类的构造函数不再调用执行
-
-最后D自己的构造
+1. 则虚基类的构造要最先执行，并且执行一次，
+2. 然后再次先调用B类，再C类的构造函数时，且A类的构造函数不再调用执行
+3. 最后D自己的构造
 
 ### 4.多态，虚函数
-[代码示例](src/cpp_basic_knowledge/virtual.h)
-
-(1)、普通继承/多重继承下的虚函数表
-
-在有继承情况下，只要基类有虚函数，子类不论实现或没实现，都有虚函数表。
-子类中与基类虚函数同名的函数，也会自动加上virtual。首先，子类会继承基类的虚函数表，如果重写了基类的虚函数会更新虚函数表。如果没有重写任何基类的虚函数，那么子类和基类的虚函数表是内容是一致的。
-但是，基类的虚函数表和子类的虚函数表不是同一个表。
-
-(2)、多继承情况下的虚函数表（同时继承多个基类）
-
-在多继承情况下，有多少个基类就有多少个虚函数表指针，前提是基类要有虚函数才算上这个基类。
-
-注意：
-1.子类虚函数会覆盖每一个父类的每一个同名虚函数。
-
-2.父类中没有的虚函数而子类有，填入第一个虚函数表中，且用父类指针是不能调用。
-
-3.父类中有的虚函数而子类没有，则不覆盖。仅子类和该父类指针能调用。
+##### [代码示例](src/cpp_basic_knowledge/virtual.h)
+##### (1)、普通继承/多重继承下的虚函数表
+1. 在有继承情况下，只要基类有虚函数，子类不论实现或没实现，都有虚函数表。
+2. 子类中与基类虚函数同名的函数，也会自动加上virtual。
+3. 子类会继承基类的虚函数表，如果重写了基类的虚函数会更新虚函数表。如果没有重写任何基类的虚函数，那么子类和基类的虚函数表是内容是一致的。
+4. 基类的虚函数表和子类的虚函数表不是同一个表。
+##### (2)、多继承情况下的虚函数表（同时继承多个基类）
+1. 在多继承情况下，有多少个基类就有多少个虚函数表指针，前提是基类要有虚函数才算上这个基类。
+2. 子类虚函数会覆盖每一个父类的每一个同名虚函数。
+3. 父类中没有的虚函数而子类有，填入第一个虚函数表中，且用父类指针是不能调用。
+4. 父类中有的虚函数而子类没有，则不覆盖。仅子类和该父类指针能调用。
 
 下图详解两种情况的虚函数表内存分布
 
 ![pic](illustration/virtual.png)
+
+
+### 5.构造、析构函数与虚函数
+##### 1. 为什么构造函数不能为虚函数？
+虚函数的调用需要虚函数表指针，而该指针存放在对象的内容空间中；若构造函数声明为虚函数，那么由于对象还未创建，还没有内存空间，更没有虚函数表地址用来调用虚函数——构造函数了。
+##### 2. 为什么析构函数可以为虚函数，如果不设为虚函数可能会存在什么问题？
+首先析构函数可以为虚函数，而且当要使用基类指针或引用调用子类时，最好将基类的析构函数声明为虚函数，否则可以存在内存泄露的问题。
+举例说明：
+子类B继承自基类A; A *p = new B; delete p;
+1. 此时，如果类A的析构函数不是虚函数，那么delete p；将会仅仅调用A的析构函数，只释放了B对象中的A部分，而派生出的新的部分未释放掉。
+2. 如果类A的析构函数是虚函数，delete p; 将会先调用B的析构函数，再调用A的析构函数，释放B对象的所有空间。
+3. B *p = new B; delete p;时也是先调用B的析构函数，再调用A的析构函数。
 
 
 # 二、工程师算法常识

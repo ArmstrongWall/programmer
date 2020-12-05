@@ -12,6 +12,12 @@ using namespace std;
 class VA
 {
 public:
+    VA() {
+        printf("A执行构造函数\n");
+    };
+    virtual ~VA() {
+        printf("A执行析构函数\n");
+    };
     void foo()
     {
         printf("A执行非虚函数1\n");
@@ -24,6 +30,12 @@ public:
 class VB : public VA
 {
 public:
+    VB() {
+        printf("B执行构造函数\n");
+    };
+    ~VB() {
+        printf("B执行析构函数\n");
+    };
     void foo()
     {
         printf("B执行非虚函数3\n");
@@ -35,7 +47,7 @@ public:
 };
 int test_virtual(void)
 {
-    cout <<"创建Ａ的对象"<< endl;
+/*    cout <<"创建Ａ的对象"<< endl;
     VA a;
     a.foo();
     a.fun();
@@ -57,12 +69,13 @@ int test_virtual(void)
     VB *p2 = new VB;
     p2->foo();
     p2->fun();
-    cout<< endl;
+    cout<< endl;*/
 
     cout <<"创建指向B类的Ａ类指针,系统会自动调用到Ｂ类的虚函数"<< endl;
     VA *p3 = new VB();//A *p3 = &b; 这样定义也可以
     p3->foo();
     p3->fun();
+    delete p3;
     cout<< endl;
 
 /*

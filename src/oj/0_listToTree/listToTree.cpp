@@ -8,7 +8,10 @@
 #include <iostream>
 #include "listToTree.h"
 
-/*输入例子1:
+/*
+ * https://www.nowcoder.com/question/next?pid=24568059&qid=1022703&tid=39843967
+ *
+ * 输入例子1:
 
 [["d1", "d0", "IT"], ["d2", "d0", "RD"], ["d0", "", "The Company"], ["d3", "d0", "HR"]]
 
