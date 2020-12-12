@@ -41,8 +41,6 @@ public:
         row_putdown_queue(0,n,count,mark);
         return count;
     }
-
-
     void row_putdown_queue(const int now_row, const int n,
                            int &count, std::vector<std::vector<int>> &mark) {
         if(now_row == n) {
