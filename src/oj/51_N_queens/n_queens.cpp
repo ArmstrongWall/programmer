@@ -94,7 +94,7 @@ public:
         mark[x][y] = 1;
 
         for(auto &dir : direction) {
-            for(int i = 1;; i++){
+            for(int i = 1;; i++) {
                 if( x + i * dir.first >= n || y + i * dir.second >= n
                 ||  x + i * dir.first < 0  || y + i * dir.second < 0) {
                     break;
@@ -120,4 +120,5 @@ public:
 int n_queen() {
     Solution s;
     s.solveNQueens(8);
+    return 0;
 }

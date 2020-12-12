@@ -153,4 +153,7 @@ add_executable(leetcode src/main.cpp
         src/ds_basic_knowledge/sort/qiuckSort.cpp
         src/ds_basic_knowledge/sort/mergeSort.cpp
         src/ds_basic_knowledge/sort/shellSort.cpp
-        src/cpp_basic_knowledge/multichild.h src/cpp_basic_knowledge/virtual.h)
+        src/cpp_basic_knowledge/multichild.h
+        src/cpp_basic_knowledge/virtual.h
+        src/oj/52_N_queue_II/n_queue_II.cpp
+        src/oj/52_N_queue_II/n_queue_II.h)

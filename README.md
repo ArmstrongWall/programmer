@@ -45,6 +45,8 @@
 |   6  |分治，递归  |   [逆序数，计算右侧小于当前元素的个数](src/oj/315_count_smaller_numbers/count_smaller_numbers.cpp)   |   L315    |  困难 | √
 |   7  |递归        |   [从尾到头打印链表](src/oj/offer06_reversePrint/reversePrint.cpp)   |   O6    |  简单 | √
 |   8  |回溯        |   [矩阵中的路径](src/oj/offer12_exist/exist.cpp)   |   O12    |  中等 | √
+|   9  |回溯        |   [N皇后 II](src/oj/52_N_queue_II/n_queue_II.cpp)   |   L52    |  困难 | √
+
 
 ## 五、二叉树与图
 | 序号 | 知识点 | 题目 | 题源 | 难度 | 解决状态 |
