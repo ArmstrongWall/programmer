@@ -48,6 +48,7 @@ public:
             return;
         }
 
+
         for(int y = 0; y < n; y++) {
             if(mark[now_row][y] == 0) {
                 std::vector<std::vector<int>> temp_mark = mark;
