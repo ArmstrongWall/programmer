@@ -156,4 +156,4 @@ add_executable(leetcode src/main.cpp
         src/cpp_basic_knowledge/multichild.h
         src/cpp_basic_knowledge/virtual.h
         src/oj/52_N_queue_II/n_queue_II.cpp
-        src/oj/52_N_queue_II/n_queue_II.h)
+        src/oj/52_N_queue_II/n_queue_II.h src/oj/102_levelOrder/levelOrder.cpp src/oj/102_levelOrder/levelOrder.h)
