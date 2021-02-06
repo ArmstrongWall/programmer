@@ -8,6 +8,10 @@
 template <typename T>
 binarySearchTree<T>::binarySearchTree():root{nullptr} {
     vector<int> node {10,23,40,50,60,59,32,66};
+    for(int i = 0;i < 256;++i) {
+        node.push_back(i);
+    }
+
     for(auto x:node) {
         insert(x);
     }

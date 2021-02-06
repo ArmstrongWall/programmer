@@ -12,6 +12,7 @@
 |   7  |链表|   [两个已排序链表的合并](src/oj/21_mergeTwoLists/mergeTwoLists.cpp)   |   L21    |  简单 | √
 |   8  |链表|   [K个已排序链表的合并](src/oj/23_mergeKLists/mergeKLists.cpp)   |   L23    |  困难 | √
 |   9  |数组|   [找出数组中重复的数字](src/oj/offer03_findRepeatNumber/findRepeatNumber.cpp)   |   O3    |  简单 | √
+|   10  |数组|   [航班预订统计](src/oj/1109_corpFlightBookings/corpFlightBookings.cpp)   |   L1109    |  中等 | √
 
 ## 二、栈、队列、堆
 | 序号 | 知识点 | 题目 | 题源 | 难度 | 解决状态 |
@@ -91,6 +92,7 @@
 |   9  |哈希表 |   [两数之和](src/oj/1_two_sum/two_sum.cpp)   | L1  | 困难 | √
 |   10 |哈希表 |   [队列转多叉树](src/oj/0_listToTree/listToTree.cpp)   | 牛客网  | 困难 | √
 |   11 |哈希表 |   [替换空格](src/oj/offer05_replaceSpace/replaceSpace.cpp)   | O5  | 简单 | √
+|   12 |字符串 |   [单词的压缩编码](src/oj/820_minimumLengthEncoding/minimumLengthEncoding.cpp)   | L820  | 中等 | √
 
 
 ## 八、图与搜索

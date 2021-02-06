@@ -54,7 +54,7 @@ int main() {
 //    n_queen();
 //    lowestCommonAncestor();
 //    flatten();
-    BFS();
+//    BFS();
 //    print_graph();
 //    canFinish();
 //    binary_search();
@@ -70,11 +70,12 @@ int main() {
 //    test_astar();
 //    sortDemo();
 //    knapsack();
-//    binarySearchTreeDemo();
+    binarySearchTreeDemo();
 
 //C++基础知识
 //    multichild();
 //    test_virtual();
+
 
     return 0;
 }

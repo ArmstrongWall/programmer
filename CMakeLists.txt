@@ -156,4 +156,7 @@ add_executable(leetcode src/main.cpp
         src/cpp_basic_knowledge/multichild.h
         src/cpp_basic_knowledge/virtual.h
         src/oj/52_N_queue_II/n_queue_II.cpp
-        src/oj/52_N_queue_II/n_queue_II.h src/oj/102_levelOrder/levelOrder.cpp src/oj/102_levelOrder/levelOrder.h)
+        src/oj/52_N_queue_II/n_queue_II.h src/oj/102_levelOrder/levelOrder.cpp src/oj/102_levelOrder/levelOrder.h src/ds_basic_knowledge/avl_tree/avl_tree.cpp src/ds_basic_knowledge/avl_tree/avl_tree.h src/ds_basic_knowledge/binary_heap/binary_heap.cpp src/ds_basic_knowledge/binary_heap/binary_heap.h src/oj/820_minimumLengthEncoding/minimumLengthEncoding.cpp src/oj/820_minimumLengthEncoding/minimumLengthEncoding.h src/oj/1109_corpFlightBookings/corpFlightBookings.cpp src/oj/1109_corpFlightBookings/corpFlightBookings.h)
+
+
+target_link_libraries(leetcode atomic)
